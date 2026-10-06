@@ -18,11 +18,11 @@
 }
 .promo-slide::before {
     content:''; position:absolute; inset:0;
-    background:linear-gradient(90deg, rgba(14,42,58,.96) 0%, rgba(14,42,58,.88) 38%, rgba(14,42,58,.4) 68%, rgba(14,42,58,.15) 100%);
+    background:linear-gradient(90deg, rgba(14,59,46,.96) 0%, rgba(14,59,46,.88) 38%, rgba(14,59,46,.4) 68%, rgba(14,59,46,.15) 100%);
 }
 @media (max-width:768px) {
     .promo-slide { min-height:520px; }
-    .promo-slide::before { background:linear-gradient(180deg, rgba(14,42,58,.75) 0%, rgba(14,42,58,.94) 55%, var(--navy) 100%); }
+    .promo-slide::before { background:linear-gradient(180deg, rgba(14,59,46,.75) 0%, rgba(14,59,46,.94) 55%, var(--navy) 100%); }
 }
 .promo-slide__inner {
     position:relative; z-index:1;

@@ -180,8 +180,8 @@ class SiteAssetsController extends Controller
             'scope'            => '/',
             'display'          => 'standalone',
             'orientation'      => 'any',
-            'background_color' => '#0E2A3A',
-            'theme_color'      => '#8F6A1F',
+            'background_color' => '#0E3B2E',
+            'theme_color'      => '#9A7736',
             'lang'             => app()->getLocale(),
             'categories'       => ['finance', 'business'],
             'icons'            => [

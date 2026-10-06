@@ -7,30 +7,30 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="{{ site_name() }} Admin">
-<meta name="theme-color" content="#8F6A1F">
+<meta name="theme-color" content="#9A7736">
 <link rel="manifest" href="/admin-manifest.json">
 <link rel="apple-touch-icon" sizes="180x180" href="/site-icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site-icon-192.png">
 <title>{{ __('auth.staff_login_title') }} | {{ site_name() }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}">
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <style>
 :root{
-  --navy:#0E2A3A;--nm:#1A3D52;--nl:#24485C;
-  --accent:#8F6A1F;--gd:#24485C;--gp:#F6EEDC;
+  --navy:#0E3B2E;--nm:#14503D;--nl:#1C6B51;
+  --accent:#9A7736;--gd:#1C6B51;--gp:#F5EDDD;
 }
 html,body{height:100%;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh;display:flex;flex-direction:column}
+body{font-family:'Outfit',sans-serif;background:#fff;min-height:100vh;display:flex;flex-direction:column}
 
 /* ════ LEFT PANEL — staff variant ════ */
 .auth-left{
   /* Fond bleu profond : accent eclairci pour rester lisible (AA). */
-  --accent:#E0B55A;--gd:#A87F2B;
-  background:linear-gradient(160deg,#060f1e 0%,#0E2A3A 45%,#0e2240 100%);
+  --accent:#C6A15B;--gd:#C6A15B;
+  background:linear-gradient(160deg,#061D17 0%,#0E3B2E 45%,#0A2A21 100%);
   min-height:100vh; padding:2.5rem 3rem;
   display:flex;flex-direction:column;justify-content:space-between;
   position:relative;overflow:hidden;
@@ -45,7 +45,7 @@ body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh;display:fle
 .auth-left::after{
   content:'';position:absolute;top:-100px;right:-100px;
   width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(143, 106, 31,.08) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(154, 119, 54,.08) 0%,transparent 70%);
   pointer-events:none;
 }
 .auth-left__logo img{height:40px;position:relative;z-index:1}
@@ -53,12 +53,12 @@ body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh;display:fle
 
 .staff-badge{
   display:inline-flex;align-items:center;gap:.625rem;
-  background:rgba(143, 106, 31,.08);border:1px solid rgba(143, 106, 31,.2);
+  background:rgba(154, 119, 54,.08);border:1px solid rgba(154, 119, 54,.2);
   border-radius:12px;padding:.625rem 1rem;margin-bottom:1.75rem;
 }
 .staff-badge__ico{
   width:32px;height:32px;border-radius:8px;
-  background:rgba(143, 106, 31,.12);display:flex;align-items:center;justify-content:center;
+  background:rgba(154, 119, 54,.12);display:flex;align-items:center;justify-content:center;
 }
 .staff-badge__ico i{color:var(--accent);font-size:.75rem}
 .staff-badge__text{line-height:1.3}
@@ -168,10 +168,10 @@ body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh;display:fle
 .f-input{
   width:100%;padding:.7rem .9rem .7rem 2.5rem;
   border:1.5px solid #e5e7eb;border-radius:9px;
-  font-size:.875rem;font-family:'Inter',sans-serif;color:#111827;
+  font-size:.875rem;font-family:'Outfit',sans-serif;color:#111827;
   outline:none;transition:border-color .2s,box-shadow .2s;background:#fff;
 }
-.f-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(14, 42, 58,.08)}
+.f-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(14, 59, 46,.08)}
 .f-input.is-err{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.08)}
 .f-eye{
   position:absolute;right:.875rem;top:50%;transform:translateY(-50%);
@@ -189,12 +189,12 @@ body{font-family:'Inter',sans-serif;background:#fff;min-height:100vh;display:fle
 
 .btn-auth{
   width:100%;padding:.8rem;border:none;border-radius:10px;
-  font-size:.9rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;
+  font-size:.9rem;font-weight:700;font-family:'Outfit',sans-serif;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:.5rem;
   background:var(--navy);color:#fff;
   transition:background .2s,transform .12s;letter-spacing:.01em;
 }
-.btn-auth:hover{background:#0E2A3A}
+.btn-auth:hover{background:#0E3B2E}
 .btn-auth:active{transform:scale(.98)}
 
 .auth-footer{
@@ -416,7 +416,7 @@ function tglPwd(id, ico) {
 {{-- Bannière Android / Chrome --}}
 <div id="pwa-banner" style="display:none;position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);
   width:calc(100% - 2rem);max-width:400px;
-  background:var(--navy);border:1px solid rgba(143, 106, 31,.35);
+  background:var(--navy);border:1px solid rgba(154, 119, 54,.35);
   border-radius:14px;padding:.875rem 1.125rem;
   box-shadow:0 8px 32px rgba(0,0,0,.3);z-index:9999;
   align-items:center;gap:.75rem">
@@ -439,7 +439,7 @@ function tglPwd(id, ico) {
 {{-- Bannière iOS Safari --}}
 <div id="pwa-ios" style="display:none;position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);
   width:calc(100% - 2rem);max-width:400px;
-  background:var(--navy);border:1px solid rgba(143, 106, 31,.35);
+  background:var(--navy);border:1px solid rgba(154, 119, 54,.35);
   border-radius:14px;padding:1rem 1.125rem;
   box-shadow:0 8px 32px rgba(0,0,0,.3);z-index:9999;flex-direction:column;gap:.75rem">
   <div style="display:flex;align-items:center;justify-content:space-between">
@@ -457,15 +457,15 @@ function tglPwd(id, ico) {
   </div>
   <div style="font-size:.73rem;color:rgba(255,255,255,.65);line-height:1.9">
     <span style="display:inline-flex;align-items:center;gap:.35rem">
-      <b style="background:rgba(143, 106, 31,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">1</b>
+      <b style="background:rgba(154, 119, 54,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">1</b>
       Appuyez sur <strong style="color:#fff">Partager</strong> <i class="fas fa-share-square" style="color:var(--accent)"></i>
     </span><br>
     <span style="display:inline-flex;align-items:center;gap:.35rem">
-      <b style="background:rgba(143, 106, 31,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">2</b>
+      <b style="background:rgba(154, 119, 54,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">2</b>
       Puis <strong style="color:#fff">Sur l'écran d'accueil</strong> <i class="fas fa-plus-square" style="color:var(--accent)"></i>
     </span><br>
     <span style="display:inline-flex;align-items:center;gap:.35rem">
-      <b style="background:rgba(143, 106, 31,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">3</b>
+      <b style="background:rgba(154, 119, 54,.2);color:var(--accent);padding:.05rem .35rem;border-radius:4px;font-size:.68rem">3</b>
       Appuyez sur <strong style="color:#fff">Ajouter</strong>
     </span>
   </div>

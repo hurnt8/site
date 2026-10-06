@@ -9,7 +9,7 @@
 
 {{-- Page hero --}}
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.services')</h1>
             <ul class="page-hero__breadcrumb">
@@ -25,7 +25,7 @@
 
 {{-- Services grid --}}
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="text-center mb-14">
             <div class="section-label justify-content-center">{{ __('home.services.sectagline') }}</div>
             <h2 class="section-title">{{ __('home.services.sectitle') }}</h2>
@@ -71,7 +71,7 @@
 
 {{-- CTA --}}
 <section class="cta-banner">
-    <div class="container">
+    <div class="container-sm">
         <div class="row align-items-center gutter-y-30">
             <div class="col-lg-7 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="section-label" style="color:var(--accent);">{{ __('home.services.sectagline') }}</div>

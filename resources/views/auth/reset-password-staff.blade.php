@@ -6,24 +6,24 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#8F6A1F">
+<meta name="theme-color" content="#9A7736">
 <link rel="icon" type="image/png" sizes="192x192" href="/site-icon-192.png">
 <title>Réinitialiser le mot de passe — {{ site_name() }} Admin</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}">
 
 <style>
 :root{
-  --navy:#0E2A3A;--nm:#1A3D52;--nl:#24485C;
-  --accent:#E0B55A;--gd:#A87F2B;--gp:#F6EEDC;
+  --navy:#0E3B2E;--nm:#14503D;--nl:#1C6B51;
+  --accent:#C6A15B;--gd:#C6A15B;--gp:#F5EDDD;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{
   height:100%;background:var(--navy);color:#fff;
-  font-family:'Inter', system-ui, sans-serif;font-size:15px;
+  font-family:'Outfit', system-ui, sans-serif;font-size:15px;
   -webkit-font-smoothing:antialiased;
 }
 body{min-height:100vh;overflow-x:hidden}
@@ -35,7 +35,7 @@ a{text-decoration:none;color:inherit}
   background-size:40px 40px;
 }
 .bg-orb{position:fixed;top:-100px;right:-100px;width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(224, 181, 90,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
+  background:radial-gradient(circle,rgba(198, 161, 91,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
 
 .topbar{position:relative;z-index:10;display:flex;align-items:center;
   padding:.9rem 1.5rem;padding-top:calc(.9rem + env(safe-area-inset-top,0px));}
@@ -50,13 +50,13 @@ a{text-decoration:none;color:inherit}
 
 .icon-badge{
   width:72px;height:72px;border-radius:50%;
-  background:rgba(224, 181, 90,.1);border:1.5px solid rgba(224, 181, 90,.28);
+  background:rgba(198, 161, 91,.1);border:1.5px solid rgba(198, 161, 91,.28);
   display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;
-  box-shadow:0 0 28px rgba(224, 181, 90,.15);
+  box-shadow:0 0 28px rgba(198, 161, 91,.15);
 }
 .icon-badge i{font-size:1.75rem;color:var(--accent)}
 
-.card-title{font-family:'Inter',sans-serif;font-size:1.625rem;font-weight:800;color:#fff;margin-bottom:.45rem}
+.card-title{font-family:'Outfit',sans-serif;font-size:1.625rem;font-weight:800;color:#fff;margin-bottom:.45rem}
 .card-sub{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:1.875rem;max-width:320px;margin-left:auto;margin-right:auto}
 
 .ferr{
@@ -74,11 +74,11 @@ a{text-decoration:none;color:inherit}
 .finput{
   width:100%;padding:.85rem 1rem .85rem 2.6rem;
   background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);border-radius:12px;
-  font-size:.88rem;font-family:'Inter',sans-serif;color:#fff;
+  font-size:.88rem;font-family:'Outfit',sans-serif;color:#fff;
   outline:none;transition:border-color .2s,box-shadow .2s,background .2s;
 }
 .finput::placeholder{color:rgba(255,255,255,.25)}
-.finput:focus{border-color:var(--accent);background:rgba(255,255,255,.08);box-shadow:0 0 0 3.5px rgba(224, 181, 90,.15)}
+.finput:focus{border-color:var(--accent);background:rgba(255,255,255,.08);box-shadow:0 0 0 3.5px rgba(198, 161, 91,.15)}
 .finput:focus ~ .ficon,.frel:focus-within .ficon{color:var(--accent)}
 .finput.err{border-color:#ef4444}
 .feye{
@@ -93,10 +93,10 @@ a{text-decoration:none;color:inherit}
 
 .fbtn{
   width:100%;padding:.92rem 1.5rem;border:none;border-radius:10px;
-  font-size:.95rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;
+  font-size:.95rem;font-weight:700;font-family:'Outfit',sans-serif;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:.625rem;
-  background:var(--accent);color:#0E2A3A;letter-spacing:.01em;
-  box-shadow:0 6px 24px rgba(224, 181, 90,.3);
+  background:var(--accent);color:#0E3B2E;letter-spacing:.01em;
+  box-shadow:0 6px 24px rgba(198, 161, 91,.3);
   transition:filter .2s,box-shadow .2s,transform .1s;margin-top:.5rem;
 }
 .fbtn:hover{filter:brightness(1.08)}
@@ -250,7 +250,7 @@ function updateStrength(val) {
   if (/[A-Z]/.test(val)) score++;
   if (/[0-9]/.test(val)) score++;
   if (/[^A-Za-z0-9]/.test(val)) score++;
-  var colors = ['#ef4444','#f97316','#eab308','#22c55e','#E0B55A'];
+  var colors = ['#ef4444','#f97316','#eab308','#22c55e','#C6A15B'];
   var widths  = ['20%','40%','60%','80%','100%'];
   fill.style.width      = widths[Math.max(score-1,0)] || '0';
   fill.style.background = colors[Math.max(score-1,0)] || 'transparent';

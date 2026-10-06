@@ -16,7 +16,7 @@
 
 {{-- Page hero --}}
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.contact')</h1>
             <ul class="page-hero__breadcrumb">
@@ -29,7 +29,7 @@
 </div>
 
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-40 align-items-start">
             {{-- Contact form --}}
             <div class="col-lg-7 wow fadeInLeft" data-wow-duration="900ms" x-data="{ submitting: false }">

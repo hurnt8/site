@@ -6,7 +6,7 @@
 
 {{-- Page hero --}}
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.simulate')</h1>
             <ul class="page-hero__breadcrumb">
@@ -19,7 +19,7 @@
 </div>
 
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
 
         {{-- Simulation form --}}
         <div class="row justify-content-center mb-12">

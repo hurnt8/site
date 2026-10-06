@@ -276,7 +276,7 @@ document.addEventListener('alpine:init', () => {
 @php $locale = app()->getLocale(); @endphp
 
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.loan')</h1>
             <ul class="page-hero__breadcrumb">
@@ -289,7 +289,7 @@ document.addEventListener('alpine:init', () => {
 </div>
 
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 align-items-start">
 
             {{-- ══════════ FORMULAIRE PRINCIPAL ══════════ --}}
@@ -646,7 +646,7 @@ document.addEventListener('alpine:init', () => {
 </style>
 @endpush
 <section class="py-10" style="background:#f7f8fa;border-top:1px solid #eaecf0;border-bottom:1px solid #eaecf0;">
-    <div class="container">
+    <div class="container-sm">
         <p class="text-center" style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#9ca3af;margin-bottom:1.4rem;">
             @lang('home.partners_label')
         </p>

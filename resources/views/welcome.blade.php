@@ -14,6 +14,7 @@
      diapositive à l'autre. Le texte a désormais son propre fond clair.
 ============================================================ --}}
 <section class="hero-split">
+  <div class="container-sm">
     <div class="hero-split__grid">
 
             <div class="hero-split__text wow fadeInUp" data-wow-duration="800ms">
@@ -53,14 +54,18 @@
             </div>
 
             <div class="hero-split__media wow fadeIn" data-wow-duration="1100ms">
-                <img src="{{ asset('assets/images/refonte/hero-client.jpg') }}"
-                     alt="@lang('menu.loan')" style="object-position:center 30%;">
+                <img src="{{ asset('assets/images/aurenza/hero-siege.jpg') }}" alt="@lang('menu.loan')">
+                <div class="hero-split__stamp">
+                    <b>5 000 000 €</b>
+                    <span>{{ __('home.total_loan_amount_granted') }}</span>
+                </div>
             </div>
 
     </div>
+  </div>
 </section>
 
-@include('partials.promo-carousel')
+@include('partials.service-strip')
 
 {{-- ============================================================
      SELON VOTRE SITUATION — segmentation par profil
@@ -81,12 +86,12 @@
 }
 .needs-card:hover {
     transform:translateY(-4px);
-    box-shadow:0 18px 40px rgba(14,42,58,.1);
+    box-shadow:0 18px 40px rgba(14,59,46,.1);
     border-color:transparent;
 }
 .needs-card__icon {
     width:50px; height:50px; border-radius:13px;
-    background:rgba(143,106,31,.08); color:var(--accent);
+    background:rgba(154,119,54,.08); color:var(--accent);
     display:flex; align-items:center; justify-content:center;
     font-size:1.2rem; margin-bottom:1.1rem;
     transition:background .22s ease, color .22s ease;
@@ -107,7 +112,7 @@
 @endpush
 
 <section class="py-24" style="background:var(--cream);">
-    <div class="container">
+    <div class="container-sm">
         <div class="text-center mb-4" style="max-width:640px;margin-left:auto;margin-right:auto;">
             <div class="rule-label rule-label--center">{{ __('home.needs.sectagline') }}</div>
             <h2 class="section-title">{{ __('home.needs.sectitle') }}</h2>
@@ -168,14 +173,14 @@
     padding:.3rem .8rem; white-space:nowrap; flex-shrink:0;
     transition:border-color .25s ease, box-shadow .25s ease;
 }
-.about-partner-bar__name:hover { border-color:var(--accent); box-shadow:0 2px 10px rgba(143, 106, 31,.18); }
+.about-partner-bar__name:hover { border-color:var(--accent); box-shadow:0 2px 10px rgba(154, 119, 54,.18); }
 @media (prefers-reduced-motion: reduce) {
     }
 </style>
 @endpush
 
 <section class="py-24 bg-white" id="about">
-    <div class="container">
+    <div class="container-sm">
         <div class="row gutter-y-60 align-items-center">
 
             {{-- ── Image ── --}}
@@ -265,7 +270,7 @@
      SERVICES GRID
 ============================================================ --}}
 <section class="py-24" style="background:var(--cream);" id="services">
-    <div class="container">
+    <div class="container-sm">
         <div class="row align-items-end mb-12">
             <div class="col-lg-8">
                 <div class="rule-label">{{ __('home.services.sectagline') }}</div>
@@ -308,7 +313,7 @@
      HOW IT WORKS
 ============================================================ --}}
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="row mb-10">
             <div class="col-lg-7">
                 <div class="rule-label">{{ __('home.works.sectagline') }}</div>
@@ -333,7 +338,7 @@
      LOAN CALCULATOR
 ============================================================ --}}
 <section class="calc-section py-24" id="simulate">
-    <div class="container">
+    <div class="container-sm">
         <div class="row gutter-y-50 align-items-center">
             <div class="col-lg-5 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="rule-label" style="color:var(--accent);">{{ __('home.works.sectagline') }}</div>
@@ -342,7 +347,7 @@
 
                 @foreach ([1,2,3] as $r)
                 <div class="d-flex align-items-start gap-3 mb-4">
-                    <div style="width:36px;height:36px;background:rgba(143, 106, 31,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+                    <div style="width:36px;height:36px;background:rgba(154, 119, 54,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
@@ -377,7 +382,7 @@
      Les compteurs animes disparaissent : le modele affiche les valeurs
      directement, sans dependre de jquery-appear. --}}
 <section class="figure-band">
-    <div class="container">
+    <div class="container-sm">
         @php
         $chiffres = [
             ['8 500+',   __('home.customer_satisfaction_rate')],
@@ -402,7 +407,7 @@
 ============================================================ --}}
 {{-- Bande statique : le modele ne fait plus defiler les partenaires. --}}
 <section class="py-10 bg-white" style="border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);">
-    <div class="container">
+    <div class="container-sm">
         <p class="text-center" style="font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--gray-400);margin-bottom:1.5rem;">
             @lang('home.partners_label')
         </p>
@@ -421,7 +426,7 @@
      TESTIMONIALS — Swiper carousel
 ============================================================ --}}
 <section class="py-24" style="background:var(--gray-50);" id="testimonials">
-    <div class="container">
+    <div class="container-sm">
         <div class="mb-10">
             <div class="rule-label">{{ __('home.testimonials_title') }}</div>
             <h2 class="section-title mb-0">{{ __('home.testimonials_title') }}</h2>
@@ -446,7 +451,7 @@
      CTA BANNER
 ============================================================ --}}
 <section class="cta-banner">
-    <div class="container">
+    <div class="container-sm">
         <div class="row align-items-center gutter-y-30">
             <div class="col-lg-7 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="rule-label" style="color:var(--accent);">@lang('home.final_cta.tagline')</div>

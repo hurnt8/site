@@ -38,13 +38,13 @@
     // variant="icon" attend une pastille carree : un logotype large y casserait la mise
     // en page, on garde donc le monogramme pour cette variante.
     if ($variant === 'icon') { $overrideSrc = null; }
-    $box   = ['sm' => 32, 'md' => 44, 'lg' => 64][$size] ?? 44;
+    $box   = ['sm' => 36, 'md' => 48, 'lg' => 56][$size] ?? 48;
     $isDark = $theme === 'dark';
     // Palette derivee du logo Aurenza Capital : pastille bleu nuit, monogramme or ; inversee sur fond sombre.
-    $badgeBg   = $isDark ? '#E0B55A' : '#0E2A3A';
-    $badgeFg   = $isDark ? '#0E2A3A' : '#E0B55A';
-    $wordColor = $isDark ? '#FFFFFF' : '#0E2A3A';
-    $restColor = $isDark ? '#E8C877' : '#8F6A1F';
+    $badgeBg   = $isDark ? '#C6A15B' : '#0E3B2E';
+    $badgeFg   = $isDark ? '#0E3B2E' : '#C6A15B';
+    $wordColor = $isDark ? '#FFFFFF' : '#0E3B2E';
+    $restColor = $isDark ? '#DCBE87' : '#9A7736';
     $gap   = round($box * 0.28);
     $wsize = round($box * 0.42);
     $tag   = $href ? 'a' : 'span';
@@ -59,16 +59,11 @@
 @else
     <{{ $tag }} @if($href) href="{{ $href }}" @endif
         {{ $attributes->merge(['class' => 'sg-logo']) }}
-        style="display:inline-flex;align-items:center;gap:{{ $gap }}px;line-height:1;text-decoration:none">
-        <svg width="{{ $box }}" height="{{ $box }}" viewBox="0 0 44 44" role="img" aria-label="{{ $alt }}" style="flex-shrink:0;display:block">
-            <rect width="44" height="44" rx="10" fill="{{ $badgeBg }}"/>
-            <rect x="3" y="3" width="38" height="38" rx="7" fill="none" stroke="{{ $badgeFg }}" stroke-opacity=".45" stroke-width="1"/>
-            <text x="22" y="29" text-anchor="middle" font-family="'Fraunces',Georgia,serif" font-weight="700" font-size="19" fill="{{ $badgeFg }}">{{ $initials }}</text>
-        </svg>
-        @if($variant === 'full')
-        <span style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:{{ $wsize }}px;color:{{ $wordColor }};white-space:nowrap">
-            {{ $firstWord }}@if($restWords) <span style="color:{{ $restColor }}">{{ $restWords }}</span>@endif
-        </span>
+        style="display:inline-flex;align-items:center;text-decoration:none">
+        @if($variant === 'icon')
+            <img src="{{ asset('assets/images/favicon-aurenza.svg') }}" alt="{{ $alt }}" style="height:{{ $box }}px;width:{{ $box }}px;display:block">
+        @else
+            <img src="{{ asset('assets/images/logo-aurenza-' . ($isDark ? 'light' : 'dark') . '.svg') }}" alt="{{ $alt }}" style="height:{{ $box }}px;width:auto;display:block">
         @endif
     </{{ $tag }}>
 @endif

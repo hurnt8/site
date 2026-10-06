@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<meta name="theme-color" content="#8F6A1F">
+<meta name="theme-color" content="#9A7736">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="{{ site_name() }} Admin">
@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/site-icon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('assets/vendors/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}">
 <style>
@@ -24,17 +24,17 @@
   Aurenza Capital — DESIGN SYSTEM v2
    ═══════════════════════════════════════════════ */
 :root {
-  --c-navy:       #0E2A3A;
-  --c-navy-2:     #1A3D52;
-  --c-navy-3:     #24485C;
-  --c-accent:       #8F6A1F;
+  --c-navy:       #0E3B2E;
+  --c-navy-2:     #14503D;
+  --c-navy-3:     #1C6B51;
+  --c-accent:       #9A7736;
   --c-on-accent:  #FFFFFF;  /* texte sur aplat d accent */
-  --c-accent-d:     #24485C;
-  --c-accent-l:     #A87F2B;
+  --c-accent-d:     #1C6B51;
+  --c-accent-l:     #C6A15B;
   --c-bg:         #F7F8F9;
   --c-surface:    #FFFFFF;
   --c-border:     #DBDDDE;
-  --c-text:       #0E2A3A;
+  --c-text:       #0E3B2E;
   --c-muted:      #95A3B1;
   --c-green:      #059669;
   --c-green-l:    #D1FAE5;
@@ -50,13 +50,13 @@
   --topbar-h:     64px;
   --radius:       12px;
   --radius-sm:    8px;
-  --shadow:       0 1px 3px rgba(14, 42, 58,.06), 0 4px 16px rgba(14, 42, 58,.07);
-  --shadow-sm:    0 1px 2px rgba(14, 42, 58,.05);
+  --shadow:       0 1px 3px rgba(14, 59, 46,.06), 0 4px 16px rgba(14, 59, 46,.07);
+  --shadow-sm:    0 1px 2px rgba(14, 59, 46,.05);
   --transition:   all .2s ease;
 }
 
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Inter',sans-serif; font-weight:400; background:var(--c-bg); color:var(--c-text); font-size:.875rem; line-height:1.6; min-height:100vh; -webkit-font-smoothing:antialiased; }
+body { font-family:'Outfit',sans-serif; font-weight:400; background:var(--c-bg); color:var(--c-text); font-size:.875rem; line-height:1.6; min-height:100vh; -webkit-font-smoothing:antialiased; }
 a { text-decoration:none; }
 
 /* ─── SCROLLBAR ─── */
@@ -69,7 +69,7 @@ a { text-decoration:none; }
    ══════════════════ */
 .sidebar {
   /* Fond bleu profond : l accent doit s eclaircir pour rester lisible. */
-  --c-accent:#E0B55A;
+  --c-accent:#C6A15B;
   position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh;
   background:var(--c-navy);
   display:flex; flex-direction:column; z-index:300;
@@ -117,7 +117,7 @@ a { text-decoration:none; }
 }
 .sidebar-link .icon { width:18px; text-align:center; font-size:.8rem; flex-shrink:0; }
 .sidebar-link:hover { color:#fff; background:rgba(255,255,255,.04); border-left-color:rgba(255,255,255,.15); }
-.sidebar-link.active { color:var(--c-accent); background:rgba(143, 106, 31,.1); border-left-color:var(--c-accent); font-weight:600; }
+.sidebar-link.active { color:var(--c-accent); background:rgba(154, 119, 54,.1); border-left-color:var(--c-accent); font-weight:600; }
 .sidebar-link.active .icon { color:var(--c-accent); }
 
 .sidebar-footer {
@@ -405,7 +405,7 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
   font-family:inherit; transition:var(--transition);
   appearance:none;
 }
-.form-control-pro:focus { outline:none; border-color:var(--c-accent); box-shadow:0 0 0 3px rgba(143, 106, 31,.12); }
+.form-control-pro:focus { outline:none; border-color:var(--c-accent); box-shadow:0 0 0 3px rgba(154, 119, 54,.12); }
 .form-control-pro::placeholder { color:#C4CADC; }
 .form-help { font-size:.73rem; color:var(--c-muted); margin-top:.3rem; }
 
@@ -448,7 +448,7 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
   transition:var(--transition);
 }
 .step-dot.done { background:var(--c-accent); color:var(--c-on-accent); border-color:var(--c-accent); }
-.step-dot.current { background:var(--c-navy); color:#E0B55A; border-color:#E0B55A; }
+.step-dot.current { background:var(--c-navy); color:#C6A15B; border-color:#C6A15B; }
 .step-label { font-size:.62rem; text-align:center; color:var(--c-muted); margin-top:.4rem; max-width:65px; line-height:1.3; }
 .step-label.done,.step-label.current { color:var(--c-navy); font-weight:600; }
 
@@ -482,7 +482,7 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
 }
 .filter-bar input:focus, .filter-bar select:focus {
   outline:none; border-color:var(--c-accent); background:var(--c-surface);
-  box-shadow:0 0 0 3px rgba(143, 106, 31,.1);
+  box-shadow:0 0 0 3px rgba(154, 119, 54,.1);
 }
 .filter-bar input::placeholder { color:#C4CADC; }
 
@@ -914,7 +914,7 @@ function doInstallPwa() {
     border-radius:var(--radius);padding:1rem 1.125rem;
     box-shadow:0 8px 32px rgba(0,0,0,.25);z-index:9999;
     flex-direction:column;gap:.625rem;
-    border:1px solid rgba(143, 106, 31,.3)">
+    border:1px solid rgba(154, 119, 54,.3)">
   <div style="display:flex;align-items:center;justify-content:space-between">
     <div style="display:flex;align-items:center;gap:.625rem">
       <img src="/site-icon-192.png" style="width:36px;height:36px;border-radius:8px" alt="">
@@ -930,15 +930,15 @@ function doInstallPwa() {
   </div>
   <div style="font-size:.73rem;color:rgba(255,255,255,.65);line-height:1.6">
     <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem">
-      <span style="background:rgba(143, 106, 31,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">1</span>
+      <span style="background:rgba(154, 119, 54,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">1</span>
       Appuyez sur <strong style="color:#fff">Partager</strong> <i class="fas fa-share-square" style="color:var(--c-accent)"></i>
     </div>
     <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem">
-      <span style="background:rgba(143, 106, 31,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">2</span>
+      <span style="background:rgba(154, 119, 54,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">2</span>
       Puis <strong style="color:#fff">Sur l'écran d'accueil</strong> <i class="fas fa-plus-square" style="color:var(--c-accent)"></i>
     </div>
     <div style="display:flex;align-items:center;gap:.5rem">
-      <span style="background:rgba(143, 106, 31,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">3</span>
+      <span style="background:rgba(154, 119, 54,.15);border-radius:4px;padding:.1rem .4rem;font-size:.7rem;color:var(--c-accent);font-weight:700">3</span>
       Appuyez sur <strong style="color:#fff">Ajouter</strong>
     </div>
   </div>

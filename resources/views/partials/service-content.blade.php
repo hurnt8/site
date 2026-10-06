@@ -2,7 +2,7 @@
 
 {{-- Page hero --}}
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.' . $menuKey)</h1>
             <ul class="page-hero__breadcrumb">
@@ -17,7 +17,7 @@
 </div>
 
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-50 align-items-start">
 
             {{-- Sidebar (2e sur mobile, 1re sur desktop) --}}
@@ -129,7 +129,7 @@
 
 {{-- Calculator strip --}}
 <section class="calc-section py-16">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-50 align-items-center">
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="section-label" style="color:var(--accent);">Simulation</div>
@@ -145,7 +145,7 @@
 
 {{-- Produits associés — cross-sell vers les 5 autres types de prêt --}}
 <section class="py-24" style="background:var(--cream);">
-    <div class="container">
+    <div class="container-sm">
         <div class="text-center mb-4" style="max-width:640px;margin-left:auto;margin-right:auto;">
             <div class="rule-label rule-label--center">{{ __('menu.services') }}</div>
             <h2 class="section-title">{{ __('loan.service_related_title') }}</h2>

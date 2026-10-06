@@ -5,7 +5,7 @@
 @endphp
 
 <footer class="site-footer">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-50">
 
             {{-- ── Colonne marque (toujours visible) ── --}}

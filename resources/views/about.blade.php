@@ -6,7 +6,7 @@
 
 {{-- Page hero --}}
 <div class="page-hero">
-    <div class="container">
+    <div class="container-sm">
         <div class="page-hero__content">
             <h1 class="page-hero__title">@lang('menu.about')</h1>
             <ul class="page-hero__breadcrumb">
@@ -20,7 +20,7 @@
 
 {{-- Intro --}}
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-40 align-items-center">
             <div class="col-lg-6 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="rule-label">{{ __('about.hero_tagline') }}</div>
@@ -45,7 +45,7 @@
 
 {{-- Mission / histoire --}}
 <section class="py-24" style="background:var(--cream);">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-40 align-items-center">
             <div class="col-lg-6 order-lg-2 wow fadeInRight" data-wow-duration="900ms">
                 <div class="rule-label">{{ __('about.mission_tagline') }}</div>
@@ -68,7 +68,7 @@
 
 {{-- Stats --}}
 <section style="background:var(--navy);">
-    <div class="container">
+    <div class="container-sm">
         <div class="text-center pt-16" style="padding-top:4rem;">
             <div class="section-label justify-content-center" style="color:var(--accent);">{{ __('about.stats_tagline') }}</div>
             <h2 class="section-title section-title--white mb-0">{{ __('about.stats_title') }}</h2>
@@ -100,7 +100,7 @@
 
 {{-- Nos valeurs --}}
 <section class="py-24 bg-white">
-    <div class="container">
+    <div class="container-sm">
         <div class="text-center mb-14">
             <div class="section-label justify-content-center">{{ __('about.values_tagline') }}</div>
             <h2 class="section-title">{{ __('about.values_title') }}</h2>
@@ -135,7 +135,7 @@
 
 {{-- Comment nous travaillons --}}
 <section class="py-24" style="background:var(--cream);">
-    <div class="container">
+    <div class="container-sm">
         <div class="row g-4 gutter-y-40 align-items-center">
             <div class="col-lg-5 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="rule-label">{{ __('about.approach_tagline') }}</div>
@@ -161,7 +161,7 @@
 
 {{-- CTA --}}
 <section class="cta-banner">
-    <div class="container">
+    <div class="container-sm">
         <div class="row align-items-center gutter-y-30">
             <div class="col-lg-8 wow fadeInLeft" data-wow-duration="900ms">
                 <div class="section-label" style="color:var(--accent);">{{ __('about.cta_tagline') }}</div>

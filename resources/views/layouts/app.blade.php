@@ -5,6 +5,8 @@
 
 <div id="page-wrapper" class="relative flex flex-col min-h-screen">
     @include('partials.header')
+    {{-- Espaceur sous l'en-tete fixe --}}
+    <div class="h-20"></div>
     <main class="flex-1">
         @yield('content')
     </main>
