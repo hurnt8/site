@@ -472,10 +472,6 @@ function tglPwd(id, ico) {
 </div>
 
 <script>
-/* ── Service Worker ── */
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
-}
 
 /* ── Android / Chrome install ── */
 var _pwaStaffPrompt = null;

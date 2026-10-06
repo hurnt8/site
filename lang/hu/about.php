@@ -3,7 +3,7 @@
 return [
     // Hero / bevezető
     'hero_tagline' => 'a történetünk',
-    'hero_title' => 'Egy online bank, amely gyorsabb, mint a hagyományos bankok',
+    'hero_title' => 'Online finanszírozás, amely gyorsabb a hagyományos hitelezőknél',
     'hero_text' => 'A ' . site_name() . ' 8 éve segíti magánszemélyek és vállalkozások finanszírozási terveinek megvalósítását, egyetlen egyszerű meggyőződés jegyében: hitelt felvenni sosem szabadna bonyolultnak lennie.',
 
     // Küldetés / történet

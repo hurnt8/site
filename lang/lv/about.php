@@ -3,7 +3,7 @@
 return [
     // Hero / ievads
     'hero_tagline' => 'mūsu vēsture',
-    'hero_title' => 'Tiešsaistes banka, kas radīta ātrāka nekā tradicionālās bankas',
+    'hero_title' => 'Tiešsaistes finansējums, kas radīts ātrāks nekā tradicionālie aizdevēji',
     'hero_text' => 'Jau 8 gadus ' . site_name() . ' palīdz privātpersonām un uzņēmumiem īstenot savus finansēšanas projektus, vadoties pēc vienkārša principa: aizdevuma saņemšanai nekad nevajadzētu būt sarežģītai.',
 
     // Misija / vēsture

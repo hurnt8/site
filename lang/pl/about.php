@@ -3,7 +3,7 @@
 return [
     // Hero / wprowadzenie
     'hero_tagline' => 'nasza historia',
-    'hero_title' => 'Bank internetowy stworzony, by działać szybciej niż tradycyjne banki',
+    'hero_title' => 'Finansowanie online stworzone, by działać szybciej niż tradycyjni kredytodawcy',
     'hero_text' => 'Od 8 lat ' . site_name() . ' pomaga osobom prywatnym i firmom realizować projekty finansowe, kierując się jedną prostą zasadą: uzyskanie pożyczki nigdy nie powinno być skomplikowane.',
 
     // Misja / historia

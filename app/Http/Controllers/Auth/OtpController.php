@@ -105,7 +105,7 @@ class OtpController extends Controller
 
         $url = $flow === 'staff'
             ? ($user->hasRole('super-admin') ? route('super-admin.dashboard') : route('admin.dashboard'))
-            : route('client.app.home');
+            : url('/');
 
         return $isAjax
             ? response()->json(['status' => 'success', 'url' => $url])

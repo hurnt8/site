@@ -56,7 +56,7 @@ class AppServiceProvider extends ServiceProvider
     {
         ResetPassword::toMailUsing(function ($notifiable, string $token) {
             $locale  = $notifiable->locale ?? 'fr';
-            $url     = route('password.reset', ['token' => $token, 'email' => $notifiable->email]);
+            $url     = route('staff.password.reset', ['token' => $token, 'email' => $notifiable->email]);
             $expire  = (int) config('auth.passwords.users.expire', 60);
 
             $subjects = [

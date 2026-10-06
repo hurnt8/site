@@ -3,7 +3,7 @@
 return [
     // Hero / Einleitung
     'hero_tagline' => 'unsere Geschichte',
-    'hero_title' => 'Eine Online-Bank, die schneller ist als traditionelle Banken',
+    'hero_title' => 'Online-Finanzierung, die schneller ist als traditionelle Kreditgeber',
     'hero_text' => 'Seit 8 Jahren unterstützt ' . site_name() . ' Privatpersonen und Unternehmen bei ihren Finanzierungsvorhaben – geleitet von einer einfachen Überzeugung: Einen Kredit zu bekommen, sollte niemals kompliziert sein.',
 
     // Mission / Geschichte

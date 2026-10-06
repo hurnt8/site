@@ -77,8 +77,8 @@
             @php
             $stats = [
                 ['stop'=>'8500','suffix'=>'+','prefix'=>'', 'label'=> __('home.customer_satisfaction_rate')],
-                ['stop'=>'500',  'suffix'=>'k','prefix'=>'€','label'=> __('home.total_loan_amount_granted')],
-                ['stop'=>'24',  'suffix'=>'h','prefix'=>'', 'label'=> __('home.average_approval_time')],
+                ['stop'=>'5',    'suffix'=>'M','prefix'=>'€','label'=> __('home.total_loan_amount_granted')],
+                ['stop'=>'48',  'suffix'=>'h','prefix'=>'', 'label'=> __('home.average_approval_time')],
                 ['stop'=>'8',    'suffix'=>'+','prefix'=>'', 'label'=> __('home.years_experience')],
             ];
             @endphp

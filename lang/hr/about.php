@@ -3,7 +3,7 @@
 return [
     // Hero / uvod
     'hero_tagline' => 'naša priča',
-    'hero_title' => 'Internetska banka stvorena da bude brža od tradicionalnih banaka',
+    'hero_title' => 'Internetsko financiranje stvoreno da bude brže od tradicionalnih zajmodavaca',
     'hero_text' => 'Već 8 godina ' . site_name() . ' pomaže pojedincima i tvrtkama u ostvarenju njihovih financijskih projekata, vođeni jednostavnim uvjerenjem: dobivanje kredita nikada ne bi smjelo biti komplicirano.',
 
     // Misija / povijest

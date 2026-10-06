@@ -3,7 +3,7 @@
 return [
     // Hero / inleiding
     'hero_tagline' => 'ons verhaal',
-    'hero_title' => 'Een online bank die sneller werkt dan traditionele banken',
+    'hero_title' => 'Online financiering die sneller werkt dan traditionele kredietverstrekkers',
     'hero_text' => 'Al 8 jaar begeleidt ' . site_name() . ' particulieren en bedrijven bij hun financieringsprojecten, vanuit één simpele overtuiging: een lening afsluiten zou nooit ingewikkeld mogen zijn.',
 
     // Missie / geschiedenis

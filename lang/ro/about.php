@@ -3,7 +3,7 @@
 return [
     // Hero / introducere
     'hero_tagline' => 'povestea noastră',
-    'hero_title' => 'O bancă online creată pentru a fi mai rapidă decât băncile tradiționale',
+    'hero_title' => 'O finanțare online creată pentru a fi mai rapidă decât circuitele tradiționale',
     'hero_text' => 'De 8 ani, ' . site_name() . ' îi ajută pe persoane fizice și companii să își ducă la bun sfârșit proiectele de finanțare, ghidați de o convingere simplă: obținerea unui împrumut nu ar trebui niciodată să fie complicată.',
 
     // Misiune / istorie

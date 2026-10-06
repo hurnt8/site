@@ -9,15 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="{{ site_name() }} Admin">
 <meta name="mobile-web-app-capable" content="yes">
-@auth
-  @if(Auth::user()->hasAnyRole(['admin','super-admin']))
 <link rel="manifest" href="/admin-manifest.json">
-  @else
-<link rel="manifest" href="/manifest.json">
-  @endif
-@else
-<link rel="manifest" href="/admin-manifest.json">
-@endauth
 <link rel="apple-touch-icon" sizes="180x180" href="/site-icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/site-icon-192.png">
 <title>@yield('title','Dashboard') — {{ site_name() }}</title>
@@ -583,8 +575,6 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
   .metrics-grid   { grid-template-columns:repeat(2,1fr); }
   .metrics-grid-3 { grid-template-columns:repeat(2,1fr); }
 
-  /* Notification panel pleine largeur */
-  #notifPanel { width:calc(100vw - 2rem) !important; right:-1rem !important; }
 
   /* Tables avec scroll horizontal */
   .pro-table { min-width:600px; }
@@ -742,211 +732,60 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
   <nav class="sidebar-nav">
   @auth
 
-    {{-- ══ CLIENT ══ --}}
-    @role('client')
-      <span class="sidebar-label">Navigation</span>
-      <a href="{{ route('client.dashboard') }}"
-         class="sidebar-link {{ request()->routeIs('client.dashboard') ? 'active':'' }}">
-        <i class="fas fa-th-large icon"></i> Tableau de bord
-      </a>
-      <a href="{{ route('client.loans') }}"
-         class="sidebar-link {{ request()->routeIs('client.loans*') ? 'active':'' }}">
-        <i class="fas fa-file-invoice-dollar icon"></i> Mes demandes
-      </a>
-      <span class="sidebar-label">Compte</span>
-      <a href="{{ route('home',['locale'=>app()->getLocale()]) }}" class="sidebar-link">
-        <i class="fas fa-globe icon"></i> Retour au site
-      </a>
-    @endrole
+    <span class="sidebar-label">Tableau de bord</span>
+    <a href="{{ Auth::user()->hasRole('super-admin') ? route('super-admin.dashboard') : route('admin.dashboard') }}"
+       class="sidebar-link {{ request()->routeIs('admin.dashboard', 'super-admin.dashboard') ? 'active':'' }}">
+      <i class="fas fa-chart-pie icon"></i> Vue d'ensemble
+    </a>
 
-    {{-- ══ SUPER-ADMIN ══ --}}
+    <span class="sidebar-label">Informations du site</span>
+    @if(Auth::user()->hasRole('super-admin') || Auth::user()->can('manage-site-contacts'))
+    <a href="{{ route('admin.site-contacts.edit') }}"
+       class="sidebar-link {{ request()->routeIs('admin.site-contacts*') ? 'active':'' }}">
+      <i class="fas fa-map-marker-alt icon"></i> Coordonnées
+    </a>
+    @endif
+    @if(Auth::user()->hasRole('super-admin') || Auth::user()->can('manage-social-links'))
+    <a href="{{ route('admin.social-links.index') }}"
+       class="sidebar-link {{ request()->routeIs('admin.social-links*') ? 'active':'' }}">
+      <i class="fas fa-share-alt icon"></i> Réseaux sociaux
+    </a>
+    @endif
+    @if(Auth::user()->hasRole('super-admin') || Auth::user()->can('manage-languages'))
+    <a href="{{ route('admin.languages.index') }}"
+       class="sidebar-link {{ request()->routeIs('admin.languages*') ? 'active':'' }}">
+      <i class="fas fa-language icon"></i> Langues
+    </a>
+    @endif
+    @if(Auth::user()->hasRole('super-admin') || Auth::user()->can('manage-currencies'))
+    <a href="{{ route('admin.currencies.index') }}"
+       class="sidebar-link {{ request()->routeIs('admin.currencies*') ? 'active':'' }}">
+      <i class="fas fa-money-bill-wave icon"></i> Devises
+    </a>
+    @endif
+    @if(Auth::user()->hasRole('super-admin') || Auth::user()->can('manage-loan-settings'))
+    <a href="{{ route('admin.loan-settings.edit') }}"
+       class="sidebar-link {{ request()->routeIs('admin.loan-settings*') ? 'active':'' }}">
+      <i class="fas fa-percentage icon"></i> Paramètres de prêt
+    </a>
+    @endif
+
     @role('super-admin')
-      <span class="sidebar-label">Tableau de bord</span>
-      <a href="{{ route('super-admin.dashboard') }}"
-         class="sidebar-link {{ request()->routeIs('super-admin.dashboard') ? 'active':'' }}">
-        <i class="fas fa-chart-pie icon"></i> Vue d'ensemble
-      </a>
-
-      <span class="sidebar-label">Prêts &amp; Contrats</span>
-      <a href="{{ route('super-admin.loans.index') }}"
-         class="sidebar-link {{ request()->routeIs('super-admin.loans*') ? 'active':'' }}">
-        <i class="fas fa-file-invoice-dollar icon"></i> Toutes les demandes
-      </a>
-      <a href="{{ route('admin.contract-templates.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.contract-templates*') ? 'active':'' }}">
-        <i class="fas fa-file-signature icon"></i> Modèles de contrats
-      </a>
-      <a href="{{ route('admin.notification-templates.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.notification-templates*') ? 'active':'' }}">
-        <i class="fas fa-bell icon"></i> Modèles de notification
-      </a>
-      <a href="{{ route('admin.site-contacts.edit') }}"
-         class="sidebar-link {{ request()->routeIs('admin.site-contacts*') ? 'active':'' }}">
-        <i class="fas fa-map-marker-alt icon"></i> Coordonnées
-      </a>
-      <a href="{{ route('admin.social-links.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.social-links*') ? 'active':'' }}">
-        <i class="fas fa-share-alt icon"></i> Réseaux sociaux
-      </a>
-      <a href="{{ route('admin.languages.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.languages*') ? 'active':'' }}">
-        <i class="fas fa-language icon"></i> Langues
-      </a>
-      <a href="{{ route('admin.currencies.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.currencies*') ? 'active':'' }}">
-        <i class="fas fa-money-bill-wave icon"></i> Devises
-      </a>
-      <a href="{{ route('admin.loan-settings.edit') }}"
-         class="sidebar-link {{ request()->routeIs('admin.loan-settings*') ? 'active':'' }}">
-        <i class="fas fa-percentage icon"></i> Paramètres de prêt
-      </a>
-
-      @hasanyrole(['super-admin'])
-      <span class="sidebar-label">Administration</span>
-      <a href="{{ route('super-admin.roles') }}"
-         class="sidebar-link {{ request()->routeIs('super-admin.roles') ? 'active':'' }}">
-        <i class="fas fa-shield-alt icon"></i> Rôles &amp; Permissions
-      </a>
-      <a href="{{ route('admin.users') }}"
-         class="sidebar-link {{ request()->routeIs('admin.users') ? 'active':'' }}">
-        <i class="fas fa-users icon"></i> Utilisateurs
-      </a>
-      @endhasanyrole
-
-      <span class="sidebar-label">Gestion financière</span>
-      @hasanyrole(['admin', 'super-admin'])
-      <a href="{{ route('admin.accounts.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.accounts*') ? 'active':'' }}">
-        <i class="fas fa-wallet icon"></i> Comptes clients
-      </a>
-      <a href="{{ route('admin.transfers.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.transfers*') ? 'active':'' }}">
-        <i class="fas fa-exchange-alt icon"></i> Transferts
-      </a>
-      <a href="{{ route('admin.invoices.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.invoices*') ? 'active':'' }}">
-        <i class="fas fa-file-invoice icon"></i> Factures
-      </a>
-      @endhasanyrole
-
-      @hasanyrole(['admin', 'super-admin'])
-      @php $saSupUnread = \App\Models\SupportMessage::where('sender_type','client')->whereNull('read_at')->count(); @endphp
-      <a href="{{ route('admin.support.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.support*') ? 'active':'' }}">
-        <i class="fas fa-comments icon"></i> Support
-        @if($saSupUnread > 0)
-        <span style="margin-left:auto;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--c-accent);color:var(--c-on-accent);font-size:.62rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center">{{ $saSupUnread }}</span>
-        @endif
-      </a>
-      @endhasanyrole
-
-      <span class="sidebar-label">Compte</span>
-      @role('super-admin')
-      <a href="{{ route('super-admin.profile') }}"
-         class="sidebar-link {{ request()->routeIs('super-admin.profile*') ? 'active':'' }}">
-        <i class="fas fa-user-circle icon"></i> Mon profil
-      </a>
-      @endrole
-      <a href="{{ route('home',['locale'=>app()->getLocale()]) }}" class="sidebar-link">
-        <i class="fas fa-globe icon"></i> Retour au site
-      </a>
+    <span class="sidebar-label">Administration</span>
+    <a href="{{ route('super-admin.roles') }}"
+       class="sidebar-link {{ request()->routeIs('super-admin.roles') ? 'active':'' }}">
+      <i class="fas fa-shield-alt icon"></i> Rôles &amp; Permissions
+    </a>
     @endrole
 
-    {{-- ══ ADMIN ══ --}}
-    @role('admin')
-      <span class="sidebar-label">Tableau de bord</span>
-      <a href="{{ route('admin.dashboard') }}"
-         class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active':'' }}">
-        <i class="fas fa-chart-pie icon"></i> Vue d'ensemble
-      </a>
-
-      <span class="sidebar-label">Prêts &amp; Contrats</span>
-      <a href="{{ route('admin.loans.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.loans*') ? 'active':'' }}">
-        <i class="fas fa-file-invoice-dollar icon"></i> Demandes de prêt
-      </a>
-      <a href="{{ route('admin.contract-templates.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.contract-templates*') ? 'active':'' }}">
-        <i class="fas fa-file-signature icon"></i> Modèles de contrats
-      </a>
-      @can('manage-notification-templates')
-      <a href="{{ route('admin.notification-templates.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.notification-templates*') ? 'active':'' }}">
-        <i class="fas fa-bell icon"></i> Modèles de notification
-      </a>
-      @endcan
-
-      <span class="sidebar-label">Gestion</span>
-      @hasanyrole(['admin', 'super-admin'])
-      <a href="{{ route('admin.users') }}"
-         class="sidebar-link {{ request()->routeIs('admin.users') ? 'active':'' }}">
-        <i class="fas fa-users icon"></i> Clients &amp; Utilisateurs
-      </a>
-      <a href="{{ route('admin.accounts.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.accounts*') ? 'active':'' }}">
-        <i class="fas fa-wallet icon"></i> Comptes clients
-      </a>
-      <a href="{{ route('admin.transfers.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.transfers*') ? 'active':'' }}">
-        <i class="fas fa-exchange-alt icon"></i> Transferts
-      </a>
-      <a href="{{ route('admin.invoices.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.invoices*') ? 'active':'' }}">
-        <i class="fas fa-file-invoice icon"></i> Factures
-      </a>
-      @endhasanyrole
-      @can('manage-site-contacts')
-      <a href="{{ route('admin.site-contacts.edit') }}"
-         class="sidebar-link {{ request()->routeIs('admin.site-contacts*') ? 'active':'' }}">
-        <i class="fas fa-map-marker-alt icon"></i> Coordonnées
-      </a>
-      @endcan
-      @can('manage-social-links')
-      <a href="{{ route('admin.social-links.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.social-links*') ? 'active':'' }}">
-        <i class="fas fa-share-alt icon"></i> Réseaux sociaux
-      </a>
-      @endcan
-      @can('manage-languages')
-      <a href="{{ route('admin.languages.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.languages*') ? 'active':'' }}">
-        <i class="fas fa-language icon"></i> Langues
-      </a>
-      @endcan
-      @can('manage-currencies')
-      <a href="{{ route('admin.currencies.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.currencies*') ? 'active':'' }}">
-        <i class="fas fa-money-bill-wave icon"></i> Devises
-      </a>
-      @endcan
-      @can('manage-loan-settings')
-      <a href="{{ route('admin.loan-settings.edit') }}"
-         class="sidebar-link {{ request()->routeIs('admin.loan-settings*') ? 'active':'' }}">
-        <i class="fas fa-percentage icon"></i> Paramètres de prêt
-      </a>
-      @endcan
-      @hasanyrole(['admin', 'super-admin'])
-      @php $admSupUnread = \App\Models\SupportMessage::where('sender_type','client')->whereNull('read_at')->count(); @endphp
-      <a href="{{ route('admin.support.index') }}"
-         class="sidebar-link {{ request()->routeIs('admin.support*') ? 'active':'' }}">
-        <i class="fas fa-comments icon"></i> Support
-        @if($admSupUnread > 0)
-        <span style="margin-left:auto;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--c-accent);color:var(--c-on-accent);font-size:.62rem;font-weight:800;display:inline-flex;align-items:center;justify-content:center">{{ $admSupUnread }}</span>
-        @endif
-      </a>
-      @endhasanyrole
-
-      <span class="sidebar-label">Compte</span>
-      @role('admin')
-      <a href="{{ route('admin.profile') }}"
-         class="sidebar-link {{ request()->routeIs('admin.profile*') ? 'active':'' }}">
-        <i class="fas fa-user-circle icon"></i> Mon profil
-      </a>
-      @endrole
-      <a href="{{ route('home',['locale'=>app()->getLocale()]) }}" class="sidebar-link">
-        <i class="fas fa-globe icon"></i> Retour au site
-      </a>
-    @endrole
+    <span class="sidebar-label">Compte</span>
+    <a href="{{ Auth::user()->hasRole('super-admin') ? route('super-admin.profile') : route('admin.profile') }}"
+       class="sidebar-link {{ request()->routeIs('admin.profile*', 'super-admin.profile*') ? 'active':'' }}">
+      <i class="fas fa-user-circle icon"></i> Mon profil
+    </a>
+    <a href="{{ route('home',['locale'=>app()->getLocale()]) }}" class="sidebar-link">
+      <i class="fas fa-globe icon"></i> Retour au site
+    </a>
 
   @endauth
   </nav>
@@ -988,37 +827,6 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
         <span class="d-none d-sm-inline">Installer l'app</span>
       </button>
       @endif
-      @if(Auth::user()->hasAnyRole(['admin','super-admin']))
-      @php $adminUnread = \App\Models\AdminNotification::where('admin_id', Auth::id())->whereNull('read_at')->count(); @endphp
-      <div style="position:relative" id="notifWrap">
-        <button class="topbar-badge" id="notifBell" onclick="toggleNotifPanel()"
-                style="border:none;cursor:pointer;background:var(--c-surface)" title="Notifications">
-          <i class="fas fa-bell"></i>
-          <span id="adminNotifBadge" style="position:absolute;top:-4px;right:-4px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:var(--c-accent);color:var(--c-on-accent);font-size:.58rem;font-weight:800;display:{{ $adminUnread > 0 ? 'flex' : 'none' }};align-items:center;justify-content:center;border:2px solid var(--c-surface)">{{ $adminUnread > 9 ? '9+' : $adminUnread }}</span>
-        </button>
-        {{-- Dropdown panel --}}
-        <div id="notifPanel" style="display:none;position:absolute;top:calc(100% + 10px);right:0;
-          width:340px;background:var(--c-surface);border:1px solid var(--c-border);
-          border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:500;overflow:hidden">
-          <div style="display:flex;align-items:center;justify-content:space-between;
-            padding:.8125rem 1.125rem;border-bottom:1px solid var(--c-border)">
-            <span style="font-size:.875rem;font-weight:700;color:var(--c-navy)">Notifications</span>
-            <button onclick="markAllReadPanel()" style="background:none;border:none;color:var(--c-accent);
-              font-size:.72rem;font-weight:700;cursor:pointer;padding:.2rem .4rem;border-radius:4px;transition:.15s"
-              onmouseover="this.style.background='var(--c-amber-l)'" onmouseout="this.style.background='none'">
-              Tout lire
-            </button>
-          </div>
-          <div id="notifList" style="max-height:360px;overflow-y:auto"></div>
-          <div style="padding:.625rem 1.125rem;border-top:1px solid var(--c-border);text-align:center">
-            <a href="{{ Auth::user()->hasRole('super-admin') ? route('super-admin.profile') : route('admin.profile') }}"
-               style="font-size:.75rem;color:var(--c-muted);display:inline-flex;align-items:center;gap:.35rem">
-              <i class="fas fa-user-circle"></i> Mon profil
-            </a>
-          </div>
-        </div>
-      </div>
-      @endif
       @endauth
       <div class="topbar-avatar" title="{{ Auth::user()->name ?? '' }}">
         {{ strtoupper(substr(Auth::user()->name??'U',0,1)) }}
@@ -1050,114 +858,7 @@ a.pg-pro__link:hover { background:var(--c-bg); border-color:#94A3B8; color:var(-
 function openSidebar()  { document.getElementById('sidebar').classList.add('open'); document.getElementById('sidebarOverlay').classList.add('show'); }
 function closeSidebar() { document.getElementById('sidebar').classList.remove('open'); document.getElementById('sidebarOverlay').classList.remove('show'); }
 </script>
-@auth
-@if(Auth::user()->hasAnyRole(['admin','super-admin']))
-<script>
-/* ── Notification panel ── */
-let _notifOpen = false;
-
-function toggleNotifPanel() {
-  _notifOpen = !_notifOpen;
-  const panel = document.getElementById('notifPanel');
-  panel.style.display = _notifOpen ? 'block' : 'none';
-  if (_notifOpen) _fetchNotifs();
-}
-
-document.addEventListener('click', function(e) {
-  const wrap = document.getElementById('notifWrap');
-  if (wrap && !wrap.contains(e.target)) {
-    document.getElementById('notifPanel').style.display = 'none';
-    _notifOpen = false;
-  }
-});
-
-async function _fetchNotifs() {
-  try {
-    const r = await fetch('{{ route("admin.notifications.list") }}', {
-      headers: { 'X-Requested-With': 'XMLHttpRequest' }
-    });
-    const d = await r.json();
-    _renderNotifs(d.notifications || []);
-  } catch(e) {}
-}
-
-function _renderNotifs(list) {
-  const el = document.getElementById('notifList');
-  if (!list.length) {
-    el.innerHTML = '<div style="padding:2.25rem 1rem;text-align:center;color:var(--c-muted);font-size:.8rem"><i class="fas fa-bell-slash" style="font-size:1.75rem;display:block;margin-bottom:.625rem;opacity:.35"></i>Aucune notification</div>';
-    return;
-  }
-  const colorMap = { support:'var(--c-violet)', transfer:'var(--c-blue)', system:'var(--c-amber)' };
-  const bgMap    = { support:'rgba(124,58,237,.1)', transfer:'rgba(37,99,235,.1)', system:'rgba(217,119,6,.1)' };
-  el.innerHTML = list.map(n => {
-    const col = colorMap[n.type] || 'var(--c-accent)';
-    const bg  = bgMap[n.type]   || 'rgba(38, 130, 38,.1)';
-    const unreadDot = n.read ? '' : `<div style="width:6px;height:6px;border-radius:50%;background:var(--c-accent);flex-shrink:0;margin-top:.4rem"></div>`;
-    return `<div onclick="${n.url ? `window.location='${n.url}'` : ''}"
-      style="display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 1.125rem;
-        border-bottom:1px solid var(--c-border);cursor:${n.url ? 'pointer' : 'default'};
-        background:${n.read ? 'transparent' : 'rgba(38, 130, 38,.04)'};transition:.15s"
-      onmouseover="this.style.background='var(--c-bg)'"
-      onmouseout="this.style.background='${n.read ? 'transparent' : 'rgba(38, 130, 38,.04)'}'">
-      <div style="width:34px;height:34px;border-radius:8px;flex-shrink:0;display:flex;
-        align-items:center;justify-content:center;font-size:.8rem;background:${bg};color:${col}">
-        <i class="fas fa-${n.icon}"></i>
-      </div>
-      <div style="flex:1;min-width:0">
-        <div style="font-size:.8rem;font-weight:${n.read ? '500' : '700'};color:var(--c-navy);
-          white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${n.title}</div>
-        <div style="font-size:.73rem;color:var(--c-muted);margin-top:.1rem;
-          white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${n.body}</div>
-        <div style="font-size:.65rem;color:var(--c-muted);margin-top:.2rem">${n.time}</div>
-      </div>
-      ${unreadDot}
-    </div>`;
-  }).join('');
-}
-
-async function markAllReadPanel() {
-  try {
-    await fetch('{{ route("admin.notifications.read-all") }}', {
-      method: 'POST',
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest',
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-        'Accept': 'application/json',
-      }
-    });
-    const badge = document.getElementById('adminNotifBadge');
-    badge.style.display = 'none';
-    _fetchNotifs();
-  } catch(e) {}
-}
-
-/* ── Badge polling (15s) ── */
-(function() {
-  const badge = document.getElementById('adminNotifBadge');
-  if (!badge) return;
-  setInterval(async () => {
-    try {
-      const r = await fetch('{{ route("admin.notifications.count") }}', {
-        headers: { 'X-Requested-With': 'XMLHttpRequest' }
-      });
-      const d = await r.json();
-      const n = d.count || 0;
-      badge.textContent = n > 9 ? '9+' : n;
-      badge.style.display = n > 0 ? 'flex' : 'none';
-    } catch(e) {}
-  }, 15000);
-})();
-</script>
-@endif
-@endauth
 @stack('scripts')
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
-  });
-}
-</script>
 @auth
 @if(Auth::user()->hasAnyRole(['admin','super-admin']))
 <script>

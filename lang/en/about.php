@@ -3,7 +3,7 @@
 return [
     // Hero / intro
     'hero_tagline' => 'our story',
-    'hero_title' => 'An online bank built to move faster than traditional banks',
+    'hero_title' => 'Online financing built to move faster than traditional lenders',
     'hero_text' => 'For 8 years, ' . site_name() . ' has been helping individuals and businesses bring their financing projects to life, guided by one simple belief: getting a loan should never be complicated.',
 
     // Mission / history

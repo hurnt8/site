@@ -3,7 +3,7 @@
 return [
     // Hero / įvadas
     'hero_tagline' => 'mūsų istorija',
-    'hero_title' => 'Internetinis bankas, sukurtas veikti greičiau nei tradiciniai bankai',
+    'hero_title' => 'Internetinis finansavimas, sukurtas veikti greičiau nei tradiciniai kreditoriai',
     'hero_text' => 'Jau 8 metų ' . site_name() . ' padeda privatiems asmenims ir įmonėms įgyvendinti savo finansavimo projektus, vadovaudamiesi paprastu įsitikinimu: gauti paskolą niekada neturėtų būti sudėtinga.',
 
     // Misija / istorija

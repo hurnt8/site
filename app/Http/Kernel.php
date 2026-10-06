@@ -69,7 +69,5 @@ class Kernel extends HttpKernel
         'role'              => \Spatie\Permission\Middleware\RoleMiddleware::class,
         'permission'        => \Spatie\Permission\Middleware\PermissionMiddleware::class,
         'role_or_permission'=> \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
-        'client.locale'     => \App\Http\Middleware\SetClientLocale::class,
-        'ajax.secure'       => \App\Http\Middleware\SecureAjaxApi::class,
     ];
 }

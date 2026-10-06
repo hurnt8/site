@@ -3,7 +3,7 @@
 return [
     // Hero / introdução
     'hero_tagline' => 'a nossa história',
-    'hero_title' => 'Um banco online pensado para ser mais rápido do que os bancos tradicionais',
+    'hero_title' => 'Um financiamento online pensado para ser mais rápido do que os circuitos tradicionais',
     'hero_text' => 'Há 8 anos que a ' . site_name() . ' apoia particulares e empresas nos seus projetos de financiamento, guiada por uma convicção simples: obter um empréstimo nunca deveria ser complicado.',
 
     // Missão / história

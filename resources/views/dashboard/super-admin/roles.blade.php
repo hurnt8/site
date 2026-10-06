@@ -169,7 +169,7 @@ $roleConf = [
     'bg'     => '#FEF9EC',
     'badge'  => 'bs-amber',
     'name'   => 'Administrateur',
-    'desc'   => 'Gestion complète des prêts, des utilisateurs et des modèles de contrats.',
+    'desc'   => 'Gestion des informations du site (coordonnées, réseaux sociaux, langues, devises, paramètres).',
     'accent' => 'var(--c-accent)',
   ],
   'client' => [
@@ -200,90 +200,6 @@ $roleConf = [
     <div class="role-card__accent" style="background:{{ $cfg['accent'] }}"></div>
   </div>
   @endforeach
-</div>
-
-{{-- ── PERMISSION MATRIX ────────────────────────────────────────── --}}
-<div class="card-pro mb-4">
-  <div class="card-pro-hdr card-pro-hdr--toggle" id="matrixHdr" onclick="toggleMatrix()">
-    <div class="card-pro-title">
-      <span class="icon-dot"></span>Matrice des permissions
-    </div>
-    <span class="toggle-label" style="font-size:.7rem;color:var(--c-muted)">
-      Détail par rôle <i class="fas fa-chevron-down"></i>
-    </span>
-  </div>
-  <div class="perm-scroll" id="matrixBody" style="display:none">
-    <table class="perm-matrix">
-      <thead>
-        <tr>
-          <th style="width:55%;text-align:left">Fonctionnalité</th>
-          <th>
-            <div class="perm-col-head">
-              <div class="perm-col-icon" style="background:#EEF2FF;color:var(--c-navy)"><i class="fas fa-user"></i></div>
-              <span>Client</span>
-            </div>
-          </th>
-          <th>
-            <div class="perm-col-head">
-              <div class="perm-col-icon" style="background:#FEF9EC;color:var(--c-accent-d)"><i class="fas fa-shield-alt"></i></div>
-              <span>Admin</span>
-            </div>
-          </th>
-          <th>
-            <div class="perm-col-head">
-              <div class="perm-col-icon" style="background:#EEF2FF;color:var(--c-navy)"><i class="fas fa-crown"></i></div>
-              <span>Super Admin</span>
-            </div>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="perm-section-row">
-          <td colspan="4">Espace personnel</td>
-        </tr>
-        @php
-        $matrix = [
-          // [label, sub, client, admin, super]
-          ['Tableau de bord personnel',         'Accès au dashboard',                        1, 1, 1],
-          ['Soumettre une demande de prêt',      'Formulaire de demande en ligne',             1, 1, 1],
-          ['Suivre ses propres demandes',        'Historique et statuts',                      1, 1, 1],
-          ['Télécharger ses contrats',           'PDF et documents signés',                    1, 1, 1],
-          ['__section' => 'Gestion des prêts'],
-          ['Voir toutes les demandes',           'Accès global aux dossiers clients',          0, 1, 1],
-          ['Approuver ou refuser un prêt',       'Changer le statut d\'une demande',           0, 1, 1],
-          ['Créer un dossier manuellement',      'Saisie d\'un dossier pour un client',        0, 1, 1],
-          ['Générer un contrat PDF / DOCX',      'Depuis un modèle de contrat',                0, 1, 1],
-          ['Envoyer un contrat par email',       'Notification au client',                     0, 1, 1],
-          ['__section' => 'Administration'],
-          ['Gérer les utilisateurs',             'Créer, inviter et modifier les comptes',     0, 1, 1],
-          ['Gérer les modèles de contrats',      'Templates HTML et DOCX',                     0, 1, 1],
-          ['Voir le tableau super admin',        'Vue d\'ensemble globale du système',         0, 0, 1],
-          ['Attribuer les rôles',                'Modifier le niveau d\'accès d\'un compte',   0, 0, 1],
-          ['Accéder à toutes les données',       'Toutes fonctionnalités sans restriction',    0, 0, 1],
-        ];
-        @endphp
-        @foreach($matrix as $row)
-          @if(isset($row['__section']))
-          <tr class="perm-section-row">
-            <td colspan="4">{{ $row['__section'] }}</td>
-          </tr>
-          @else
-          <tr>
-            <td>
-              <div class="perm-feature">
-                {{ $row[0] }}
-                <small>{{ $row[1] }}</small>
-              </div>
-            </td>
-            <td><span class="perm-check {{ $row[2] ? 'perm-yes' : 'perm-no' }}"><i class="fas fa-{{ $row[2] ? 'check' : 'times' }}"></i></span></td>
-            <td><span class="perm-check {{ $row[3] ? 'perm-yes' : 'perm-no' }}"><i class="fas fa-{{ $row[3] ? 'check' : 'times' }}"></i></span></td>
-            <td><span class="perm-check {{ $row[4] ? 'perm-yes' : 'perm-no' }}"><i class="fas fa-{{ $row[4] ? 'check' : 'times' }}"></i></span></td>
-          </tr>
-          @endif
-        @endforeach
-      </tbody>
-    </table>
-  </div>
 </div>
 
 {{-- ── ATTRIBUTION DES RÔLES ────────────────────────────────────── --}}
@@ -320,7 +236,6 @@ $roleConf = [
           <th>Type</th>
           <th>Rôle actuel</th>
           <th>Changer le rôle</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -371,15 +286,10 @@ $roleConf = [
               </select>
             </form>
           </td>
-          <td data-label="">
-            <a href="{{ route('admin.users') }}" class="btn-icon" title="Voir le profil">
-              <i class="fas fa-external-link-alt"></i>
-            </a>
-          </td>
         </tr>
         @empty
         <tr>
-          <td colspan="5" style="text-align:center;padding:2.5rem;color:var(--c-muted)">
+          <td colspan="4" style="text-align:center;padding:2.5rem;color:var(--c-muted)">
             <i class="fas fa-users" style="font-size:1.5rem;display:block;margin-bottom:.5rem;opacity:.3"></i>
             Aucun utilisateur trouvé
           </td>
@@ -463,14 +373,6 @@ $roleConf = [
 
 @push('scripts')
 <script>
-function toggleMatrix() {
-  const body = document.getElementById('matrixBody');
-  const hdr  = document.getElementById('matrixHdr');
-  const open = body.style.display !== 'none';
-  body.style.display = open ? 'none' : '';
-  hdr.classList.toggle('is-open', !open);
-}
-
 function filterTable(query) {
   const q    = query.toLowerCase().trim();
   const role = document.getElementById('roleFilter').value;
