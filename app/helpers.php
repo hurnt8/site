@@ -58,7 +58,7 @@ if (! function_exists('site_name')) {
     function site_name(): string
     {
         return site_identity()?->name
-            ?: site_config_fallback('app.name', 'Aurelis Capital');
+            ?: site_config_fallback('app.name', 'Aurenza Capital');
     }
 }
 

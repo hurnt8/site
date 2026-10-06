@@ -67,7 +67,7 @@ class SiteAssetsController extends Controller
             }
 
             $canvas = imagecreatetruecolor($size, $size);
-            imagefill($canvas, 0, 0, imagecolorallocate($canvas, 0x2A, 0x19, 0x67));
+            imagefill($canvas, 0, 0, imagecolorallocate($canvas, 0x0E, 0x2A, 0x3A));
 
             // Un logo deja carre est presque toujours une icone concue comme telle :
             // on remplit le cadre. Un logotype large est encastre a 80% pour survivre
@@ -180,8 +180,8 @@ class SiteAssetsController extends Controller
             'scope'            => '/',
             'display'          => 'standalone',
             'orientation'      => 'any',
-            'background_color' => '#2A1967',
-            'theme_color'      => '#268226',
+            'background_color' => '#0E2A3A',
+            'theme_color'      => '#8F6A1F',
             'lang'             => app()->getLocale(),
             'categories'       => ['finance', 'business'],
             'icons'            => [

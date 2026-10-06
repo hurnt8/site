@@ -21,15 +21,15 @@
     background: #fff;
     user-select: none;
 }
-.doc-type-card:hover { border-color: #170E39; background: #f0f5ff; }
+.doc-type-card:hover { border-color: #081922; background: #f0f5ff; }
 .doc-type-card.selected {
-    border-color: #170E39;
+    border-color: #081922;
     background: #e8f0ff;
     box-shadow: 0 0 0 3px rgba(26,64,128,.1);
 }
 .doc-type-icon { font-size: 1.6rem; display: block; margin-bottom: .4rem; color: #4a6fa5; }
-.doc-type-card.selected .doc-type-icon { color: #170E39; }
-.doc-type-label { font-size: .75rem; font-weight: 700; color: #170E39; line-height: 1.2; }
+.doc-type-card.selected .doc-type-icon { color: #081922; }
+.doc-type-label { font-size: .75rem; font-weight: 700; color: #081922; line-height: 1.2; }
 
 .upload-zone {
     position: relative;
@@ -42,7 +42,7 @@
     transition: border-color .15s, background .15s;
     cursor: pointer;
 }
-.upload-zone:hover { border-color: #170E39; background: #eef3ff; }
+.upload-zone:hover { border-color: #081922; background: #eef3ff; }
 .upload-zone.has-file { border-color: #28a745; background: #f0fff4; }
 .upload-zone input[type="file"] {
     position: absolute;
@@ -56,13 +56,13 @@
     gap: .4rem;
     font-size: .75rem;
     font-weight: 700;
-    color: #170E39;
+    color: #081922;
     letter-spacing: .04em;
     text-transform: uppercase;
     margin-bottom: .6rem;
 }
 .step-badge .num {
-    background: #170E39;
+    background: #081922;
     color: #fff;
     border-radius: 50%;
     width: 1.4rem;
@@ -83,7 +83,7 @@
     gap: .5rem 1.4rem;
 }
 .recap-box__item { font-size: .82rem; color: #4a6fa5; }
-.recap-box__item strong { color: #170E39; }
+.recap-box__item strong { color: #081922; }
 [x-cloak] { display: none !important; }
 </style>
 @endpush
@@ -289,7 +289,7 @@
                             {{-- Note : verso non requis --}}
                             <p x-show="!needsVerso" x-transition
                                style="font-size:.82rem;color:#666;background:#f0f5ff;border-radius:7px;padding:.6rem .9rem;margin-bottom:1rem;">
-                                <i class="fas fa-info-circle" style="color:#170E39;margin-right:.35rem;"></i>
+                                <i class="fas fa-info-circle" style="color:#081922;margin-right:.35rem;"></i>
                                 @lang('message.docs_single_photo')
                             </p>
 

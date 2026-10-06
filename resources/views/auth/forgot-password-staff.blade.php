@@ -6,19 +6,19 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#268226">
+<meta name="theme-color" content="#8F6A1F">
 <link rel="icon" type="image/png" sizes="192x192" href="/site-icon-192.png">
 <title>Mot de passe oublié — {{ site_name() }} Admin</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('assets/vendors/fontawesome/css/all.min.css') }}">
 
 <style>
 :root{
-  --navy:#2A1967;--nm:#3A2A72;--nl:#443579;
-  --accent:#65DC50;--gd:#379627;--gp:#E9F3E9;
+  --navy:#0E2A3A;--nm:#1A3D52;--nl:#24485C;
+  --accent:#E0B55A;--gd:#A87F2B;--gp:#F6EEDC;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{
@@ -35,7 +35,7 @@ a{text-decoration:none;color:inherit}
   background-size:40px 40px;
 }
 .bg-orb{position:fixed;top:-100px;right:-100px;width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(101, 220, 80,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
+  background:radial-gradient(circle,rgba(224, 181, 90,.08) 0%,transparent 70%);pointer-events:none;z-index:0}
 
 .topbar{position:relative;z-index:10;display:flex;align-items:center;
   padding:.9rem 1.5rem;padding-top:calc(.9rem + env(safe-area-inset-top,0px));}
@@ -50,9 +50,9 @@ a{text-decoration:none;color:inherit}
 
 .icon-badge{
   width:72px;height:72px;border-radius:50%;
-  background:rgba(101, 220, 80,.1);border:1.5px solid rgba(101, 220, 80,.28);
+  background:rgba(224, 181, 90,.1);border:1.5px solid rgba(224, 181, 90,.28);
   display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;
-  box-shadow:0 0 28px rgba(101, 220, 80,.15);
+  box-shadow:0 0 28px rgba(224, 181, 90,.15);
 }
 .icon-badge i{font-size:1.75rem;color:var(--accent)}
 
@@ -86,7 +86,7 @@ a{text-decoration:none;color:inherit}
   outline:none;transition:border-color .2s,box-shadow .2s,background .2s;
 }
 .finput::placeholder{color:rgba(255,255,255,.25)}
-.finput:focus{border-color:var(--accent);background:rgba(255,255,255,.08);box-shadow:0 0 0 3.5px rgba(101, 220, 80,.15)}
+.finput:focus{border-color:var(--accent);background:rgba(255,255,255,.08);box-shadow:0 0 0 3.5px rgba(224, 181, 90,.15)}
 .finput:focus ~ .ficon,.frel:focus-within .ficon{color:var(--accent)}
 .finput.err{border-color:#ef4444}
 
@@ -94,8 +94,8 @@ a{text-decoration:none;color:inherit}
   width:100%;padding:.92rem 1.5rem;border:none;border-radius:10px;
   font-size:.95rem;font-weight:700;font-family:'Inter',sans-serif;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:.625rem;
-  background:var(--accent);color:#2A1967;letter-spacing:.01em;
-  box-shadow:0 6px 24px rgba(101, 220, 80,.3);
+  background:var(--accent);color:#0E2A3A;letter-spacing:.01em;
+  box-shadow:0 6px 24px rgba(224, 181, 90,.3);
   transition:filter .2s,box-shadow .2s,transform .1s;margin-top:.25rem;
 }
 .fbtn:hover{filter:brightness(1.08)}

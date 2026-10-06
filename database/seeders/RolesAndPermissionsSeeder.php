@@ -75,7 +75,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $admin = User::firstOrCreate(
             ['email' => 'noreply@aureliscapital.de'],
             [
-                'name'     => 'Admin Aurelis Capital',
+                'name'     => 'Admin Aurenza Capital',
                 'password' => Hash::make('Admin@2025!'),
                 'type'     => 'staff',
             ]

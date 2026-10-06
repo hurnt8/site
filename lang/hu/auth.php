@@ -30,7 +30,7 @@ return [
     'email'               => 'E-mail cím',
     'email_staff'         => 'Céges e-mail cím',
     'email_ph'            => 'on@pelda.com',
-    'email_ph_staff'      => 'agent@aureliscapital.de',
+    'email_ph_staff'      => 'agent@aurenzacapital.com',
     'password_label'      => 'Jelszó',
     'remember'            => 'Emlékezzen rám',
     'remember_staff'      => 'Bejelentkezve maradok',

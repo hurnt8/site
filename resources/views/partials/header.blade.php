@@ -9,10 +9,10 @@
         <!-- Logo -->
         <a href="{{ route('home', ['locale' => $locale]) }}" class="flex items-center gap-3 flex-shrink-0">
             <span class="logo-img logo-img--white">
-                <x-logo variant="full" theme="dark" size="lg" :dark="$siteContact->logo_dark_path ? Storage::url($siteContact->logo_dark_path) : null" :name="$siteContact->name" />
+                <x-logo variant="full" theme="dark" size="md" :dark="$siteContact->logo_dark_path ? Storage::url($siteContact->logo_dark_path) : null" :name="$siteContact->name" />
             </span>
             <span class="logo-img logo-img--color">
-                <x-logo variant="full" theme="light" size="lg" :light="$siteContact->logo_light_path ? Storage::url($siteContact->logo_light_path) : null" :name="$siteContact->name" />
+                <x-logo variant="full" theme="light" size="md" :light="$siteContact->logo_light_path ? Storage::url($siteContact->logo_light_path) : null" :name="$siteContact->name" />
             </span>
         </a>
 
@@ -35,7 +35,7 @@
                 : $route === $link['route'];
             @endphp
             <a href="{{ route($link['route'], ['locale' => $locale]) }}"
-               class="nav-link px-4 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 {{ $active ? 'nav-link--active' : '' }}">
+               class="nav-link whitespace-nowrap px-3 py-2 text-sm font-semibold rounded-lg transition-colors duration-200 {{ $active ? 'nav-link--active' : '' }}">
                 @lang($link['label'])
             </a>
             @endforeach
@@ -50,7 +50,7 @@
                     class="lang-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-200">
                     @php $flagExt = \App\Models\Language::enabledList()->firstWhere('code', $locale)->flag_ext ?? 'png'; @endphp
                     <img src="{{ asset('images/' . $locale . '.' . $flagExt) }}" alt="{{ $locale }}" class="w-5 h-auto rounded-sm">
-                    <span class="hidden sm:inline">{{ strtoupper($locale) }}</span>
+                    <span class="hidden sm:inline whitespace-nowrap">{{ strtoupper($locale) }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform duration-200" :class="{ 'rotate-180': open }" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
                     </svg>

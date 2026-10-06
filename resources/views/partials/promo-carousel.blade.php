@@ -18,11 +18,11 @@
 }
 .promo-slide::before {
     content:''; position:absolute; inset:0;
-    background:linear-gradient(90deg, rgba(42,25,103,.96) 0%, rgba(42,25,103,.88) 38%, rgba(42,25,103,.4) 68%, rgba(42,25,103,.15) 100%);
+    background:linear-gradient(90deg, rgba(14,42,58,.96) 0%, rgba(14,42,58,.88) 38%, rgba(14,42,58,.4) 68%, rgba(14,42,58,.15) 100%);
 }
 @media (max-width:768px) {
     .promo-slide { min-height:520px; }
-    .promo-slide::before { background:linear-gradient(180deg, rgba(42,25,103,.75) 0%, rgba(42,25,103,.94) 55%, var(--navy) 100%); }
+    .promo-slide::before { background:linear-gradient(180deg, rgba(14,42,58,.75) 0%, rgba(14,42,58,.94) 55%, var(--navy) 100%); }
 }
 .promo-slide__inner {
     position:relative; z-index:1;
@@ -37,7 +37,7 @@
     letter-spacing:.1em; padding:.3rem .9rem; border-radius:999px; margin-bottom:1.1rem;
 }
 .promo-slide__title {
-    font-family:'Playfair Display',serif; color:#fff; font-weight:700;
+    font-family:'Fraunces',serif; color:#fff; font-weight:700;
     font-size:clamp(1.5rem,3vw,2.35rem); line-height:1.22; margin:0 0 .75rem;
     text-shadow:0 2px 16px rgba(0,0,0,.25);
 }

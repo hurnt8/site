@@ -81,19 +81,19 @@
 }
 .needs-card:hover {
     transform:translateY(-4px);
-    box-shadow:0 18px 40px rgba(42,25,103,.1);
+    box-shadow:0 18px 40px rgba(14,42,58,.1);
     border-color:transparent;
 }
 .needs-card__icon {
     width:50px; height:50px; border-radius:13px;
-    background:rgba(38,130,38,.08); color:var(--accent);
+    background:rgba(143,106,31,.08); color:var(--accent);
     display:flex; align-items:center; justify-content:center;
     font-size:1.2rem; margin-bottom:1.1rem;
     transition:background .22s ease, color .22s ease;
 }
 .needs-card:hover .needs-card__icon { background:var(--accent); color:#fff; }
 .needs-card__title {
-    font-family:'Playfair Display',serif; font-weight:700; color:var(--navy);
+    font-family:'Fraunces',serif; font-weight:700; color:var(--navy);
     font-size:1.05rem; margin:0 0 .5rem; line-height:1.3;
 }
 .needs-card__text { font-size:.85rem; color:var(--gray-500); line-height:1.65; margin:0 0 1.1rem; flex:1; }
@@ -168,7 +168,7 @@
     padding:.3rem .8rem; white-space:nowrap; flex-shrink:0;
     transition:border-color .25s ease, box-shadow .25s ease;
 }
-.about-partner-bar__name:hover { border-color:var(--accent); box-shadow:0 2px 10px rgba(38, 130, 38,.18); }
+.about-partner-bar__name:hover { border-color:var(--accent); box-shadow:0 2px 10px rgba(143, 106, 31,.18); }
 @media (prefers-reduced-motion: reduce) {
     }
 </style>
@@ -342,11 +342,11 @@
 
                 @foreach ([1,2,3] as $r)
                 <div class="d-flex align-items-start gap-3 mb-4">
-                    <div style="width:36px;height:36px;background:rgba(38, 130, 38,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
+                    <div style="width:36px;height:36px;background:rgba(143, 106, 31,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;">
                         <i class="fas fa-check"></i>
                     </div>
                     <div>
-                        <h4 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin:0 0 .25rem;">
+                        <h4 style="font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:#fff;margin:0 0 .25rem;">
                             {{ __('home.loan_reasons.reasons.title' . $r) }}
                         </h4>
                         <p style="font-size:.875rem;color:rgba(255,255,255,.55);margin:0;line-height:1.65;">

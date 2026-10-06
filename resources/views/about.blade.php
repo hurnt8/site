@@ -120,7 +120,7 @@
                     <div style="width:52px;height:52px;background:var(--accent-pale);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--accent-dark);font-size:1.25rem;margin-bottom:1.25rem;">
                         <i class="{{ $v['icon'] }}"></i>
                     </div>
-                    <h3 style="font-family:'Playfair Display',serif;font-size:1.0625rem;font-weight:700;color:var(--navy);margin-bottom:.625rem;">
+                    <h3 style="font-family:'Fraunces',serif;font-size:1.0625rem;font-weight:700;color:var(--navy);margin-bottom:.625rem;">
                         {{ $v['title'] }}
                     </h3>
                     <p style="font-size:.85rem;color:var(--gray-500);line-height:1.7;margin:0;">

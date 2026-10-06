@@ -30,7 +30,7 @@ return [
     'email'               => 'Correo electrónico',
     'email_staff'         => 'Email profesional',
     'email_ph'            => 'usted@ejemplo.com',
-    'email_ph_staff'      => 'agente@aureliscapital.de',
+    'email_ph_staff'      => 'agente@aurenzacapital.com',
     'password_label'      => 'Contraseña',
     'remember'            => 'Recordarme',
     'remember_staff'      => 'Mantener sesión',

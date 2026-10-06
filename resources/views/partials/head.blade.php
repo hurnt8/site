@@ -17,10 +17,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/site-icon-180.png">
     <link rel="shortcut icon" type="image/png" href="/site-icon-32.png">
 
-    <!-- Fonts: Inter + Playfair Display -->
+    <!-- Fonts: Inter + Fraunces -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,19 +29,19 @@
         theme: {
             extend: {
                 colors: {
-                    navy:      { DEFAULT:'#2A1967', mid:'#3A2A72', light:'#443579', deep:'#211450' },
-                    accent:      { DEFAULT:'#268226', light:'#379627', pale:'#E9F3E9', dark:'#1F6B1F' },
-                    cream:     { DEFAULT:'#F3F0FA', light:'#F9F7FC' },
+                    navy:      { DEFAULT:'#0E2A3A', mid:'#1A3D52', light:'#24485C', deep:'#0A1F2B' },
+                    accent:      { DEFAULT:'#8F6A1F', light:'#A87F2B', pale:'#F6EEDC', dark:'#6F5116' },
+                    cream:     { DEFAULT:'#F5F1E8', light:'#FAF8F3' },
                 },
                 fontFamily: {
                     sans:  ['Inter','ui-sans-serif','system-ui','sans-serif'],
-                    serif: ['Playfair Display','Georgia','serif'],
+                    serif: ['Fraunces','Georgia','serif'],
                 },
                 boxShadow: {
-                    'card':  '0 1px 3px rgba(42,25,103,.06), 0 4px 16px rgba(42,25,103,.08)',
-                    'card-hover': '0 4px 8px rgba(42,25,103,.08), 0 16px 40px rgba(42,25,103,.12)',
-                    'accent':  '0 4px 24px rgba(38,130,38,.30)',
-                    'nav':   '0 1px 0 rgba(42,25,103,.08)',
+                    'card':  '0 1px 3px rgba(14,42,58,.06), 0 4px 16px rgba(14,42,58,.08)',
+                    'card-hover': '0 4px 8px rgba(14,42,58,.08), 0 16px 40px rgba(14,42,58,.12)',
+                    'accent':  '0 4px 24px rgba(143,106,31,.30)',
+                    'nav':   '0 1px 0 rgba(14,42,58,.08)',
                 },
                 animation: {
                     'fade-in-up': 'fadeInUp .6s ease forwards',
