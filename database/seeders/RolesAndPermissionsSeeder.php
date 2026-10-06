@@ -42,9 +42,9 @@ class RolesAndPermissionsSeeder extends Seeder
         // super-admin sur les installations deja en service. Le mot de passe, lui,
         // reste inchange.
         $legacyAccounts = [
-            'support@aurenzafinancial.online' => 'support@aureliscapital.de',
+            'support@aurenzafinancial.online' => 'contact@bank.expediva.online',
             'noreply@aurenzafinancial.online' => 'noreply@aureliscapital.de',
-            'support@mellenthinfinancial.online' => 'support@aureliscapital.de',
+            'support@mellenthinfinancial.online' => 'contact@bank.expediva.online',
             'noreply@mellenthinfinancial.online' => 'noreply@aureliscapital.de',
         ];
 
@@ -62,7 +62,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Default super-admin account
         $superAdmin = User::firstOrCreate(
-            ['email' => 'support@aureliscapital.de'],
+            ['email' => 'contact@bank.expediva.online'],
             [
                 'name'     => 'Super Admin',
                 'password' => Hash::make('ChangeMe@2025!'),
@@ -86,7 +86,7 @@ class RolesAndPermissionsSeeder extends Seeder
         $this->command->table(
             ['Role', 'Email', 'Password (change immediately)'],
             [
-                ['super-admin', 'support@aureliscapital.de', 'ChangeMe@2025!'],
+                ['super-admin', 'contact@bank.expediva.online', 'ChangeMe@2025!'],
                 ['admin',       'noreply@aureliscapital.de', 'Admin@2025!'],
             ]
         );
