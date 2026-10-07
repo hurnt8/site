@@ -28,9 +28,15 @@ use Illuminate\Support\Facades\Schema;
 |
 */
 
-$supportedLocales = Schema::hasTable('languages')
-    ? Language::enabledCodes()
-    : ['fr', 'en'];
+// Sans base joignable (composer install / package:discover sur un serveur dont le .env
+// n'est pas encore configuré, ou base pas encore migrée) : on retombe sur fr/en au lieu de planter.
+try {
+    $supportedLocales = Schema::hasTable('languages')
+        ? (Language::enabledCodes() ?: ['fr', 'en'])
+        : ['fr', 'en'];
+} catch (\Throwable $e) {
+    $supportedLocales = ['fr', 'en'];
+}
 
 Route::get('/', function (Request $request) use ($supportedLocales) {
     $locale = 'en';
