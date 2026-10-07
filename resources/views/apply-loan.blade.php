@@ -9,62 +9,50 @@
 
 @push('styles')
 <style>
-/* ── Devise ── */
-.currency-btn {
-    display:flex; align-items:center; gap:.5rem;
-    padding:.5rem .9rem; border-radius:10px; border:2px solid #e5e7eb;
-    background:#fff; cursor:pointer; transition:all .18s; user-select:none; white-space:nowrap;
+/* ── Blocs du formulaire ── */
+.loan-block {
+    border:1px solid var(--gray-200); border-radius:var(--radius-xl);
+    background:#fff; padding:1.4rem 1.4rem 1.5rem; margin-bottom:1.25rem;
 }
-.currency-btn:hover { border-color:var(--accent); }
-.currency-btn.active { background:var(--navy); border-color:var(--navy); color:#fff; box-shadow:0 3px 12px rgba(10,37,76,.2); }
-.currency-btn__flag { font-size:1.1rem; line-height:1; }
-.currency-btn__name { font-size:.79rem; font-weight:700; line-height:1.1; }
-.currency-btn__sym  { font-size:.7rem; opacity:.65; }
+.loan-block__head { display:flex; align-items:center; gap:.8rem; margin-bottom:1.15rem; }
+.loan-block__num {
+    width:30px; height:30px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    background:var(--forest); color:var(--brass-light); border-radius:var(--radius);
+    font-family:var(--font-display); font-weight:700; font-size:.95rem;
+}
+.loan-block__title { font-family:var(--font-display); font-weight:700; color:var(--forest); font-size:1.05rem; margin:0; line-height:1.2; }
+.loan-block__hint  { font-size:.76rem; color:var(--gray-500); margin:.1rem 0 0; }
 
-/* ── Chips ── */
-.chip-group { display:flex; flex-wrap:wrap; gap:.4rem; }
-.chip {
-    padding:.38rem .8rem; border-radius:999px; border:2px solid #d1d5db;
-    background:#fff; color:#374151; font-size:.82rem; font-weight:600;
-    cursor:pointer; transition:all .18s; white-space:nowrap;
+.loan-grid { align-items:end; display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+@media (max-width:767px) { .loan-grid { grid-template-columns:1fr; } }
+.loan-field label {
+    display:block; font-size:.7rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--forest); margin-bottom:.4rem;
 }
-.chip:hover { border-color:var(--accent); color:var(--accent); }
-.chip.active { background:var(--navy); color:#fff; border-color:var(--navy); }
+.loan-field .form-control { width:100%; height:50px; }
+.loan-input { position:relative; }
+.loan-input input { padding-right:3.4rem; font-weight:600; }
+.loan-input__unit {
+    position:absolute; right:.9rem; top:50%; transform:translateY(-50%);
+    font-size:.82rem; font-weight:700; color:var(--brass-dark); pointer-events:none;
+}
+.loan-rate { margin-left:auto; display:inline-flex; align-items:center; gap:.4rem; background:var(--brass-pale); color:var(--brass-dark); padding:.35rem .85rem; border-radius:999px; font-weight:800; font-size:.78rem; white-space:nowrap; }
+.loan-field label { min-height:2.4em; display:flex; align-items:flex-end; }
+.loan-error { font-size:.74rem; color:#b91c1c; margin:.45rem 0 0; }
 
-/* ── Champ libre montant/durée ── */
-.free-input-row {
-    display:flex; align-items:center; gap:.6rem;
-    margin-top:.65rem; padding:.55rem .85rem;
-    background:#f5f7fb; border:1.5px dashed #c8d3e8; border-radius:10px;
-}
-.free-input-row label { font-size:.76rem; font-weight:600; color:#6b7280; white-space:nowrap; margin:0; }
-.free-input-row input {
-    flex:1; border:none; background:transparent; font-size:.92rem; font-weight:700;
-    color:var(--navy); outline:none; min-width:0;
-}
-.free-input-row input::placeholder { font-weight:400; color:#b0bec5; }
-.free-input-row .sym { font-size:.88rem; font-weight:800; color:var(--navy); opacity:.7; }
-
-/* ── Résumé devis ── */
+/* ── Résumé du devis ── */
 .quote-result {
-    background:linear-gradient(135deg,var(--navy) 0%,#183560 100%);
-    border-radius:14px; padding:1.1rem 1.3rem; color:#fff;
+    background:var(--forest); border-radius:var(--radius-xl); padding:1.25rem 1.4rem; color:#fff;
+    border-top:3px solid var(--brass);
 }
-.quote-result__row { display:flex; flex-wrap:wrap; gap:.8rem; justify-content:space-between; margin-bottom:.75rem; }
-.quote-result__item { text-align:center; flex:1; min-width:80px; }
-.quote-result__label { font-size:.62rem; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.5); display:block; margin-bottom:.2rem; }
-.quote-result__value { font-size:1rem; font-weight:800; color:#fff; }
-.quote-result__value.accent { color:var(--accent); font-size:1.25rem; }
-.quote-result__sep { width:1px; height:32px; background:rgba(255,255,255,.15); }
+.quote-result__row { display:flex; flex-wrap:wrap; gap:.8rem; justify-content:space-between; margin-bottom:.8rem; }
+.quote-result__item { text-align:center; flex:1; min-width:110px; }
+.quote-result__label { font-size:.62rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.55); display:block; margin-bottom:.25rem; }
+.quote-result__value { font-family:var(--font-display); font-size:1.05rem; font-weight:700; color:#fff; }
+.quote-result__value.accent { color:var(--brass-light); font-size:1.4rem; }
+.quote-result__sep { width:1px; height:36px; background:rgba(255,255,255,.18); align-self:center; }
 
-/* ── Séparateurs de section ── */
-.form-section { margin-bottom:1.5rem; }
-.form-section-title {
-    font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.07em;
-    color:var(--navy); margin-bottom:.55rem; display:flex; align-items:center; gap:.5rem;
-}
-.form-section-title i { color:var(--accent); }
-.form-section-title::after { content:''; flex:1; height:1px; background:#eaecf0; }
+.form-section { margin-bottom:1.25rem; }
 
 /* ── Sidebar raisons ── */
 .reason-item { display:flex; gap:.75rem; padding:.8rem 0; }
@@ -295,20 +283,7 @@ document.addEventListener('alpine:init', () => {
             {{-- ══════════ FORMULAIRE PRINCIPAL ══════════ --}}
             <div class="col-lg-8" x-data="loanForm">
                 <div class="form-card wow fadeInLeft" data-wow-duration="700ms"
-                     style="border-top:4px solid var(--accent);">
-
-                    {{-- En-tête --}}
-                    <div class="d-flex align-items-start justify-content-between flex-wrap gap-2 mb-4">
-                        <div>
-                            <h3 style="font-family:'Fraunces',serif;color:var(--navy);font-size:1.25rem;font-weight:700;margin:0 0 .15rem;">
-                                @lang('loan.quote_step_title')
-                            </h3>
-                        </div>
-                        <div style="display:inline-flex;align-items:center;gap:.4rem;background:var(--navy);color:#FFFFFF;padding:.35rem .9rem;border-radius:999px;font-weight:800;font-size:.82rem;white-space:nowrap;flex-shrink:0;">
-                            <i class="fas fa-lock" style="font-size:.68rem;"></i>
-                            @lang('loan.label_rate') : {{ number_format((float) $loanSetting->annual_rate, 2) }} %
-                        </div>
-                    </div>
+                     style="background:transparent;border:0;box-shadow:none;padding:0;">
 
                     @if (session('success'))
                     {{-- ══ PANNEAU DE CONFIRMATION ══ --}}
@@ -336,95 +311,85 @@ document.addEventListener('alpine:init', () => {
                         </div>
                     @endif
 
-                    {{-- ── ① Devise ── --}}
-                    <div class="form-section">
-                        <div class="form-section-title">
-                            <i class="fas fa-globe"></i> @lang('loan.label_currency')
+                    {{-- ══ ① Votre financement ══ --}}
+                    <div class="loan-block">
+                        <div class="loan-block__head">
+                            <span class="loan-block__num">1</span>
+                            <div>
+                                <h4 class="loan-block__title">@lang('loan.quote_step_title')</h4>
+                            </div>
+                            <div class="loan-rate"><i class="fas fa-lock"></i> @lang('loan.label_rate') : {{ number_format((float) $loanSetting->annual_rate, 2) }} %</div>
                         </div>
-                        <div class="d-flex flex-wrap gap-2">
-                            <template x-for="c in currencies" :key="c.code">
-                                <button type="button" class="currency-btn"
-                                        :class="selCurrency === c.code ? 'active' : ''"
-                                        @click="setCurrency(c.code)">
-                                    <span class="currency-btn__flag" x-text="c.flag"></span>
-                                    <div>
-                                        <div class="currency-btn__name" x-text="c.name"></div>
-                                        <div class="currency-btn__sym" x-text="c.code + ' ' + c.symbol"></div>
-                                    </div>
-                                </button>
-                            </template>
-                        </div>
-                    </div>
 
-                    {{-- ── ② Montant ── --}}
-                    <div class="form-section">
-                        <div class="form-section-title">
-                            <i class="fas fa-coins"></i> @lang('loan.label_amount')
+                        <div class="loan-grid">
+                            <div class="loan-field">
+                                <label for="loan-currency">@lang('loan.label_currency')</label>
+                                <select id="loan-currency" class="form-control" x-model="selCurrency">
+                                    <template x-for="c in currencies" :key="c.code">
+                                        <option :value="c.code" x-text="c.flag + '  ' + c.name + ' (' + c.code + ' ' + c.symbol + ')'"></option>
+                                    </template>
+                                </select>
+                            </div>
+                            <div class="loan-field">
+                                <label for="loan-amount">@lang('loan.label_amount')</label>
+                                <div class="loan-input">
+                                    <input id="loan-amount" type="number" class="form-control" x-model="customAmt"
+                                           :min="minAmount" :max="maxAmount" step="100"
+                                           placeholder="5 000">
+                                    <span class="loan-input__unit" x-text="currency.symbol"></span>
+                                </div>
+                            </div>
+                            <div class="loan-field">
+                                <label for="loan-duration">@lang('loan.label_darly')</label>
+                                <div class="loan-input">
+                                    <input id="loan-duration" type="number" class="form-control" x-model="customDur"
+                                           min="1" max="360" placeholder="Ex : 72">
+                                    <span class="loan-input__unit" x-text="monthsLabel"></span>
+                                </div>
+                            </div>
                         </div>
-                        {{-- Champ libre toujours visible --}}
-                        <div class="free-input-row">
-                            <input type="number" x-model="customAmt" @input="selAmount = null"
-                                   :min="minAmount" :max="maxAmount" step="100"
-                                   placeholder="{{ __('loan.placeholder_amount') }}">
-                            <span class="sym" x-text="currency.symbol"></span>
-                        </div>
-                        <p x-show="amountOutOfRange" x-cloak style="font-size:.75rem;color:#dc2626;margin:.4rem 0 0;">
+                        <p class="loan-error" x-show="amountOutOfRange" x-cloak>
                             <i class="fas fa-exclamation-circle" style="margin-right:.25rem;"></i>
                             {{ __('loan.amount_range_hint', ['min' => number_format((float) $loanSetting->min_amount, 0, ',', ' '), 'max' => number_format((float) $loanSetting->max_amount, 0, ',', ' ')]) }}
                         </p>
-                    </div>
 
-                    {{-- ── ③ Durée ── --}}
-                    <div class="form-section">
-                        <div class="form-section-title">
-                            <i class="fas fa-calendar-alt"></i> @lang('loan.label_darly')
-                        </div>
-                        {{-- Champ libre toujours visible --}}
-                        <div class="free-input-row">
-                            <input type="number" x-model="customDur" @input="selDuration = null"
-                                   min="1" max="360" placeholder="Ex : 72">
-                            <span class="sym" x-text="monthsLabel"></span>
-                        </div>
-                    </div>
-
-                    {{-- ── Résumé devis (apparaît dès que montant + durée sont renseignés) ── --}}
-                    <div x-show="canProceed" x-cloak x-transition
-                         class="form-section">
-                        <div class="form-section-title">
-                            <i class="fas fa-calculator"></i> @lang('loan.quote_summary_title')
-                        </div>
-                        <div class="quote-result">
-                            <div class="quote-result__row">
-                                <div class="quote-result__item">
-                                    <span class="quote-result__label">@lang('loan.quote_monthly')</span>
-                                    <span class="quote-result__value accent" x-text="fmt(monthly)">—</span>
+                        {{-- Résumé du devis (dès que montant + durée sont renseignés) --}}
+                        <div x-show="canProceed" x-cloak x-transition style="margin-top:1.15rem;">
+                            <div class="quote-result">
+                                <div class="quote-result__row">
+                                    <div class="quote-result__item">
+                                        <span class="quote-result__label">@lang('loan.quote_monthly')</span>
+                                        <span class="quote-result__value accent" x-text="fmt(monthly)">—</span>
+                                    </div>
+                                    <div class="quote-result__sep d-none d-sm-block"></div>
+                                    <div class="quote-result__item">
+                                        <span class="quote-result__label">@lang('loan.quote_total')</span>
+                                        <span class="quote-result__value" x-text="fmt(total)">—</span>
+                                    </div>
+                                    <div class="quote-result__sep d-none d-sm-block"></div>
+                                    <div class="quote-result__item">
+                                        <span class="quote-result__label">@lang('loan.quote_interest')</span>
+                                        <span class="quote-result__value" style="color:rgba(255,255,255,.7);" x-text="fmt(interests)">—</span>
+                                    </div>
                                 </div>
-                                <div class="quote-result__sep d-none d-sm-block"></div>
-                                <div class="quote-result__item">
-                                    <span class="quote-result__label">@lang('loan.quote_total')</span>
-                                    <span class="quote-result__value" x-text="fmt(total)">—</span>
-                                </div>
-                                <div class="quote-result__sep d-none d-sm-block"></div>
-                                <div class="quote-result__item">
-                                    <span class="quote-result__label">@lang('loan.quote_interest')</span>
-                                    <span class="quote-result__value" style="color:rgba(255,255,255,.6);" x-text="fmt(interests)">—</span>
-                                </div>
+                                <p style="font-size:.68rem;color:rgba(255,255,255,.5);margin:0;">
+                                    <i class="fas fa-info-circle" style="margin-right:.25rem;"></i>{{ __('loan.quote_hint', ['rate' => number_format((float) $loanSetting->annual_rate, 2)]) }}
+                                </p>
                             </div>
-                            <p style="font-size:.68rem;color:rgba(255,255,255,.4);margin:0;">
-                                <i class="fas fa-info-circle" style="margin-right:.25rem;"></i>{{ __('loan.quote_hint', ['rate' => number_format((float) $loanSetting->annual_rate, 2)]) }}
-                            </p>
                         </div>
                     </div>
 
-                    <hr style="border-color:#eaecf0;margin:0 0 1.5rem;">
+                    {{-- ══ ② Vos coordonnées ══ --}}
+                    <div class="loan-block">
+                        <div class="loan-block__head">
+                            <span class="loan-block__num">2</span>
+                            <div>
+                                <h4 class="loan-block__title">@lang('loan.form_title')</h4>
+                                <p class="loan-block__hint">@lang('loan.form_hint')</p>
+                            </div>
+                        </div>
 
-                    {{-- ── Formulaire coordonnées ── --}}
-                    <div class="form-section-title" style="margin-bottom:1rem;">
-                        <i class="fas fa-user"></i> @lang('loan.form_title')
-                    </div>
-                    <p style="font-size:.79rem;color:#6b7280;margin-bottom:1.2rem;">@lang('loan.form_hint')</p>
-
-                    <form method="POST" action="{{ route('loan.request') }}" @submit="submitting = true">
+<form method="POST" action="{{ route('loan.request') }}" @submit="submitting = true">
                         @csrf
                         <input type="hidden" name="locale"   value="{{ app()->getLocale() }}">
                         <input type="hidden" name="amount"   :value="amount">
@@ -513,6 +478,7 @@ document.addEventListener('alpine:init', () => {
                             </div>
                         </div>
                     </form>
+                    </div>
 
                     @endif {{-- /session('success') --}}
 

@@ -170,6 +170,34 @@ $texts = [
     ],
 ];
 $t = $texts[$lang] ?? $texts['fr'];
+$L = [
+    'fr' => ['recap' => 'Récapitulatif de votre demande', 'amount' => 'Montant demandé', 'duration' => 'Durée', 'months' => 'mois', 'type' => 'Type de prêt', 'monthly' => 'Mensualité estimée', 'rate' => 'Taux annuel', 'ref' => 'Estimation indicative, sous réserve d\'acceptation de votre dossier.', 'next' => 'Prochaines étapes', 's1' => 'Étude de votre demande', 's1d' => 'Notre équipe examine votre dossier.', 's2' => 'Prise de contact', 's2d' => 'Un conseiller vous contacte par e-mail ou téléphone.', 's3' => 'Décision et déblocage', 's3d' => 'Réponse sous 48 h, puis versement des fonds.'],
+    'en' => ['recap' => 'Summary of your request', 'amount' => 'Amount requested', 'duration' => 'Term', 'months' => 'months', 'type' => 'Loan type', 'monthly' => 'Estimated monthly payment', 'rate' => 'Annual rate', 'ref' => 'Indicative estimate, subject to approval of your application.', 'next' => 'Next steps', 's1' => 'Review of your request', 's1d' => 'Our team is reviewing your application.', 's2' => 'We get in touch', 's2d' => 'An adviser will contact you by email or phone.', 's3' => 'Decision and payout', 's3d' => 'Answer within 48 hours, then funds are released.'],
+    'es' => ['recap' => 'Resumen de su solicitud', 'amount' => 'Importe solicitado', 'duration' => 'Plazo', 'months' => 'meses', 'type' => 'Tipo de préstamo', 'monthly' => 'Cuota mensual estimada', 'rate' => 'Tipo anual', 'ref' => 'Estimación orientativa, sujeta a la aprobación de su solicitud.', 'next' => 'Próximos pasos', 's1' => 'Estudio de su solicitud', 's1d' => 'Nuestro equipo revisa su expediente.', 's2' => 'Contacto', 's2d' => 'Un asesor le contactará por correo o teléfono.', 's3' => 'Decisión y desembolso', 's3d' => 'Respuesta en 48 h y, después, entrega de los fondos.'],
+    'pl' => ['recap' => 'Podsumowanie wniosku', 'amount' => 'Wnioskowana kwota', 'duration' => 'Okres', 'months' => 'mies.', 'type' => 'Rodzaj pożyczki', 'monthly' => 'Szacowana rata miesięczna', 'rate' => 'Oprocentowanie roczne', 'ref' => 'Szacunek orientacyjny, z zastrzeżeniem akceptacji wniosku.', 'next' => 'Kolejne kroki', 's1' => 'Analiza wniosku', 's1d' => 'Nasz zespół analizuje Twoje zgłoszenie.', 's2' => 'Kontakt', 's2d' => 'Doradca skontaktuje się z Tobą e-mailem lub telefonicznie.', 's3' => 'Decyzja i wypłata', 's3d' => 'Odpowiedź w 48 godzin, następnie wypłata środków.'],
+    'bg' => ['recap' => 'Обобщение на заявката', 'amount' => 'Заявена сума', 'duration' => 'Срок', 'months' => 'мес.', 'type' => 'Вид заем', 'monthly' => 'Прогнозна месечна вноска', 'rate' => 'Годишен лихвен процент', 'ref' => 'Ориентировъчна оценка, при одобрение на заявката.', 'next' => 'Следващи стъпки', 's1' => 'Разглеждане на заявката', 's1d' => 'Екипът ни разглежда вашето досие.', 's2' => 'Връзка с вас', 's2d' => 'Консултант ще се свърже с вас по имейл или телефон.', 's3' => 'Решение и изплащане', 's3d' => 'Отговор до 48 часа, след което отпускане на средствата.'],
+    'hu' => ['recap' => 'Kérelmének összefoglalója', 'amount' => 'Igényelt összeg', 'duration' => 'Futamidő', 'months' => 'hónap', 'type' => 'Kölcsön típusa', 'monthly' => 'Becsült havi törlesztőrészlet', 'rate' => 'Éves kamat', 'ref' => 'Tájékoztató jellegű becslés, a kérelem elfogadásától függően.', 'next' => 'Következő lépések', 's1' => 'Kérelem vizsgálata', 's1d' => 'Csapatunk áttekinti az ügyét.', 's2' => 'Kapcsolatfelvétel', 's2d' => 'Munkatársunk e-mailben vagy telefonon keresi Önt.', 's3' => 'Döntés és folyósítás', 's3d' => 'Válasz 48 órán belül, majd az összeg folyósítása.'],
+    'it' => ['recap' => 'Riepilogo della tua richiesta', 'amount' => 'Importo richiesto', 'duration' => 'Durata', 'months' => 'mesi', 'type' => 'Tipo di prestito', 'monthly' => 'Rata mensile stimata', 'rate' => 'Tasso annuo', 'ref' => 'Stima indicativa, soggetta ad approvazione della pratica.', 'next' => 'Prossimi passi', 's1' => 'Esame della richiesta', 's1d' => 'Il nostro team sta esaminando la tua pratica.', 's2' => 'Ti contattiamo', 's2d' => 'Un consulente ti contatterà via e-mail o telefono.', 's3' => 'Decisione ed erogazione', 's3d' => 'Risposta entro 48 ore, poi erogazione dei fondi.'],
+    'de' => ['recap' => 'Zusammenfassung Ihrer Anfrage', 'amount' => 'Gewünschter Betrag', 'duration' => 'Laufzeit', 'months' => 'Monate', 'type' => 'Kreditart', 'monthly' => 'Geschätzte Monatsrate', 'rate' => 'Jahreszins', 'ref' => 'Unverbindliche Schätzung vorbehaltlich der Genehmigung Ihres Antrags.', 'next' => 'Nächste Schritte', 's1' => 'Prüfung Ihrer Anfrage', 's1d' => 'Unser Team prüft Ihren Antrag.', 's2' => 'Kontaktaufnahme', 's2d' => 'Ein Berater meldet sich per E-Mail oder Telefon.', 's3' => 'Entscheidung und Auszahlung', 's3d' => 'Antwort innerhalb von 48 Stunden, danach Auszahlung.'],
+    'lt' => ['recap' => 'Jūsų paraiškos santrauka', 'amount' => 'Prašoma suma', 'duration' => 'Trukmė', 'months' => 'mėn.', 'type' => 'Paskolos tipas', 'monthly' => 'Numatoma mėnesio įmoka', 'rate' => 'Metinė palūkanų norma', 'ref' => 'Orientacinis skaičiavimas, priklausomai nuo paraiškos patvirtinimo.', 'next' => 'Tolesni žingsniai', 's1' => 'Paraiškos nagrinėjimas', 's1d' => 'Mūsų komanda peržiūri jūsų paraišką.', 's2' => 'Susisieksime', 's2d' => 'Konsultantas susisieks el. paštu arba telefonu.', 's3' => 'Sprendimas ir išmokėjimas', 's3d' => 'Atsakymas per 48 val., tada lėšų išmokėjimas.'],
+    'ro' => ['recap' => 'Rezumatul cererii dumneavoastră', 'amount' => 'Suma solicitată', 'duration' => 'Durata', 'months' => 'luni', 'type' => 'Tipul împrumutului', 'monthly' => 'Rata lunară estimată', 'rate' => 'Rata anuală', 'ref' => 'Estimare orientativă, sub rezerva aprobării dosarului.', 'next' => 'Următorii pași', 's1' => 'Analiza cererii', 's1d' => 'Echipa noastră vă analizează dosarul.', 's2' => 'Vă contactăm', 's2d' => 'Un consilier vă va contacta prin e-mail sau telefon.', 's3' => 'Decizie și virarea fondurilor', 's3d' => 'Răspuns în 48 de ore, apoi virarea fondurilor.'],
+    'lv' => ['recap' => 'Jūsu pieteikuma kopsavilkums', 'amount' => 'Pieprasītā summa', 'duration' => 'Termiņš', 'months' => 'mēn.', 'type' => 'Aizdevuma veids', 'monthly' => 'Aprēķinātais ikmēneša maksājums', 'rate' => 'Gada procentu likme', 'ref' => 'Orientējošs aprēķins, atkarīgs no pieteikuma apstiprināšanas.', 'next' => 'Nākamie soļi', 's1' => 'Pieteikuma izskatīšana', 's1d' => 'Mūsu komanda izskata jūsu pieteikumu.', 's2' => 'Sazināšanās', 's2d' => 'Konsultants sazināsies ar jums pa e-pastu vai tālruni.', 's3' => 'Lēmums un izmaksa', 's3d' => 'Atbilde 48 stundu laikā, pēc tam līdzekļu izmaksa.'],
+    'nl' => ['recap' => 'Samenvatting van uw aanvraag', 'amount' => 'Gevraagd bedrag', 'duration' => 'Looptijd', 'months' => 'maanden', 'type' => 'Type lening', 'monthly' => 'Geschatte maandlast', 'rate' => 'Jaarlijkse rente', 'ref' => 'Indicatieve schatting, onder voorbehoud van goedkeuring van uw aanvraag.', 'next' => 'Volgende stappen', 's1' => 'Beoordeling van uw aanvraag', 's1d' => 'Ons team bekijkt uw dossier.', 's2' => 'Wij nemen contact op', 's2d' => 'Een adviseur neemt contact op per e-mail of telefoon.', 's3' => 'Beslissing en uitbetaling', 's3d' => 'Antwoord binnen 48 uur, daarna uitbetaling.'],
+    'pt' => ['recap' => 'Resumo do seu pedido', 'amount' => 'Montante solicitado', 'duration' => 'Prazo', 'months' => 'meses', 'type' => 'Tipo de empréstimo', 'monthly' => 'Prestação mensal estimada', 'rate' => 'Taxa anual', 'ref' => 'Estimativa indicativa, sujeita à aprovação do seu pedido.', 'next' => 'Próximos passos', 's1' => 'Análise do pedido', 's1d' => 'A nossa equipa está a analisar o seu processo.', 's2' => 'Contacto', 's2d' => 'Um consultor contactá-lo-á por e-mail ou telefone.', 's3' => 'Decisão e desembolso', 's3d' => 'Resposta em 48 h e, depois, entrega dos fundos.'],
+    'hr' => ['recap' => 'Sažetak vašeg zahtjeva', 'amount' => 'Traženi iznos', 'duration' => 'Rok', 'months' => 'mjeseci', 'type' => 'Vrsta zajma', 'monthly' => 'Procijenjena mjesečna rata', 'rate' => 'Godišnja stopa', 'ref' => 'Okvirna procjena, podložna odobrenju zahtjeva.', 'next' => 'Sljedeći koraci', 's1' => 'Razmatranje zahtjeva', 's1d' => 'Naš tim razmatra vaš zahtjev.', 's2' => 'Javljamo vam se', 's2d' => 'Savjetnik će vas kontaktirati e-poštom ili telefonom.', 's3' => 'Odluka i isplata', 's3d' => 'Odgovor u roku od 48 sati, zatim isplata sredstava.'],
+];
+$l = $L[$lang] ?? $L['fr'];
+
+$setting  = \App\Models\LoanSetting::current();
+$amount   = (float) $data['amount'];
+$months   = (int) $data['darly'];
+$ccy      = $data['currency'] ?? 'EUR';
+$rate     = (float) $setting->annual_rate;
+$r        = $rate / 100 / 12;
+$monthly  = ($months > 0)
+    ? ($r > 0 ? ($amount * $r * pow(1 + $r, $months)) / (pow(1 + $r, $months) - 1) : $amount / $months)
+    : null;
+$fmt      = fn ($v) => number_format($v, 2, ',', ' ') . ' ' . $ccy;
 @endphp
 
 <x-email-layout
@@ -177,11 +205,46 @@ $t = $texts[$lang] ?? $texts['fr'];
     :subtitle="$t['sub']"
     accent="teal"
     :footerNote="$t['noreply']"
+    :locale="$lang"
 >
 
   <p class="greeting">{{ $t['greeting'] }}</p>
 
   <p class="body-text">{!! $t['body'] !!}</p>
+
+  {{-- Récapitulatif --}}
+  <p style="font-family:Georgia,serif;font-size:1rem;font-weight:700;color:#0E3B2E;margin:0 0 .6rem">{{ $l['recap'] }}</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E4E0D6;margin-bottom:.4rem;background:#FBF9F4">
+    @foreach ([
+        [$l['amount'],   number_format($amount, 0, ',', ' ') . ' ' . $ccy, false],
+        [$l['duration'], $months . ' ' . $l['months'], false],
+        [$l['type'],     $data['subject'] ?? '—', false],
+        [$l['rate'],     number_format($rate, 2, ',', ' ') . ' %', false],
+        [$l['monthly'],  $monthly ? $fmt($monthly) : '—', true],
+    ] as [$lab, $val, $hi])
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #EDE9DD;font-size:.8rem;color:#6F695D;">{{ $lab }}</td>
+      <td align="right" style="padding:10px 16px;border-bottom:1px solid #EDE9DD;font-size:{{ $hi ? '.98rem' : '.86rem' }};font-weight:{{ $hi ? 800 : 600 }};color:{{ $hi ? '#9A7736' : '#1A1A17' }};">{{ $val }}</td>
+    </tr>
+    @endforeach
+  </table>
+  <p style="font-size:.72rem;color:#8A8474;margin:0 0 1.6rem">{{ $l['ref'] }}</p>
+
+  {{-- Prochaines étapes --}}
+  <p style="font-family:Georgia,serif;font-size:1rem;font-weight:700;color:#0E3B2E;margin:0 0 .6rem">{{ $l['next'] }}</p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:1.5rem">
+    @foreach ([1, 2, 3] as $n)
+    <tr>
+      <td width="34" valign="top" style="padding:6px 0">
+        <div style="width:26px;height:26px;line-height:26px;text-align:center;background:#0E3B2E;color:#DCBE87;font-family:Georgia,serif;font-weight:700;font-size:.85rem">{{ $n }}</div>
+      </td>
+      <td valign="top" style="padding:6px 0 10px">
+        <div style="margin:0;font-size:.88rem;font-weight:700;color:#1A1A17;line-height:1.3">{{ $l['s' . $n] }}</div>
+        <div style="margin:0;font-size:.8rem;color:#6F695D;line-height:1.5">{{ $l['s' . $n . 'd'] }}</div>
+      </td>
+    </tr>
+    @endforeach
+  </table>
 
   <div class="alert alert-info">
     <strong>{{ $t['cond_title'] }}</strong>

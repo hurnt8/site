@@ -112,7 +112,7 @@ p.closing strong{color:#111827;font-size:.92rem}
   {{-- ── Header ── --}}
   <div class="hdr">
     <div class="logo-outer">
-      <x-logo variant="icon" theme="dark" size="lg" />
+      <img src="{{ url('images/icon-192.png') }}" width="56" height="56" alt="{{ site_name() }}" style="display:block;border-radius:6px">
     </div>
     <h1 class="hdr-title">{{ $title }}</h1>
     @if($subtitle)
