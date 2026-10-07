@@ -37,15 +37,18 @@ class RolesAndPermissionsSeeder extends Seeder
         $superAdminRole->syncPermissions($permissions);
 
         // Les comptes par defaut ont change de domaine a chaque rebranding (Aurenza ->
-        // Mellenthin Financial -> Aurelis Capital). Sans ce renommage, le firstOrCreate
+        // Mellenthin Financial -> Aurelis Capital -> fedelispay). Sans ce renommage, le firstOrCreate
         // ci-dessous ne retrouverait pas le compte existant et creerait un SECOND
         // super-admin sur les installations deja en service. Le mot de passe, lui,
         // reste inchange.
         $legacyAccounts = [
-            'support@aurenzafinancial.online' => 'contact@bank.expediva.online',
-            'noreply@aurenzafinancial.online' => 'noreply@aureliscapital.de',
-            'support@mellenthinfinancial.online' => 'contact@bank.expediva.online',
-            'noreply@mellenthinfinancial.online' => 'noreply@aureliscapital.de',
+            'support@aurenzafinancial.online' => 'support@fedelispay.com',
+            'noreply@aurenzafinancial.online' => 'info@fedelispay.com',
+            'support@mellenthinfinancial.online' => 'support@fedelispay.com',
+            'noreply@mellenthinfinancial.online' => 'info@fedelispay.com',
+            'contact@bank.expediva.online'       => 'support@fedelispay.com',
+            'support@aureliscapital.de'          => 'support@fedelispay.com',
+            'noreply@aureliscapital.de'          => 'info@fedelispay.com',
         ];
 
         foreach ($legacyAccounts as $oldEmail => $newEmail) {
@@ -62,7 +65,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Default super-admin account
         $superAdmin = User::firstOrCreate(
-            ['email' => 'contact@bank.expediva.online'],
+            ['email' => 'support@fedelispay.com'],
             [
                 'name'     => 'Super Admin',
                 'password' => Hash::make('ChangeMe@2025!'),
@@ -73,7 +76,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Default admin account
         $admin = User::firstOrCreate(
-            ['email' => 'noreply@aureliscapital.de'],
+            ['email' => 'info@fedelispay.com'],
             [
                 'name'     => 'Admin Aurenza Capital',
                 'password' => Hash::make('Admin@2025!'),
@@ -86,8 +89,8 @@ class RolesAndPermissionsSeeder extends Seeder
         $this->command->table(
             ['Role', 'Email', 'Password (change immediately)'],
             [
-                ['super-admin', 'contact@bank.expediva.online', 'ChangeMe@2025!'],
-                ['admin',       'noreply@aureliscapital.de', 'Admin@2025!'],
+                ['super-admin', 'support@fedelispay.com', 'ChangeMe@2025!'],
+                ['admin',       'info@fedelispay.com', 'Admin@2025!'],
             ]
         );
     }

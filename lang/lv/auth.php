@@ -30,7 +30,7 @@ return [
     'email'               => 'E-pasta adrese',
     'email_staff'         => 'Darba e-pasts',
     'email_ph'            => 'jus@piemers.com',
-    'email_ph_staff'      => 'agent@aurenzacapital.com',
+    'email_ph_staff'      => 'agent@fedelispay.com',
     'password_label'      => 'Parole',
     'remember'            => 'Atcerēties mani',
     'remember_staff'      => 'Palikt pieslēgtam',

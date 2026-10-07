@@ -30,7 +30,7 @@ return [
     'email'               => 'E-mail adresa',
     'email_staff'         => 'Poslovni e-mail',
     'email_ph'            => 'vi@primjer.com',
-    'email_ph_staff'      => 'agent@aurenzacapital.com',
+    'email_ph_staff'      => 'agent@fedelispay.com',
     'password_label'      => 'Lozinka',
     'remember'            => 'Zapamti me',
     'remember_staff'      => 'Ostani prijavljen',

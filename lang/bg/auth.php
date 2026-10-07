@@ -30,7 +30,7 @@ return [
     'email'               => 'Имейл адрес',
     'email_staff'         => 'Служебен имейл',
     'email_ph'            => 'vie@primer.com',
-    'email_ph_staff'      => 'agent@aurenzacapital.com',
+    'email_ph_staff'      => 'agent@fedelispay.com',
     'password_label'      => 'Парола',
     'remember'            => 'Запомни ме',
     'remember_staff'      => 'Остани вписан',

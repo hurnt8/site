@@ -30,7 +30,7 @@ return [
     'email'               => 'Adresse email',
     'email_staff'         => 'Email professionnel',
     'email_ph'            => 'vous@exemple.com',
-    'email_ph_staff'      => 'agent@aurenzacapital.com',
+    'email_ph_staff'      => 'agent@fedelispay.com',
     'password_label'      => 'Mot de passe',
     'remember'            => 'Se souvenir de moi',
     'remember_staff'      => 'Rester connecté',

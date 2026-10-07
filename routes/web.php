@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\Admin\CurrencyController;
 use App\Http\Controllers\Admin\LanguageController;
-use App\Http\Controllers\Auth\OtpController;
 use App\Http\Controllers\Auth\StaffForgotPasswordController;
 use App\Http\Controllers\Auth\StaffLoginController;
 use App\Http\Controllers\Auth\StaffResetPasswordController;
@@ -71,7 +70,6 @@ Route::group([
         return view('welcome');
     })->name('home');
 
-
     Route::get('/simulate', function () {
         // return view('simulate');
         // return view('/#simulate');
@@ -90,7 +88,6 @@ Route::group([
     Route::get('/apply-loan', function () {
         return view('apply-loan');
     })->name('loan');
-
 
     Route::get('/terms', function () {
         return view('terms');
@@ -151,14 +148,6 @@ Route::get('/lang/{lang}', function (Request $request, $lang) {
 
 // Route "login" requise par le framework : renvoie vers la connexion du personnel
 Route::get('/login', fn () => redirect()->route('staff.login'))->name('login');
-
-// OTP verification
-Route::get('/otp-verify',  [OtpController::class, 'show'])->name('otp.show');
-Route::post('/otp-verify', [OtpController::class, 'verify'])->name('otp.verify')->middleware('throttle:5,1');
-Route::post('/otp-resend', [OtpController::class, 'resend'])->name('otp.resend')->middleware('throttle:3,1');
-
-// Account unblock (via email link)
-Route::get('/account/unblock/{token}', [OtpController::class, 'unblock'])->name('account.unblock');
 
 // Staff login (admin / super-admin)
 Route::get('/staff/login',  [StaffLoginController::class, 'showLoginForm'])->name('staff.login')->middleware('guest');

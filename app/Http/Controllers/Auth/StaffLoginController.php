@@ -3,18 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Mail\OtpMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
 
 class StaffLoginController extends Controller
 {
-    private const OTP_TTL = 600;
-
     public function showLoginForm()
     {
         if (Auth::check()) {
@@ -43,26 +36,14 @@ class StaffLoginController extends Controller
                 return back()->withErrors(['email' => 'Votre compte ne dispose pas des droits nécessaires.']);
             }
 
-            $remember = $request->boolean('remember');
-            // Auth::attempt() vient de connecter la session — on la referme aussitôt
-            // pour exiger la vérification OTP (2FA) avant d'accorder l'accès réel.
-            Auth::logout();
-
-            $otp = str_pad(random_int(0, 999999), 6, '0', STR_PAD_LEFT);
-            Cache::put('otp_' . $user->id, Hash::make($otp), self::OTP_TTL);
-
-            $request->session()->put('otp_user_id', $user->id);
-            $request->session()->put('otp_remember', $remember);
-            $request->session()->put('otp_flow', 'staff');
-
-            try {
-                Mail::to($user->email)->send(new OtpMail($otp, $user));
-            } catch (\Throwable $e) {
-                Log::error('StaffLoginController: échec envoi OTP', ['user_id' => $user->id, 'message' => $e->getMessage()]);
-                return back()->withErrors(['email' => 'Impossible d\'envoyer le code de vérification.']);
+            if ($user->is_blocked) {
+                Auth::logout();
+                return back()->withErrors(['email' => 'Ce compte est bloqué. Contactez un administrateur.']);
             }
 
-            return redirect()->route('otp.show');
+            $request->session()->regenerate();
+
+            return $this->redirectAuthenticated($user);
         }
 
         return back()->withErrors(['email' => 'Identifiants incorrects.'])->onlyInput('email');
