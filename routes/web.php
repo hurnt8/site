@@ -85,7 +85,6 @@ Route::group([
         return view('apply-loan');
     })->name('loan');
 
-    Route::get('/loan/complete', [LoanController::class, 'showDocuments'])->name('loan.complete');
 
     Route::get('/terms', function () {
         return view('terms');
@@ -132,7 +131,6 @@ Route::post('/loan/simulate', [LoanController::class, 'simulate'])->name('loan.s
 Route::post('/contact/send', [ContactController::class, 'sendMail'])->name('contact.send');
 Route::post('/subscribe/send', [ContactController::class, 'subscribeMail'])->name('subscribe.send');
 Route::post('/loan/request', [LoanController::class, 'sendMail'])->name('loan.request');
-Route::post('/loan/documents', [LoanController::class, 'sendDocuments'])->name('loan.documents');
 
 // ── Locale switcher (for auth pages without {locale} prefix) ────────────────
 Route::get('/lang/{lang}', function (Request $request, $lang) {

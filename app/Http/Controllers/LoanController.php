@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Mail\LoanMail;
 use App\Mail\LoanConfirmationMail;
-use App\Mail\LoanDocumentsMail;
-use App\Mail\LoanDocumentsConfirmationMail;
 use App\Models\Currency;
 use App\Models\LoanSetting;
 use App\Services\LoanService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
 
 class LoanController extends Controller
 {
@@ -67,128 +64,13 @@ class LoanController extends Controller
         }
         App::setLocale($locale);
 
-        $data['complete_url'] = url($locale . '/loan/complete')
-            . '?name='  . urlencode($data['name'])
-            . '&email=' . urlencode($data['email']);
-
         // Email 1 : nouvelle demande → adresse de notification configurée
         Mail::to(LoanSetting::current()->notification_email)->send(new LoanMail($data, $locale));
 
-        // Email 2 : confirmation → demandeur (sert aussi de lien de secours si l'utilisateur ferme l'onglet)
+        // Email 2 : confirmation → demandeur 
         Mail::to($data['email'])->send(new LoanConfirmationMail($data, $locale));
 
-        // Étape 2 enchaînée directement dans le navigateur (pas besoin d'attendre l'e-mail) :
-        // on conserve les infos du devis en session pour préremplir/récapituler l'étape suivante.
-        session(['loan_prefill' => [
-            'name'     => $data['name'],
-            'email'    => $data['email'],
-            'phone'    => $data['phone'],
-            'country'  => $data['country'],
-            'amount'   => $data['amount'],
-            'darly'    => $data['darly'],
-            'currency' => $data['currency'],
-            'subject'  => $data['subject'],
-        ]]);
-
-        return redirect()->route('loan.complete', ['locale' => $locale]);
-    }
-
-    public function showDocuments(Request $request)
-    {
-        // Nouveau jeton à chaque affichage du formulaire
-        $token = Str::uuid()->toString();
-        session(['doc_submission_token' => $token]);
-
-        // Source des données : session (enchaînement direct depuis l'étape 1) en priorité,
-        // sinon paramètres d'URL (lien de secours envoyé par e-mail).
-        $prefill = session('loan_prefill', []);
-
-        return view('loan-documents', [
-            'prefillName'     => $request->query('name')  ?? ($prefill['name']  ?? null),
-            'prefillEmail'    => $request->query('email') ?? ($prefill['email'] ?? null),
-            'submissionToken' => $token,
-            'recap'           => $prefill ?: null,
-        ]);
-    }
-
-    public function sendDocuments(Request $request)
-    {
-        $locale = $request->input('locale', 'fr');
-        if (!in_array($locale, ['fr', 'en', 'pl', 'es', 'bg', 'hu', 'it', 'de', 'lt', 'ro', 'lv', 'nl', 'pt', 'hr'], true)) {
-            $locale = 'fr';
-        }
-        App::setLocale($locale);
-
-        // ── Protection anti-doublon ──────────────────────────────────────────
-        $submitted    = $request->input('submission_token', '');
-        $sessionToken = session('doc_submission_token');
-
-        if (!$submitted || !$sessionToken || !hash_equals($sessionToken, $submitted)) {
-            return redirect()->route('loan.complete', ['locale' => $locale])
-                ->with('docs_already_sent', true);
-        }
-
-        // Consommer le jeton AVANT tout envoi
-        session()->forget('doc_submission_token');
-
-        // ── Validation ───────────────────────────────────────────────────────
-        $needsVerso = in_array($request->input('doc_type'), ['id_card', 'license', 'residence'], true);
-        $fileRules  = ['file', 'mimes:jpg,jpeg,png,pdf', 'max:5120'];
-
-        $data = $request->validate([
-            'name'           => ['required', 'string', 'max:255'],
-            'email'          => ['required', 'email'],
-            'address'        => ['required', 'string', 'max:1000'],
-            // Sélectionné à l'étape 1 et transmis via champ caché ; pas de nouvelle saisie ici.
-            'country'        => ['nullable', 'string', 'max:100'],
-            'tax_number'     => ['nullable', 'string', 'max:60'],
-            'activity'       => ['nullable', 'string', 'max:255'],
-            'doc_type'       => ['required', 'string', 'in:id_card,passport,license,residence,other'],
-            'id_photo_recto' => array_merge(['required'], $fileRules),
-            'id_photo_verso' => array_merge($needsVerso ? ['required'] : ['nullable'], $fileRules),
-        ]);
-
-        // ── Stockage temporaire des fichiers ─────────────────────────────────
-        $tempFiles   = [];
-        $attachments = [];
-
-        $recto = $request->file('id_photo_recto');
-        if ($recto instanceof \Illuminate\Http\UploadedFile) {
-            $stored = $recto->store('temp-docs', 'local');
-            if ($stored !== false) {
-                $path          = storage_path('app/' . $stored);
-                $attachments[] = ['path' => $path, 'name' => 'recto_' . $recto->getClientOriginalName(), 'mime' => $recto->getMimeType()];
-                $tempFiles[]   = $path;
-            }
-        }
-
-        $verso = $request->file('id_photo_verso');
-        if ($verso instanceof \Illuminate\Http\UploadedFile) {
-            $stored = $verso->store('temp-docs', 'local');
-            if ($stored !== false) {
-                $path          = storage_path('app/' . $stored);
-                $attachments[] = ['path' => $path, 'name' => 'verso_' . $verso->getClientOriginalName(), 'mime' => $verso->getMimeType()];
-                $tempFiles[]   = $path;
-            }
-        }
-
-        // ── Envoi des emails ─────────────────────────────────────────────────
-        try {
-            Mail::to(LoanSetting::current()->notification_email)->send(new LoanDocumentsMail($data, $attachments, $locale));
-            Mail::to($data['email'])->send(new LoanDocumentsConfirmationMail($data, $locale));
-        } finally {
-            foreach ($tempFiles as $p) {
-                if (file_exists($p)) {
-                    @unlink($p);
-                }
-            }
-        }
-
-        // Dossier complet : on efface le récapitulatif pour ne pas le réafficher
-        // si l'utilisateur revient plus tard sur cette page (ex. bouton précédent).
-        session()->forget('loan_prefill');
-
-        return redirect()->route('loan.complete', ['locale' => $locale])
-            ->with('success', __('message.docs_success'));
+        return redirect()->route('loan', ['locale' => $locale])
+            ->with('success', __('message.success_loan'));
     }
 }

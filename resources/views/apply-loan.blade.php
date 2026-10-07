@@ -300,11 +300,9 @@ document.addEventListener('alpine:init', () => {
                     {{-- En-tête --}}
                     <div class="d-flex align-items-start justify-content-between flex-wrap gap-2 mb-4">
                         <div>
-                            <div class="section-label mb-1">{{ __('loan.step_of_2', ['step' => 1]) }}</div>
                             <h3 style="font-family:'Fraunces',serif;color:var(--navy);font-size:1.25rem;font-weight:700;margin:0 0 .15rem;">
                                 @lang('loan.quote_step_title')
                             </h3>
-                            <p style="font-size:.78rem;color:#6b7280;margin:0;">@lang('loan.quote_step_desc')</p>
                         </div>
                         <div style="display:inline-flex;align-items:center;gap:.4rem;background:var(--navy);color:#FFFFFF;padding:.35rem .9rem;border-radius:999px;font-weight:800;font-size:.82rem;white-space:nowrap;flex-shrink:0;">
                             <i class="fas fa-lock" style="font-size:.68rem;"></i>
@@ -321,9 +319,6 @@ document.addEventListener('alpine:init', () => {
                         <h3 style="color:var(--navy);font-size:1.2rem;font-weight:800;margin-bottom:.6rem;">
                             {{ session('success') }}
                         </h3>
-                        <p style="color:#6b7280;font-size:.88rem;max-width:420px;margin:0 auto 1.75rem;line-height:1.6;">
-                            @lang('message.loan_complete_intro')
-                        </p>
                         <div class="d-flex flex-wrap justify-content-center gap-3">
                             <a href="{{ route('home', ['locale' => $locale]) }}" class="btn-outline">
                                 <i class="fas fa-home"></i> @lang('menu.home')
@@ -366,23 +361,8 @@ document.addEventListener('alpine:init', () => {
                         <div class="form-section-title">
                             <i class="fas fa-coins"></i> @lang('loan.label_amount')
                         </div>
-                        <p style="font-size:.8rem;color:#6b7280;margin-bottom:.6rem;">
-                            @lang('loan.preset_hint')
-                        </p>
-                        <div class="chip-group">
-                            <template x-for="v in amounts" :key="v">
-                                <button type="button" class="chip"
-                                        :class="selAmount === v && customAmt === '' ? 'active' : ''"
-                                        @click="pickAmount(v)"
-                                        x-text="fmtAmt(v)"></button>
-                            </template>
-                        </div>
                         {{-- Champ libre toujours visible --}}
-                        <div class="free-input-row mt-2">
-                            <label>
-                                <i class="fas fa-keyboard" style="margin-right:.3rem;color:var(--accent);"></i>
-                                @lang('loan.label_other') :
-                            </label>
+                        <div class="free-input-row">
                             <input type="number" x-model="customAmt" @input="selAmount = null"
                                    :min="minAmount" :max="maxAmount" step="100"
                                    placeholder="{{ __('loan.placeholder_amount') }}">
@@ -399,23 +379,8 @@ document.addEventListener('alpine:init', () => {
                         <div class="form-section-title">
                             <i class="fas fa-calendar-alt"></i> @lang('loan.label_darly')
                         </div>
-                        <p style="font-size:.8rem;color:#6b7280;margin-bottom:.6rem;">
-                            @lang('loan.or_custom')
-                        </p>
-                        <div class="chip-group">
-                            <template x-for="d in [12,24,36,48,60,84,120]" :key="d">
-                                <button type="button" class="chip"
-                                        :class="selDuration === d && customDur === '' ? 'active' : ''"
-                                        @click="pickDuration(d)"
-                                        x-text="d + ' ' + monthsLabel"></button>
-                            </template>
-                        </div>
                         {{-- Champ libre toujours visible --}}
-                        <div class="free-input-row mt-2">
-                            <label>
-                                <i class="fas fa-keyboard" style="margin-right:.3rem;color:var(--accent);"></i>
-                                @lang('loan.label_other') :
-                            </label>
+                        <div class="free-input-row">
                             <input type="number" x-model="customDur" @input="selDuration = null"
                                    min="1" max="360" placeholder="Ex : 72">
                             <span class="sym" x-text="monthsLabel"></span>
@@ -566,7 +531,7 @@ document.addEventListener('alpine:init', () => {
                         <a href="tel:{{ preg_replace('/[^\d+]/', '', $siteContact->phone_1) }}" class="contact-widget__phone">{{ $siteContact->phone_1 }}</a>
                         @endif
                         <a href="{{ route('contact', ['locale' => $locale]) }}"
-                           class="btn-outline w-100 justify-content-center mt-2">
+                           class="btn-outline-white w-100 justify-content-center mt-2">
                             <i class="fas fa-envelope"></i> @lang('menu.contact')
                         </a>
                     </div>
