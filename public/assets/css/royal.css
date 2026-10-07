@@ -2397,3 +2397,8 @@ input, select, textarea, button, .form-control, .form-select { font-family: var(
     .hero-fact__num { color: #fff; }
     .hero-fact__label { color: rgba(255,255,255,.75); }
 }
+
+/* ── Footer : texte d'adresse aligné sur les liens de contact ── */
+.footer-contact-item span { color: rgba(255,255,255,.55); font-size: .875rem; line-height: 1.6; padding-top: 5px; }
+.footer-contact-item a { line-height: 1.6; padding-top: 5px; }
+.footer-contact-item { align-items: flex-start; }

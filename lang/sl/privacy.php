@@ -46,8 +46,7 @@ return [
     'contact_details' => [
         site_name(),
         'Naslov: Calcea Victoriei 118, Sektor 1, 010093 Bukarešta',
-        'Email: ' . site_email(),
-        'Telefon: ' . site_phone() . ' ',
+        'Email: info@fedelispay.com',
+        'Telefon: +49 15510 562715 ',
     ],
-
 ];

@@ -1,18 +1,6 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
     'accepted' => 'Polje :attribute mora biti sprejeto.',
     'accepted_if' => 'Polje :attribute mora biti sprejeto, ko je :other :value.',
     'active_url' => 'Polje :attribute mora biti veljavna URL povezava.',
@@ -122,7 +110,6 @@ return [
         'symbols' => 'Polje :attribute mora vsebovati vsaj en simbol.',
         'uncompromised' => 'Danes :attribute se je pojavilo v podatkovnem uhajanju. Izberite drugačen :attribute.',
     ],
-
     'present' => 'Polje :attribute mora biti prisotno.',
     'present_if' => 'Polje :attribute mora biti prisotno, ko je :other :value.',
     'present_unless' => 'Polje :attribute mora biti prisotno, razen če je :other :value.',
@@ -158,51 +145,25 @@ return [
     'url' => 'Polje :attribute mora biti veljavna URL povezava.',
     'ulid' => 'Polje :attribute mora biti veljaven ULID.',
     'uuid' => 'Polje :attribute mora biti veljaven UUID.',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
-
     'attributes' => [
-        'subject'          => 'zadeva',
-        // Sans ces libelles, les messages affichaient le nom technique du champ.
-        'name'             => 'ime in priimek',
-        'email'            => 'e-poštni naslov',
-        'address'          => 'naslov',
-        'phone'            => 'telefonska številka',
-        'tax_number'       => 'davčna številka',
-        'activity'         => 'dejavnost',
-        'doc_type'         => 'vrsta dokumenta',
-        'id_photo_recto'   => 'osebni dokument (sprednja stran)',
-        'id_photo_verso'   => 'osebni dokument (hrbtna stran)',
-        'message'          => 'sporočilo',
-        'password'         => 'geslo',
-        'amount'           => 'znesek',
-        'duration'         => 'trajanje',
+        'subject' => 'zadeva',
+        'name' => 'ime in priimek',
+        'email' => 'e-poštni naslov',
+        'address' => 'naslov',
+        'phone' => 'telefonska številka',
+        'tax_number' => 'davčna številka',
+        'activity' => 'dejavnost',
+        'doc_type' => 'vrsta dokumenta',
+        'id_photo_recto' => 'osebni dokument (sprednja stran)',
+        'id_photo_verso' => 'osebni dokument (hrbtna stran)',
+        'message' => 'sporočilo',
+        'password' => 'geslo',
+        'amount' => 'znesek',
+        'duration' => 'trajanje',
     ],
-
 ];

@@ -14,41 +14,29 @@ return [
     'consumer_loan' => 'Potrošniško posojilo',
     'bridge_loan' => 'Mostno posojilo',
     'microcredit' => 'Mikroposojilo',
-
-    // New translations for the section
     'discover_our_loan_services' => 'Odkrijte naše storitve posojil',
     'find_the_right_loan' => 'Najdite posojilo, ki ustreza vašim potrebam med našimi različnimi možnostmi',
-    'personal_loan' => 'Osebno posojilo',
     'personal_loan_description' => 'Za vaše osebne projekte',
     'personal_loan_details' => 'Hitra in fleksibilna financiranja za vse vaše osebne potrebe.',
-    'mortgage_loan' => 'Hipotekarno posojilo',
     'mortgage_loan_description' => 'Kupite svoj dom',
     'mortgage_loan_details' => 'Najdite popolno hipotekarno posojilo za svoj novi dom.',
-    'auto_loan' => 'Avtomobilsko posojilo',
     'auto_loan_description' => 'Financirajte svoje vozilo',
     'auto_loan_details' => 'Možnosti posojila za nakup avtomobila vaših sanj.',
-    'student_loan' => 'Študentsko posojilo',
     'student_loan_description' => 'Za vaše študije',
     'student_loan_details' => 'Posojila, zasnovana za financiranje vašega izobraževanja in akademskih potreb.',
-    'business_loan' => 'Profesionalno posojilo',
     'business_loan_description' => 'Za vaše podjetje',
     'business_loan_details' => 'Financiranje za podporo in rast vašega podjetja.',
-    'consumer_loan' => 'Potrošniško posojilo',
     'consumer_loan_description' => 'Za vaše nakupe',
     'consumer_loan_details' => 'Posojila za financiranje vaših nakupov in potrošniških izdatkov.',
-    'bridge_loan' => 'Mostno posojilo',
     'bridge_loan_description' => 'Med dvema prodajama',
     'bridge_loan_details' => 'Rešitve posojil za pokritje potreb med dvema nepremičninskima transakcijama.',
-    'microcredit' => 'Mikroposojilo',
     'microcredit_description' => 'Majhna posojila',
     'microcredit_details' => 'Majhna posojila za takojšnje finančne potrebe.',
     'loan' => 'Pripravljeno',
-
     'notice' => 'obvestilo',
     'from' => 'Od',
     'popular_loan_title' => 'Priljubljena posojila',
     'personal_loan_subtitle' => 'Najbolj gledana in zahtevana posojila',
-
     'title4' => 'Pridobite svoje posojilo hitro in varno.',
     'text4' => 'Prednosti izbire naših storitev posojil.',
     'competitive_rates' => 'Konkurenčne obrestne mere',
@@ -59,7 +47,6 @@ return [
     'quick_turnaround_description' => 'Pridobite hitro odzivnost in hitro dostopna sredstva.',
     '24/7_support' => '24/7 podpora',
     '24/7_support_description' => 'Naša ekipa je na voljo za odgovore na vsa vaša vprašanja.',
-
     'custom_loan_services' => 'Izkoristite naše storitve posojil po meri',
     'reliability_quality' => 'Preglednost in zanesljivost',
     'reliability_quality_description' => 'V ' . site_name() . ' nudimo jasne in zanesljive rešitve posojil, podprte s pozitivnimi ocenami strank in popolno preglednostjo.',
@@ -68,33 +55,43 @@ return [
     'optimal_security' => 'Varnost in zasebnost',
     'optimal_security_description' => 'Vaši osebni podatki so pri nas varni. ' . site_name() . ' uporablja napredne varnostne protokole za zaščito vaše zasebnosti. Naša podpora je na voljo 24/7 za vsa pomoč.',
     'apply_loan' => 'Zahtevajte posojilo',
-
-
     'testimonials_title' => 'Mnenja strank',
     'testimonials_description' => 'Odkrijte, kaj pravijo naše stranke o nas.',
     'testimonial_1' => [
         'quote' => '"Zelo sem zadovoljna s storitvijo. Postopek prijave za posojilo je bil hiter in enostaven. Odobritev sem prejela v le nekaj dneh, obrestne mere pa so bile konkurenčne. Hvala lepa!"',
         'name' => 'Julie B.',
+        'location' => 'Bristol, Združeno kraljestvo',
+        'months_ago' => 1,
     ],
     'testimonial_2' => [
         'quote' => '"Močno priporočam to storitev posojil. Ekipa je bila zelo profesionalna in v pomoč. Odgovorili so na vsa moja vprašanja in proces je bil brez stresa. Hvala za vašo odlično storitev!"',
         'name' => 'Pierre L.',
+        'location' => 'Cardiff, Wales',
+        'months_ago' => 2,
     ],
     'testimonial_3' => [
         'quote' => '"Postopek prijave za posojilo je bil pregleden in učinkovit. Prejela sem strokovno in osebno svetovanje skozi celoten postopek. Hvala celotni ekipi za odlično delo!"',
         'name' => 'Sophie D.',
+        'location' => 'Glasgow, Škotska',
+        'months_ago' => 2,
     ],
     'testimonial_4' => [
         'quote' => '"Pridobitev posojila pri tej družbi je bila brezskrbna izkušnja. Osebje je bilo prijazno in dobro obveščeno, proces pa hiter in učinkovit. Močno priporočam!"',
         'name' => 'Marc F.',
+        'location' => 'Liverpool, Združeno kraljestvo',
+        'months_ago' => 3,
     ],
     'testimonial_5' => [
         'quote' => '"Odlična storitev za stranke! Vodili so me skozi vsak korak postopka posojila, moja vprašanja pa so bila hitro odgovorjena. Zelo sem zadovoljna z rezultatom."',
         'name' => 'Nathalie P.',
+        'location' => 'Belfast, Severna Irska',
+        'months_ago' => 4,
     ],
     'testimonial_6' => [
         'quote' => '"Zelo dobra obrestna mera in hiter postopek. Močno priporočam to storitev vsakomur, ki potrebuje posojilo hitro in zanesljivo."',
         'name' => 'Luc M.',
+        'location' => 'Newcastle, Združeno kraljestvo',
+        'months_ago' => 5,
     ],
     'testimonial_7' => [
         'quote' => '"Preprost in učinkovit postopek posojila. Prijetno sem bila presenečena nad hitrostjo odobritve. Hvala vsem iz ekipe!"',
@@ -104,7 +101,6 @@ return [
         'quote' => '"Imela sem odlično izkušnjo s to storitvijo posojil. Osebje je bilo pozorno in profesionalno. Priporočam, ne morem se načakati!"',
         'name' => 'Jean L.',
     ],
-
     'about_title' => 'Pridružite se najboljšemu svetovnemu trgu za delavce',
     'about_description' => site_name() . ' je vaša zaupanja vredna platforma za pridobivanje posojil z izjemno izkušnjo strank. Zavezani smo, da vam nudimo preproste, varne in hitre finančne rešitve.',
     'rating' => '4.9/5',
@@ -116,19 +112,28 @@ return [
         '2' => 'Izkoristite našo personalizirano storitev za stranke, da najdete najboljše ponudbe',
         '3' => 'Dostopajte do fleksibilnih posojil, prilagojenih vašim potrebam',
     ],
-
     'cta_title' => 'Hitro pridobite posojilo, ki ga potrebujete.',
     'cta_text' => 'Danes se prijavite za posojilo na spletu. Naša platforma vas povezuje z zaupanja vrednimi posojilodajalci za hitre in varne finančne rešitve.',
     'cta_button' => 'Začnite zdaj',
-
     'terms' => 'Splošni pogoji',
     'privacy_policy' => 'Politika zasebnosti',
     'site_map' => 'Spletna stran',
     'about' => [
-        'title' => 'O nas',
-        'who_we_are' => 'Kdo smo?',
-        'faq' => 'Pogosta vprašanja',
-        'contact' => 'Kontakt',
+        'exptitle' => 'leta izkušenj',
+        'sectagline' => 'dobrodošli v ' . site_name(),
+        'sectitle' => 'Osebna posojila za izpolnitev vaših sanj',
+        'text1' => 'Smo v tem poslu že 8 let in nudimo najboljše storitve.',
+        'text2' => site_name() . ' je vaša zaupanja vredna platforma za posojila z izjemno uporabniško izkušnjo. Zavezani smo k zagotavljanju preprostih, varnih in hitrih finančnih rešitev.',
+        'check1' => 'posojilo za mala podjetja',
+        'check2' => 'posojilo za študij v tujini',
+        'check3' => 'hitro odobravanje posojil',
+        'check4' => 'zelo nizke obrestne mere',
+        'engage1_title' => 'Licencirani in regulirani',
+        'engage1_desc' => 'Certificirana kreditna institucija, ki deluje po evropskih standardih. Vaši podatki in vloga so zaščiteni v vsakem koraku.',
+        'engage2_title' => 'Zagotovljen odgovor v 48 urah',
+        'engage2_desc' => '100-odstotno spletni postopek, brez obiska poslovalnice. Odločitev v 48 urah.',
+        'engage3_title' => 'Več valut in več držav',
+        'engage3_desc' => 'Financiranje na voljo v valuti vaše države, prilagojeno vašemu projektu.',
     ],
     'loan_types' => [
         'title' => 'Vrste posojil',
@@ -149,7 +154,6 @@ return [
         'button' => 'Pošlji',
     ],
     'rights_reserved' => '© ' . site_name() . '. 2024. Vse pravice pridržane.',
-
     'en' => 'Angleščina',
     'fr' => 'Francoščina',
     'es' => 'Španščina',
@@ -160,15 +164,11 @@ return [
     'mt' => 'malteščina',
     'pt' => 'portugalščina',
     'sl' => 'Slovenščina',
-
-    // Hero subtitle
-    'hero_subtitle' => 'Brez zapletenih postopkov, brez skritih stroškov. Že 15 let financiramo osebne, nepremičninske, avtomobilske in poslovne projekte s preglednostjo in hitrostjo.',
-
-    // Slide
+    'hero_subtitle' => 'Brez zapletenih postopkov, brez skritih stroškov. Že 8 let financiramo osebne, nepremičninske, avtomobilske in poslovne projekte s preglednostjo in hitrostjo.',
     'slide_1' => [
-        'title' => ' 15 let izkušenj · Licencirano · Odgovor v 48h',
+        'title' => ' 8 let izkušenj · Licencirano · Odgovor v 48h',
         'text1' => 'Financirajte vse svoje projekte,',
-        'text2' => 'do 500.000 € v 48h.',
+        'text2' => 'do 5.000.000 € v 48h.',
     ],
     'slide_2' => [
         'title' => 'Pametna posojila za svetle prihodnosti',
@@ -185,46 +185,31 @@ return [
         'text1' => 'Vodimo najboljšo',
         'text2' => 'posojilno podjetje',
     ],
-
     'infos' => [
         'item1' => 'hitre odobritve',
         'item2' => 'več kot 500k strank',
         'item3' => 'brez stroškov plačil',
         'item4' => 'fleksibilna plačila',
     ],
-
-    'about' => [
-        'exptitle' => 'leta izkušenj',
-        'sectagline' => 'dobrodošli v ' . site_name(),
-        'sectitle' => 'Osebna posojila za izpolnitev vaših sanj',
-        'text1' => 'Smo v tem poslu že 15 let in nudimo najboljše storitve.',
-        'text2' => site_name() . ' je vaša zaupanja vredna platforma za posojila z izjemno uporabniško izkušnjo. Zavezani smo k zagotavljanju preprostih, varnih in hitrih finančnih rešitev.',
-        'check1' => 'posojilo za mala podjetja',
-        'check2' => 'posojilo za študij v tujini',
-        'check3' => 'hitro odobravanje posojil',
-        'check4' => 'zelo nizke obrestne mere',
-    ],
-
     'services' => [
         'sectagline' => 'kaj ponujamo',
         'sectitle' => 'Nudimo najboljše storitve za vaše posojilo',
+        'cta_title' => 'Ste pripravljeni začeti svoj finančni projekt?',
+        'cta_text' => 'Naša ekipa vam je na voljo pri vaši vlogi za financiranje.',
     ],
-
     'simulate' => [
         'sectitle' => 'Koliko potrebujete?',
     ],
-
     'chooses' => [
         'sectagline' => 'naše prednosti',
         'sectitle' => 'zakaj izbrati nas',
-        'text1' => 'Smo v tem poslu že 15 let in nudimo najboljše storitve.',
+        'text1' => 'Smo v tem poslu že 8 let in nudimo najboljše storitve.',
         'item1' => 'nižje obrestne mere',
         'item2' => 'hitro in enostavno',
         'progress1' => 'postopek posojila',
         'progress2' => 'poslovno svetovanje',
         'progress3' => 'prednosti plačil',
     ],
-
     'works' => [
         'sectagline' => 'Kako deluje',
         'sectitle' => 'Naš delovni proces',
@@ -246,7 +231,6 @@ return [
             'desc' => 'Sredstva se prenesejo neposredno na vaš bančni račun v kratkem času po odobritvi.',
         ],
     ],
-
     'loan_reasons' => [
         'sectagline' => 'razlogi za posojilo',
         'sectitle' => 'Priljubljeni razlogi za posojilo',
@@ -257,24 +241,78 @@ return [
             'desc2' => 'Združite več dolgov v enostavno mesečno plačilo, kar vam bo pomagalo poenostaviti in bolje upravljati vaše finance.',
             'title3' => 'Obnova doma',
             'desc3' => 'Posodobite ali obnovite svoj dom, povečajte vrednost in udobje vašega življenjskega prostora brez finančnega bremena.',
+            'title4' => 'Financirajte svojo izobrazbo',
+            'desc4' => 'Vlagajte v prihodnost: šolnina, strokovno usposabljanje ali zamenjava kariere — brez ogrožanja vsakdanjega življenja.',
+            'title5' => 'Potovanja in počitnice',
+            'desc5' => 'Raziskujte svet brez skrbi. Financirajte sanjsko potovanje, ne da bi posegli po prihrankih.',
+            'title6' => 'Poroka in družinski dogodki',
+            'desc6' => 'Proslavite najpomembnejše trenutke v življenju brez finančnega stresa. Načrtujte sanjski dogodek v svojem tempu.',
+            'title7' => 'Zdravstveni stroški',
+            'desc7' => 'Z zaupanjem se spopadite z nepričakovanimi zdravstvenimi stroški. Hitro pokrijte zdravljenje, operacije ali medicinsko opremo.',
+            'title8' => 'Zagon podjetja in naložbe',
+            'desc8' => 'Uresničite podjetniški projekt ali razširite podjetje s hitrim in prilagodljivim financiranjem.',
         ],
         'btn_text' => 'Izvedite več',
         'btn_icon' => 'ikona-naprej',
     ],
-
     'total_loans_granted' => 'Skupaj odobrena posojila',
     'customer_satisfaction_rate' => 'Zadovoljni kupci',
     'total_loan_amount_granted' => 'Razpoložljivi znesek',
     'average_approval_time' => 'Zagotovljen odgovor',
     'member' => 'Financirane stranke',
     'day' => 'dni',
-
     'cta_title2' => 'Pridobite posojilo, ki ga potrebujete hitro.',
     'cta_text2' => 'Hitro pridobite posojilo za podjetje',
     'cta_button2' => 'Začnite zdaj',
-
     'about_text' => 'Ponujamo prilagojene rešitve posojil, ki vam pomagajo doseči vaše finančne cilje. Hitre, varne in fleksibilne možnosti, zasnovane tako, da ustrezajo vašim edinstvenim potrebam.',
     'get' => 'Stopite v stik',
-
-
+    'testimonials_months_ago' => '{1} pred 1 mesecem|{2} pred :count mesecema|[3,4] pred :count meseci|[5,*] pred :count meseci',
+    'needs' => [
+        'sectagline' => 'glede na vaš položaj',
+        'sectitle' => 'Ne glede na projekt, imamo rešitev',
+        'sectitle_sub' => 'Izberite profil, ki vam ustreza, in odkrijte ponudbo, zasnovano zase.',
+        'profiles' => [
+            'starter' => [
+                'title' => 'Začenjate nov projekt',
+                'text' => 'Poroka, prenova, nepričakovan strošek... financirajte osebni projekt s prilagodljivim posojilom, brez dokazila o nakupu.',
+                'cta' => 'Oglejte si osebno posojilo',
+            ],
+            'student' => [
+                'title' => 'Ste študent',
+                'text' => 'Šolnina, namestitev, oprema: financiranje, zasnovano za podporo vaši študijski poti.',
+                'cta' => 'Oglejte si študentsko posojilo',
+            ],
+            'buyer' => [
+                'title' => 'Kupujete nepremičnino',
+                'text' => 'Uresničite nakup doma s stanovanjskim posojilom s preglednimi pogoji in fiksno obrestno mero.',
+                'cta' => 'Oglejte si stanovanjsko posojilo',
+            ],
+            'entrepreneur' => [
+                'title' => 'Vodite podjetje',
+                'text' => 'Zagon, denarni tok, oprema: hitro financiranje, ki pomaga vašemu podjetju rasti brez odlašanja.',
+                'cta' => 'Oglejte si poslovno posojilo',
+            ],
+            'driver' => [
+                'title' => 'Menjate vozilo',
+                'text' => 'Financirajte svoj avto, nov ali rabljen, z mesečnimi obroki, prilagojenimi vašemu proračunu.',
+                'cta' => 'Oglejte si avtomobilsko posojilo',
+            ],
+            'rider' => [
+                'title' => 'Vozite dvokolesnik',
+                'text' => 'Skuter ali motor: hitro se opremite s posebnim posojilom in odgovorom v 48 urah.',
+                'cta' => 'Oglejte si posojilo za motor',
+            ],
+        ],
+    ],
+    'faq_cta' => [
+        'label' => 'Podpora',
+        'title' => 'Niste našli odgovora?',
+        'text' => 'Naša ekipa vam je na voljo od ponedeljka do sobote.',
+    ],
+    'final_cta' => [
+        'tagline' => 'ukrepajte',
+        'title' => 'Ste pripravljeni uresničiti svoj projekt?',
+    ],
+    'years_experience' => 'Let izkušenj',
+    'partners_label' => 'Naši partnerji',
 ];

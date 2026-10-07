@@ -18,7 +18,6 @@ return [
     'label_file' => 'Dokument z dvojno identiteto',
     'label_objet' => 'Namen posojila',
     'details' => 'Podrobnosti o posojilu',
-
     'placeholder_name' => 'Vaše ime in priimek',
     'placeholder_email' => 'Vnesite svojo e-pošto',
     'placeholder_phone' => 'Vnesite svojo telefonsko številko',
@@ -28,7 +27,6 @@ return [
     'placeholder_amount' => 'Željeno posojilo (€)',
     'placeholder_objet' => 'Na kratko opišite namen svojega posojila',
     'button' => 'Pošlji svojo zahtevo',
-
     'personal_loan' => [
         'section_title' => 'Osebno posojilo',
         'description' => 'Osebno posojilo je posojilo, ki ni dodeljeno za specifičen nakup. Z drugimi besedami, znesek, ki ga izposodite s to vrsto financiranja, lahko uporabite za več različnih nakupov (avto, motor, nepremičnine, delo, potovanja itd.). Zato ni potrebno pojasniti narave izdatkov, ki jih krije celoten znesek denarja, v nasprotju z dodeljenimi posojili. Kot že ime pove, je dodeljeno posojilo posojilo, ki omogoča izključno izvedbo specifičnega projekta: nakup avtomobila, gradbeni projekt itd. Objektivno gledano, glavna prednost uporabe nedodeljenega posojila je potreba po hitrem denarju. Poleg tega je imetnik posojila prost, da sredstva porabi po lastni presoji. Trenutno ima veliko gospodinjstev nezadostna sredstva za financiranje novih projektov.',
@@ -48,10 +46,9 @@ return [
                 'answer2' => 'Preprosto izpolnite našo spletno prijavo in naš tim vas bo vodil skozi postopek korak za korakom.',
                 'question3' => 'Kakšna je obrestna mera za osebno posojilo?',
                 'answer3' => 'Obrestne mere se razlikujejo glede na dejavnike, kot so znesek posojila in kreditna ocena. Kontaktirajte nas za prilagojeno obrestno mero.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'home_loan' => [
         'section_title' => 'Posojilo za dom',
         'description' => 'Posojilo za dom zagotavlja financiranje posebej za nakup ali prenovo nepremičnine. Ta vrsta posojila omogoča posojilojemalcem dostop do pomembnih sredstev za projekte, kot je nakup nove hiše, širitev trenutnih bivalnih prostorov ali izboljšanje lastnosti nepremičnine. Posojila za dom so običajno dolgoročna in ponujajo konkurenčne obrestne mere, zaradi česar so pomembno finančno orodje za dosego ciljev lastništva nepremičnine. Fleksibilnost pri pogojih odplačevanja in prilagojen pristop k financiranju nepremičnin naredijo posojila za dom privlačno rešitev za bodoče lastnike domov.',
@@ -71,10 +68,9 @@ return [
                 'answer2' => 'Za prijavo preprosto izpolnite našo spletno prijavo, naš tim pa vam bo pomagal skozi vsak korak postopka.',
                 'question3' => 'Kakšna je obrestna mera za posojilo za dom?',
                 'answer3' => 'Obrestne mere se razlikujejo glede na znesek posojila, vrsto nepremičnine in kreditno zgodovino. Kontaktirajte nas za prilagojen izračun obrestne mere.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'auto_loan' => [
         'section_title' => 'Posojilo za avto',
         'description' => 'Posojilo za avto je finančna možnost, posebej zasnovana za pomoč pri nakupu novega ali rabljenega vozila. Ta vrsta posojila ponuja fleksibilne pogoje odplačevanja in konkurenčne obrestne mere, kar vam omogoča, da se odpeljete z avtom, ki si ga želite, brez velikega začetnega plačila. S posojilom za avto lahko pokrijete celoten ali delni znesek vozila in ga odplačujete v daljšem obdobju, kar je dostopna rešitev za večino proračunov. Posojila za avto ponujajo enostaven postopek prijave in hitro odobritev, da vas hitro spravijo na cesto.',
@@ -94,10 +90,9 @@ return [
                 'answer2' => 'Preprosto izpolnite našo spletno prijavo, naš tim pa vas bo vodil skozi postopek odobritve posojila, da boste hitro prejeli svoje novo vozilo.',
                 'question3' => 'Kateri dejavniki določajo obrestno mero za posojilo za avto?',
                 'answer3' => 'Obrestne mere so odvisne od dejavnikov, kot so vrsta vozila, znesek posojila in vaša kreditna ocena. Kontaktirajte nas za prilagojeno obrestno mero glede na vaše potrebe.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'business_loan' => [
         'section_title' => 'Posojilo za podjetje',
         'description' => 'Posojilo za podjetje je rešitev financiranja, zasnovana za podporo rasti in operativnim potrebam vašega podjetja. Ne glede na to, ali potrebujete sredstva za širitev, nakup opreme ali obratni kapital, vam lahko poslovno posojilo zagotovi finančno podporo, ki jo vaše podjetje potrebuje. S fleksibilnimi pogoji odplačevanja in konkurenčnimi obrestnimi merami vam ta vrsta posojila omogoča učinkovito upravljanje denarnega toka, vlaganje v nove priložnosti in spodbujanje dolgoročnega uspeha.',
@@ -117,10 +112,9 @@ return [
                 'answer2' => 'Za prijavo preprosto izpolnite našo spletno prijavo, naš tim pa vas bo vodil skozi postopek za zagotovitev brezskrbnega doživetja.',
                 'question3' => 'Kateri dejavniki vplivajo na obrestno mero za poslovno posojilo?',
                 'answer3' => 'Obrestne mere so odvisne od dejavnikov, kot so znesek posojila, finančno stanje podjetja in vaša kreditna zgodovina. Kontaktirajte nas, da prejmete prilagojeno obrestno mero.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'bike_loan' => [
         'section_title' => 'Posojilo za kolo',
         'description' => 'Posojilo za kolo je finančna možnost, prilagojena posameznikom, ki želijo kupiti novo ali rabljeno motorno kolo ali kolo. To posojilo vam omogoča, da se vozite z izbranim kolesom z dostopnimi pogoji odplačevanja in konkurenčnimi obrestnimi merami. S posojilom za kolo se izognete velikim začetnim plačilom in za svoje kolo plačujete skozi čas, kar omogoča lažje usklajevanje s proračunom. Ta vrsta posojila je idealna za začetnike in izkušene kolesarje, ki želijo finančno fleksibilnost.',
@@ -140,10 +134,9 @@ return [
                 'answer2' => 'Preprosto izpolnite našo spletno prijavo, naš tim pa vas bo vodil skozi postopek odobritve za brezskrbno doživetje.',
                 'question3' => 'Kateri dejavniki vplivajo na obrestno mero za posojilo za kolo?',
                 'answer3' => 'Obrestne mere so odvisne od dejavnikov, kot so vrsta kolesa, znesek posojila in vaša kreditna zgodovina. Kontaktirajte nas za prilagojeno obrestno mero.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'study_loan' => [
         'section_title' => 'Šolsko posojilo',
         'description' => 'Šolsko posojilo je namenski finančni izdelek, zasnovan za pomoč študentom pri pokrivanju izobraževalnih stroškov, vključno z šolnino, knjigami, nastanitvijo in drugimi stroški, povezanimi z izobraževanjem. Ta vrsta posojila zagotavlja študentom in njihovim družinam finančno podporo za nadaljevanje višjega izobraževanja brez takojšnjega finančnega bremena. S fleksibilnimi pogoji odplačevanja in konkurenčnimi obrestnimi merami lahko šolsko posojilo pomaga doseči akademske cilje.',
@@ -163,10 +156,56 @@ return [
                 'answer2' => 'Za prijavo preprosto izpolnite našo spletno prijavo, naš tim pa vam bo pomagal skozi vsak korak postopka.',
                 'question3' => 'Kdaj začnem odplačevati šolsko posojilo?',
                 'answer3' => 'Pogoji odplačevanja se razlikujejo, vendar mnoge šolske posojilne možnosti omogočajo odloženo odplačevanje, kar pomeni, da lahko začnete odplačevati po zaključku študija.',
-            ]
-        ]
+            ],
+        ],
     ],
-
-
-
+    'label_country' => 'Država prebivališča',
+    'placeholder_country' => 'Izberite svojo državo',
+    'country_auto_hint' => 'Država je bila zaznana samodejno — po potrebi jo spremenite.',
+    'button_sending' => 'Pošiljanje…',
+    'service_benefits_title' => 'Zakaj izbrati to ponudbo',
+    'service_related_title' => 'Odkrijte naše druge rešitve',
+    'service_related_sub' => 'Imate drug projekt? Verjetno imamo pravo rešitev za vas.',
+    'quote_monthly' => 'Ocenjeni mesečni obrok',
+    'quote_total' => 'Skupaj za vračilo',
+    'quote_interest' => 'Skupni strošek kredita',
+    'quote_hint' => 'Okvirna ponudba na podlagi fiksne letne obrestne mere :rate %. Končna mera bo potrjena po pregledu vaše vloge.',
+    'label_rate' => 'Fiksna letna obrestna mera',
+    'amount_range_hint' => 'Znesek od :min do :max',
+    'label_currency' => 'V kateri valuti želite najeti posojilo?',
+    'quote_summary_title' => 'Vaša ponudba:',
+    'form_hint' => 'Vsa polja, označena z *, so obvezna. Vaši podatki so zaščiteni.',
+    'form_security' => 'Vaši podatki se prenašajo varno.',
+    'quote_step_title' => 'Izberite svojo ponudbo',
+    'sidebar_hours' => 'Pon – Sob: 8:00 – 18:00',
+    'general_faqs' => [
+        'question1' => 'Katera obrestna mera velja za moje posojilo?',
+        'answer1' => 'Mera je odvisna od izposojenega zneska, izbranega obdobja in vašega profila (dohodek, zaposlitev, kreditna zgodovina). Po simulaciji prejmete osebno ponudbo še pred kakršno koli obveznostjo, brez stroškov in brez vpliva na vaše kreditno poročilo.',
+        'question2' => 'Kolikšen je največji znesek, ki ga lahko posodim?',
+        'answer2' => 'Glede na vrsto posojila in vašo sposobnost odplačevanja ' . site_name() . ' financira projekte do 5.000.000 € (ali ekvivalent v vaši valuti). Natančen ponujeni znesek je odvisen od pregleda vaše vloge.',
+        'question3' => 'Za kaj lahko uporabim posojilo?',
+        'answer3' => 'Osebno posojilo lahko uporabite po lastni presoji: nakup, obnova doma, potovanje, nepričakovan strošek... Za določen projekt (nepremičnina, avto, študij, podjetje) naše namenske ponudbe nudijo primernejše pogoje, zato primerjajte naše izdelke.',
+        'question4' => 'Kdo lahko zaprosi za posojilo pri ' . site_name() . '?',
+        'answer4' => 'Spletno vlogo lahko odda vsak polnoletni z rednim dohodkom in veljavnim osebnim dokumentom. Končna odobritev je odvisna od ocene vaših financ in sposobnosti odplačevanja.',
+        'question5' => 'Kako hitro prejmem sredstva?',
+        'answer5' => 'Ko je vloga odobrena in pogodba elektronsko podpisana, se sredstva običajno nakažejo na vaš račun v 48 delovnih urah.',
+        'question6' => 'Ali lahko posojilo delno predčasno odplačam?',
+        'answer6' => 'Da, posojilo lahko kadar koli v celoti ali delno predčasno odplačate, brez skritih stroškov. Predčasno odplačilo skrajša preostalo dobo ali zmanjša naslednje obroke.',
+        'question7' => 'Ali lahko posojilo poplačam pred koncem pogodbe?',
+        'answer7' => 'Da, popolno predčasno odplačilo je mogoče kadar koli na preprosto zahtevo. Obrnite se na našo podporo strankam, da izveste natančen znesek za izbrani datum.',
+        'question8' => 'Katere dokumente moram predložiti za spletno vlogo?',
+        'answer8' => 'Veljaven osebni dokument, dokazilo o dohodku in glede na vrsto posojila še nekaj dodatnih dokumentov (potrdilo o naslovu, bančni izpisek...). Natančen seznam prejmete po simulaciji.',
+        'question9' => 'Kako oddam dokumente za spletno vlogo?',
+        'answer9' => 'Dokumente (PDF, JPEG ali PNG) naložite neposredno iz spletnega prostora za vloge, popolnoma varno. Pošta ali obisk poslovalnice nista potrebna.',
+        'question10' => 'Ali oglaševana mera vključuje vse stroške?',
+        'answer10' => 'Vaši obroki pokrivajo izposojeno glavnico in obresti. Med trajanjem posojila se ne zaračunavajo dodatni stroški, razen izbirnega zavarovanja, če ste se zanj odločili.',
+        'question11' => 'Ali lahko najamem posojilo, če že imam drugo posojilo?',
+        'answer11' => 'Obstoječe posojilo samodejno ne preprečuje novega: pomembno je, ali zmorete vse obroke skupaj. Za poenostavitev proračuna je mogoča tudi konsolidacija dolgov.',
+        'question12' => 'Ali imam lahko pri ' . site_name() . ' hkrati več posojil?',
+        'answer12' => 'Da, če imate dovolj neto razpoložljivega dohodka in svoje račune dobro upravljate. Vsaka nova vloga se obravnava samostojno glede na vaš celotni položaj.',
+        'question13' => 'Kaj se zgodi, če obroka ne morem več plačati?',
+        'answer13' => 'Čim prej se obrnite na našo podporo strankam: mogoč je odlog plačil ali prestrukturiranje posojila. Prej ko se oglasite, več rešitev je na voljo.',
+        'question14' => 'Ali lahko posojilo zavarujem?',
+        'answer14' => 'Izbirno zavarovanje posojilojemalca lahko pokrije vaše obroke ob izgubi zaposlitve, nezmožnosti za delo ali smrti ter zaščiti vašo družino. Ni pogoj za pridobitev posojila in ga je mogoče dodati kadar koli.',
+    ],
 ];

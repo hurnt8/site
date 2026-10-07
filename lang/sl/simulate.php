@@ -12,11 +12,9 @@ return [
     'placeholder_duree' => 'Trajanje posojila',
     'placeholder_taux' => 'Obrestna mera',
     'button' => 'Simuliraj',
-
     'result_title' => 'Rezultati simulacije:',
     'paiement' => 'Ocenjena mesečna plačila',
     'table' => 'Tabela amortizacije:',
-
     'table_month' => 'Mesec',
     'pay_table' => 'Mesečno plačilo (€)',
     'table_primal' => 'Glavnica (€)',

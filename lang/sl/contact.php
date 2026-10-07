@@ -13,14 +13,13 @@ return [
     'placeholder_message' => 'Vaše sporočilo',
     'button' => 'Pošlji',
     'subject' => 'Izberi posojilo',
-
     'detail_title' => 'Ostanite v stiku z nami',
     'detail_desc' => 'Tu smo, da vam pomagamo. Kontaktirajte nas za vsa vprašanja ali pomoč v zvezi z našimi posojilnimi storitvami.',
-
     'address_title' => 'Naslov',
     'address_desc' => 'Calcea Victoriei 118 Sector 1 010093 Bukarešta',
     'phone_title' => 'Telefon',
-    'phone_desc' => site_phone() . ' ',
+    'phone_desc' => '+49 15510 562715 ',
     'mail_title' => 'E-pošta',
-    'mail_desc' => site_email(),
+    'mail_desc' => 'info@fedelispay.com',
+    'sending' => 'Pošiljanje…',
 ];

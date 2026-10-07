@@ -14,7 +14,7 @@ return [
     'slide_1' => [
         'title' => ' 8 rokov skúseností · Licencovaní · Zaručená odpoveď',
         'text1' => 'Financujte všetky svoje projekty,',
-        'text2' => 'až do 95 000 € za 48 h.',
+        'text2' => 'až do 5 000 000 € za 48 h.',
     ],
     'about' => [
         'exptitle' => 'rokov skúseností',

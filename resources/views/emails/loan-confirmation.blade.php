@@ -192,6 +192,18 @@ $texts = [
         'closing'    => 'Dejjem tiegħek,',
         'team'       => 'It-tim ta’ ' . site_name(),
     ],
+    'sl' => [
+        'title'      => 'Vloga za posojilo je prejeta',
+        'sub'        => site_name(),
+        'greeting'   => 'Pozdravljeni '.$data['name'].',',
+        'body'       => 'Uspešno smo prejeli vašo vlogo za posojilo v višini <strong>'.number_format($data['amount'], 0, ',', ' ').' '.($data['currency'] ?? 'EUR').'</strong> za <strong>'.$data['darly'].' mesecev</strong>. Trenutno jo obravnava naša ekipa.',
+        'cond_title' => 'Pogoji upravičenosti',
+        'cond_body'  => 'Za pridobitev posojila morate biti stari vsaj 18 let, imeti stalen mesečni dohodek in biti sposobni odplačevati pod določenimi pogoji.',
+        'footer'     => 'Kontaktirali vas bomo v najkrajšem možnem času. Hvala za zaupanje.',
+        'noreply'    => 'To e-sporočilo je bilo poslano z naslova no-reply. Prosimo, ne odgovarjajte neposredno.',
+        'closing'    => 'Lep pozdrav,',
+        'team'       => 'Ekipa ' . site_name(),
+    ],
 ];
 $t = $texts[$lang] ?? $texts['fr'];
 $L = [
@@ -211,6 +223,7 @@ $L = [
     'hr' => ['recap' => 'Sažetak vašeg zahtjeva', 'amount' => 'Traženi iznos', 'duration' => 'Rok', 'months' => 'mjeseci', 'type' => 'Vrsta zajma', 'monthly' => 'Procijenjena mjesečna rata', 'rate' => 'Godišnja stopa', 'ref' => 'Okvirna procjena, podložna odobrenju zahtjeva.', 'next' => 'Sljedeći koraci', 's1' => 'Razmatranje zahtjeva', 's1d' => 'Naš tim razmatra vaš zahtjev.', 's2' => 'Javljamo vam se', 's2d' => 'Savjetnik će vas kontaktirati e-poštom ili telefonom.', 's3' => 'Odluka i isplata', 's3d' => 'Odgovor u roku od 48 sati, zatim isplata sredstava.'],
     'sk' => ['recap' => 'Zhrnutie vašej žiadosti', 'amount' => 'Požadovaná suma', 'duration' => 'Doba', 'months' => 'mesiacov', 'type' => 'Typ úveru', 'monthly' => 'Odhadovaná mesačná splátka', 'rate' => 'Ročná sadzba', 'ref' => 'Orientačný odhad, podlieha schváleniu vašej žiadosti.', 'next' => 'Ďalšie kroky', 's1' => 'Posúdenie žiadosti', 's1d' => 'Náš tím preveruje vašu žiadosť.', 's2' => 'Kontaktujeme vás', 's2d' => 'Poradca vás bude kontaktovať e-mailom alebo telefonicky.', 's3' => 'Rozhodnutie a vyplatenie', 's3d' => 'Odpoveď do 48 hodín, potom vyplatenie prostriedkov.'],
     'mt' => ['recap' => 'Sommarju tat-talba tiegħek', 'amount' => 'Ammont mitlub', 'duration' => 'Tul', 'months' => 'xhur', 'type' => 'Tip ta’ self', 'monthly' => 'Ħlas ta’ kull xahar stmat', 'rate' => 'Rata annwali', 'ref' => 'Stima indikattiva, soġġetta għall-approvazzjoni tat-talba tiegħek.', 'next' => 'Il-passi li jmiss', 's1' => 'Eżami tat-talba', 's1d' => 'It-tim tagħna qed jeżamina l-applikazzjoni tiegħek.', 's2' => 'Nikkuntattjawk', 's2d' => 'Konsulent se jikkuntattjak bl-email jew bit-telefon.', 's3' => 'Deċiżjoni u ħlas', 's3d' => 'Tweġiba fi żmien 48 siegħa, imbagħad jinħarġu l-fondi.'],
+    'sl' => ['recap' => 'Povzetek vaše vloge', 'amount' => 'Zahtevani znesek', 'duration' => 'Doba', 'months' => 'mesecev', 'type' => 'Vrsta posojila', 'monthly' => 'Ocenjeni mesečni obrok', 'rate' => 'Letna obrestna mera', 'ref' => 'Okvirna ocena, odvisna od odobritve vaše vloge.', 'next' => 'Naslednji koraki', 's1' => 'Pregled vloge', 's1d' => 'Naša ekipa pregleduje vašo vlogo.', 's2' => 'Stopimo v stik', 's2d' => 'Svetovalec vas bo poklical ali vam pisal po e-pošti.', 's3' => 'Odločitev in izplačilo', 's3d' => 'Odgovor v 48 urah, nato izplačilo sredstev.'],
 ];
 $l = $L[$lang] ?? $L['fr'];
 

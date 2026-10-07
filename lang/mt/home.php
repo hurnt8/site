@@ -168,7 +168,7 @@ return [
     'slide_1' => [
         'title' => ' 15-il sena esperjenza · Liċenzjat · Risposta fi 48h',
         'text1' => 'Iffinanzja l-proġetti kollha tiegħek,',
-        'text2' => 'sa €95,000 fi 48h.',
+        'text2' => 'sa €5,000,000 fi 48h.',
     ],
     'slide_2' => [
         'title' => 'Prestiti Smart għal Futuri Brillanti',

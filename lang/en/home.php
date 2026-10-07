@@ -168,7 +168,7 @@ return [
     'slide_1' => [
         'title' => ' 8 Years of Expertise · Licensed · Guaranteed Response',
         'text1' => 'Finance all your projects,',
-        'text2' => 'up to €95,000 in 48h.',
+        'text2' => 'up to €5,000,000 in 48h.',
     ],
     'slide_2' => [
         'title' => 'Smart Loans for Bright Futures',
