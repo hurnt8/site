@@ -156,20 +156,20 @@
 .about-loan-item {
     display:flex; align-items:center; gap:.55rem;
     font-size:.82rem; font-weight:600; color:var(--navy); padding:.4rem 0;
-    border-bottom:1px solid #f3f4f6;
+    border-bottom:1px solid #F2F0EA;
 }
 .about-loan-item i { color:var(--accent); width:16px; text-align:center; font-size:.8rem; }
 
 .about-partner-bar {
     display:flex; align-items:center; gap:.55rem;
-    padding:.75rem 1rem; background:#f7f8fa; border-radius:10px;
-    border:1px solid #eaecf0; margin-bottom:1.5rem;
+    padding:.75rem 1rem; background:#F9F8F5; border-radius:10px;
+    border:1px solid #E4E0D6; margin-bottom:1.5rem;
     flex-wrap:wrap;
 }
-.about-partner-bar__lbl { font-size:.6rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:#9ca3af; white-space:nowrap; flex-shrink:0; }
+.about-partner-bar__lbl { font-size:.6rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; color:#A39C8C; white-space:nowrap; flex-shrink:0; }
 .about-partner-bar:hover .about-partner-bar__name {
     font-size:.78rem; font-weight:700; color:var(--navy);
-    background:#fff; border:1px solid #e5e7eb; border-radius:999px;
+    background:#fff; border:1px solid #E4E0D6; border-radius:999px;
     padding:.3rem .8rem; white-space:nowrap; flex-shrink:0;
     transition:border-color .25s ease, box-shadow .25s ease;
 }

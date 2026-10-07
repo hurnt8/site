@@ -40,10 +40,10 @@ $siteContact = \App\Models\SiteContact::current();
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{{ $title }}</title>
 <style>
-body{margin:0;padding:0;background:#F1F3F6;font-family:'Segoe UI',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;padding:0;background:#F2F0EA;font-family:'Segoe UI',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 img{border:0;outline:0}
 table{border-collapse:collapse}
-.wrap{max-width:580px;margin:32px auto;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E5E7EB}
+.wrap{max-width:580px;margin:32px auto;background:#FFFFFF;border-radius:14px;overflow:hidden;border:1px solid #E4E0D6}
 /* ── Header ── */
 .hdr{background:#0E3B2E;padding:28px 44px;text-align:center}
 .logo-outer{margin:0 auto 14px;display:inline-flex}
@@ -51,20 +51,20 @@ table{border-collapse:collapse}
 .hdr-sub{font-size:.74rem;color:rgba(255,255,255,.55);margin:0;letter-spacing:.03em;text-transform:uppercase}
 /* ── Body ── */
 .body{padding:32px 44px}
-p.greeting{font-size:.95rem;color:#1F2937;margin:0 0 1.25rem;line-height:1.7}
-p.body-text{font-size:.88rem;color:#4B5563;line-height:1.75;margin:0 0 1.25rem}
+p.greeting{font-size:.95rem;color:#1A1A17;margin:0 0 1.25rem;line-height:1.7}
+p.body-text{font-size:.88rem;color:#4A463C;line-height:1.75;margin:0 0 1.25rem}
 /* ── Contenu libre (modèles de notification rédigés par l'admin) ── */
-.body p,.body div{font-size:.88rem;color:#4B5563;line-height:1.75;margin:0 0 1.1rem}
-.body ul,.body ol{margin:0 0 1.1rem;padding-left:1.3rem;font-size:.88rem;color:#4B5563;line-height:1.75}
-.body strong,.body b{color:#1F2937}
+.body p,.body div{font-size:.88rem;color:#4A463C;line-height:1.75;margin:0 0 1.1rem}
+.body ul,.body ol{margin:0 0 1.1rem;padding-left:1.3rem;font-size:.88rem;color:#4A463C;line-height:1.75}
+.body strong,.body b{color:#1A1A17}
 .body a{color:#9A7736}
 .body h1,.body h2,.body h3{color:#0E3B2E;margin:0 0 .75rem}
 /* ── Info panel ── */
-.panel{background:#F8F9FB;border:1px solid #E5E7EB;border-radius:10px;overflow:hidden;margin-bottom:1.5rem}
+.panel{background:#F9F8F5;border:1px solid #E4E0D6;border-radius:10px;overflow:hidden;margin-bottom:1.5rem}
 .panel-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 16px;border-bottom:1px solid #ECEEF1;font-size:.84rem}
 .panel-row:last-child{border-bottom:none}
-.panel-lbl{color:#6B7280;font-size:.79rem;padding-right:10px;white-space:nowrap}
-.panel-val{color:#111827;font-weight:600;text-align:right}
+.panel-lbl{color:#6F695D;font-size:.79rem;padding-right:10px;white-space:nowrap}
+.panel-val{color:#1A1A17;font-weight:600;text-align:right}
 .panel-val.accent{color:{{ $p['btn'] }};font-weight:700}
 /* ── Alert boxes (teintes pastel, sobres) ── */
 .alert{border-radius:9px;padding:14px 18px;font-size:.83rem;line-height:1.7;margin-bottom:1.4rem}
@@ -78,23 +78,23 @@ p.body-text{font-size:.88rem;color:#4B5563;line-height:1.75;margin:0 0 1.25rem}
 .btn-wrap{text-align:center;margin:1.6rem 0 1.2rem}
 .btn{display:inline-block;padding:12px 34px;border-radius:8px;font-size:.92rem;font-weight:700;text-decoration:none;letter-spacing:.01em;color:#ffffff;background:{{ $p['btn'] }}}
 /* ── Code box ── */
-.code-box{background:#F8F9FB;border:1px solid #E5E7EB;border-radius:12px;padding:24px 20px;text-align:center;margin-bottom:1.5rem}
+.code-box{background:#F9F8F5;border:1px solid #E4E0D6;border-radius:12px;padding:24px 20px;text-align:center;margin-bottom:1.5rem}
 .code-digits{font-family:'Courier New',Courier,monospace;font-size:2.4rem;font-weight:900;letter-spacing:.3em;color:{{ $p['code'] }}}
-.code-expiry{font-size:.77rem;color:#6B7280;margin-top:9px}
+.code-expiry{font-size:.77rem;color:#6F695D;margin-top:9px}
 /* ── URL fallback ── */
-.url-fallback{font-size:.74rem;color:#9CA3AF;text-align:center;line-height:1.75;margin-bottom:1.25rem;word-break:break-all}
+.url-fallback{font-size:.74rem;color:#A39C8C;text-align:center;line-height:1.75;margin-bottom:1.25rem;word-break:break-all}
 .url-fallback a{color:#9A7736;text-decoration:none}
 /* ── Closing ── */
-p.closing{font-size:.88rem;color:#4B5563;margin:1.5rem 0 0;line-height:1.65}
-p.closing strong{color:#111827;font-size:.92rem}
+p.closing{font-size:.88rem;color:#4A463C;margin:1.5rem 0 0;line-height:1.65}
+p.closing strong{color:#1A1A17;font-size:.92rem}
 /* ── Divider ── */
-.divider{height:1px;background:#E5E7EB}
+.divider{height:1px;background:#E4E0D6}
 /* ── Footer ── */
 .footer{padding:18px 44px;text-align:center}
-.footer p{font-size:.72rem;color:#9CA3AF;line-height:1.7;margin:0}
+.footer p{font-size:.72rem;color:#A39C8C;line-height:1.7;margin:0}
 .footer a{color:#9A7736;text-decoration:none}
 .footer-signature{max-height:56px;margin-bottom:10px}
-.footer-address{font-size:.74rem;color:#6B7280;line-height:1.6;margin-bottom:10px}
+.footer-address{font-size:.74rem;color:#6F695D;line-height:1.6;margin-bottom:10px}
 /* ── Responsive ── */
 @media only screen and (max-width:600px){
   .wrap{margin:0;border-radius:0;border-left:none;border-right:none}
@@ -140,7 +140,7 @@ p.closing strong{color:#111827;font-size:.92rem}
       @if($siteContact->email)<br>{{ $siteContact->email }}@endif
     </p>
     @endif
-    <p style="font-weight:700;color:#6B7280;margin-bottom:6px">{{ $noReplyText }}</p>
+    <p style="font-weight:700;color:#6F695D;margin-bottom:6px">{{ $noReplyText }}</p>
     <p>
       &copy; {{ date('Y') }} {{ site_name() }}
       @if($footerNote)

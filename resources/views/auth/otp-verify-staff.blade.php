@@ -70,11 +70,11 @@ body{font-family:'Outfit',sans-serif;background:#fff;min-height:100vh;display:fl
 .auth-right{background:#fff;display:flex;flex-direction:column;min-height:100vh}
 .auth-topbar{
   display:flex;align-items:center;justify-content:space-between;
-  padding:1.25rem 2rem;border-bottom:1px solid #f0f2f5;flex-shrink:0;
+  padding:1.25rem 2rem;border-bottom:1px solid #F2F0EA;flex-shrink:0;
 }
 .auth-topbar__back{
   display:inline-flex;align-items:center;gap:.45rem;
-  font-size:.8rem;color:#6b7280;text-decoration:none;font-weight:500;transition:color .18s;
+  font-size:.8rem;color:#6F695D;text-decoration:none;font-weight:500;transition:color .18s;
 }
 .auth-topbar__back:hover{color:var(--navy)}
 .auth-topbar__logo img{height:34px}
@@ -84,7 +84,7 @@ body{font-family:'Outfit',sans-serif;background:#fff;min-height:100vh;display:fl
 
 .otp-icon{
   width:64px;height:64px;border-radius:18px;
-  background:linear-gradient(135deg,rgba(154, 119, 54,.16),rgba(150,112,47,.16));
+  background:linear-gradient(135deg,rgba(154, 119, 54,.16),rgba(154,119,54,.16));
   border:1.5px solid rgba(154, 119, 54,.3);
   display:flex;align-items:center;justify-content:center;
   margin:0 auto 1.25rem;
@@ -95,7 +95,7 @@ body{font-family:'Outfit',sans-serif;background:#fff;min-height:100vh;display:fl
   font-family:'Fraunces',serif;font-size:1.75rem;font-weight:800;
   color:var(--navy);line-height:1.15;margin-bottom:.5rem;
 }
-.form-sub{font-size:.82rem;color:#6b7280;margin-bottom:1.75rem;line-height:1.6}
+.form-sub{font-size:.82rem;color:#6F695D;margin-bottom:1.75rem;line-height:1.6}
 .form-sub strong{color:var(--navy)}
 
 .auth-error{
@@ -132,13 +132,13 @@ body{font-family:'Outfit',sans-serif;background:#fff;min-height:100vh;display:fl
 .btn-auth:active{transform:scale(.98)}
 .btn-auth:disabled{opacity:.5;cursor:not-allowed}
 
-.resend-row{font-size:.79rem;color:#6b7280;margin-top:.5rem}
+.resend-row{font-size:.79rem;color:#6F695D;margin-top:.5rem}
 .resend-btn{background:none;border:none;cursor:pointer;padding:0;font-size:.79rem;font-weight:700;color:var(--gd)}
 .resend-btn:disabled{opacity:.4;cursor:not-allowed}
 .resend-msg{display:block;font-size:.74rem;font-weight:600;margin-top:.35rem}
 .resend-msg.ok{color:#059669}.resend-msg.fail{color:#dc2626}
 
-.auth-footer{padding:.875rem 2rem 1.25rem;text-align:center;font-size:.72rem;color:#9ca3af;flex-shrink:0}
+.auth-footer{padding:.875rem 2rem 1.25rem;text-align:center;font-size:.72rem;color:#A39C8C;flex-shrink:0}
 
 @media (max-width:991.98px){
   .auth-left{display:none!important}

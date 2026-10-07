@@ -12,7 +12,7 @@
     {{ __('auth.otp_email_intro', [], $locale) }}
   </p>
 
-  <p class="body-text" style="font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:rgba(240,245,255,.38);margin-bottom:.5rem">
+  <p class="body-text" style="font-size:.77rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:rgba(251,249,244,.38);margin-bottom:.5rem">
     {{ __('auth.otp_email_code_label', [], $locale) }}
   </p>
 

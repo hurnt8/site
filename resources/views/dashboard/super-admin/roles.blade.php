@@ -36,17 +36,17 @@
 .perm-matrix { width:100%; border-collapse:collapse; }
 .perm-matrix thead th {
   padding:.875rem 1rem; font-size:.7rem; font-weight:700; text-transform:uppercase;
-  letter-spacing:.07em; color:var(--c-muted); background:#FAFBFC;
+  letter-spacing:.07em; color:var(--c-muted); background:#FBF9F4;
   border-bottom:2px solid var(--c-border); text-align:center; white-space:nowrap;
 }
 .perm-matrix thead th:first-child { text-align:left; }
 .perm-matrix tbody td {
-  padding:.8rem 1rem; font-size:.8125rem; border-bottom:1px solid #F3F4F6;
+  padding:.8rem 1rem; font-size:.8125rem; border-bottom:1px solid #F2F0EA;
   vertical-align:middle; text-align:center;
 }
 .perm-matrix tbody td:first-child { text-align:left; }
 .perm-matrix tbody tr:last-child td { border-bottom:none; }
-.perm-matrix tbody tr:hover td { background:#F8FAFF; }
+.perm-matrix tbody tr:hover td { background:#FBF9F4; }
 .perm-matrix .perm-section-row td {
   background:var(--c-bg); font-size:.62rem; font-weight:700;
   text-transform:uppercase; letter-spacing:.09em; color:var(--c-muted);
@@ -56,7 +56,7 @@
 .perm-feature small { display:block; font-size:.68rem; color:var(--c-muted); margin-top:.1rem; }
 .perm-check  { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:6px; font-size:.65rem; }
 .perm-yes { background:var(--c-green-l);  color:var(--c-green); }
-.perm-no  { background:#F3F4F6;            color:#CBD5E1; }
+.perm-no  { background:#F2F0EA;            color:#D4CFC2; }
 .perm-col-head {
   display:flex; flex-direction:column; align-items:center; gap:.3rem;
 }
@@ -157,7 +157,7 @@ $roleConf = [
   'super-admin' => [
     'icon'   => 'fa-crown',
     'color'  => 'var(--c-navy)',
-    'bg'     => '#EEF2FF',
+    'bg'     => '#F5EDDD',
     'badge'  => 'bs-dark',
     'name'   => 'Super Administrateur',
     'desc'   => 'Contrôle total du système. Gestion des rôles, accès à toutes les données et configurations.',
@@ -166,7 +166,7 @@ $roleConf = [
   'admin' => [
     'icon'   => 'fa-shield-alt',
     'color'  => 'var(--c-accent-d)',
-    'bg'     => '#FEF9EC',
+    'bg'     => '#F5EDDD',
     'badge'  => 'bs-amber',
     'name'   => 'Administrateur',
     'desc'   => 'Gestion des informations du site (coordonnées, réseaux sociaux, langues, devises, paramètres).',
@@ -186,7 +186,7 @@ $roleConf = [
 
 <div class="role-cards">
   @foreach($roles as $role)
-  @php $cfg = $roleConf[$role->name] ?? ['icon'=>'fa-user','color'=>'var(--c-muted)','bg'=>'#F3F4F6','badge'=>'bs-gray','name'=>ucfirst($role->name),'desc'=>'Rôle personnalisé','accent'=>'#6B7280']; @endphp
+  @php $cfg = $roleConf[$role->name] ?? ['icon'=>'fa-user','color'=>'var(--c-muted)','bg'=>'#F2F0EA','badge'=>'bs-gray','name'=>ucfirst($role->name),'desc'=>'Rôle personnalisé','accent'=>'#6F695D']; @endphp
   <div class="role-card">
     <div class="role-card__top">
       <div class="role-card__icon" style="background:{{ $cfg['bg'] }};color:{{ $cfg['color'] }}">
@@ -242,7 +242,7 @@ $roleConf = [
         @forelse($users as $u)
         @php
           $rn = $u->getRoleNames()->first() ?? '';
-          $avatarColors = ['#2563EB','#059669','#D97706','#7C3AED','#DC2626','#0D9488','#9A7736','#0E3B2E'];
+          $avatarColors = ['#1C6B51','#059669','#D97706','#9A7736','#DC2626','#1C6B51','#9A7736','#0E3B2E'];
           $avatarBg = $avatarColors[crc32($u->email) % count($avatarColors)];
           $roleBadge = ['super-admin'=>'bs-dark','admin'=>'bs-amber','client'=>'bs-blue'][$rn] ?? 'bs-gray';
         @endphp
@@ -339,7 +339,7 @@ $roleConf = [
         <tr>
           <td data-label="Admin">
             <div style="display:flex;align-items:center;gap:.75rem">
-              <div class="u-avatar" style="background:#26822622;color:#9A7736">
+              <div class="u-avatar" style="background:#9A773622;color:#9A7736">
                 {{ strtoupper(mb_substr($u->name, 0, 1)) }}
               </div>
               <div>

@@ -7,10 +7,6 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/css/client.css',
-                'resources/js/client.js',
-                'resources/css/client-app.css',
-                'resources/js/client-app.js',
             ],
             refresh: true,
         }),

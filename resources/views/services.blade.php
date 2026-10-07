@@ -21,8 +21,6 @@
     </div>
 </div>
 
-@include('partials.promo-carousel')
-
 {{-- Services grid --}}
 <section class="py-24 bg-white">
     <div class="container-sm">
@@ -46,10 +44,6 @@
             @foreach ($services as $i => $svc)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="800ms" data-wow-delay="{{ $i * 80 }}ms">
                 <div class="service-card">
-                    <div class="service-card__image">
-                        <img src="{{ asset('assets/images/services/' . $svc['img']) }}" alt="@lang($svc['label'])">
-                        <div class="service-card__image__overlay"></div>
-                    </div>
                     <div class="service-card__body">
                         <div class="service-card__icon"><i class="{{ $svc['icon'] }}"></i></div>
                         <h3 class="service-card__title">

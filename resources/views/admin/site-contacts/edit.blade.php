@@ -34,7 +34,7 @@
             <label class="form-label-pro">Logo — fond clair</label>
             @if($contact->logo_light_path)
             <div class="mb-2">
-              <img src="{{ Storage::url($contact->logo_light_path) }}" alt="Logo fond clair" style="max-height:48px;background:#f0f2f5;padding:.5rem;border-radius:8px">
+              <img src="{{ Storage::url($contact->logo_light_path) }}" alt="Logo fond clair" style="max-height:48px;background:#F2F0EA;padding:.5rem;border-radius:8px">
               <label class="ms-2" style="font-size:.8rem"><input type="checkbox" name="remove_logo_light" value="1"> Supprimer</label>
             </div>
             @endif
@@ -66,7 +66,7 @@
         </p>
         @if($contact->email_signature_path)
         <div class="mb-2">
-          <img src="{{ Storage::url($contact->email_signature_path) }}" alt="Signature email" style="max-height:64px;background:#f0f2f5;padding:.5rem;border-radius:8px">
+          <img src="{{ Storage::url($contact->email_signature_path) }}" alt="Signature email" style="max-height:64px;background:#F2F0EA;padding:.5rem;border-radius:8px">
           <label class="ms-2" style="font-size:.8rem"><input type="checkbox" name="remove_email_signature" value="1"> Supprimer</label>
         </div>
         @endif

@@ -79,9 +79,9 @@
 /* ── Sidebar raisons ── */
 .reason-item { display:flex; gap:.75rem; padding:.8rem 0; }
 .reason-item + .reason-item { border-top:1px solid #f0f0f0; }
-.reason-icon { width:38px; height:38px; border-radius:9px; background:rgba(212,175,55,.1); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
+.reason-icon { width:38px; height:38px; border-radius:9px; background:rgba(198,161,91,.1); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
 .reason-title { font-size:.84rem; font-weight:700; color:var(--navy); margin-bottom:.15rem; }
-.reason-desc  { font-size:.75rem; color:#6b7280; line-height:1.45; margin:0; }
+.reason-desc  { font-size:.75rem; color:#6F695D; line-height:1.45; margin:0; }
 
 .country-auto-note {
     font-size: .74rem;
@@ -495,7 +495,7 @@ document.addEventListener('alpine:init', () => {
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>@lang('loan.label_objet')
-                                        <span style="font-size:.72rem;color:#9ca3af;font-weight:400;">({{ __('message.optional') }})</span>
+                                        <span style="font-size:.72rem;color:#A39C8C;font-weight:400;">({{ __('message.optional') }})</span>
                                     </label>
                                     <textarea name="objet" class="form-control" rows="3"
                                               placeholder="@lang('loan.placeholder_objet')">{{ old('objet') }}</textarea>
@@ -507,7 +507,7 @@ document.addEventListener('alpine:init', () => {
                                     <i class="fas fa-paper-plane" x-show="!submitting"></i>
                                     <span x-text="submitting ? '{{ __('loan.button_sending') }}' : '{{ __('loan.button') }}'"></span>
                                 </button>
-                                <p style="font-size:.71rem;color:#9ca3af;text-align:center;margin-top:.55rem;">
+                                <p style="font-size:.71rem;color:#A39C8C;text-align:center;margin-top:.55rem;">
                                     <i class="fas fa-lock" style="margin-right:.3rem;"></i>
                                     @lang('loan.form_security')
                                 </p>
@@ -590,14 +590,14 @@ document.addEventListener('alpine:init', () => {
 .partner-logo {
     display:flex; align-items:center; justify-content:center;
     padding:.8rem 1.5rem; min-width:120px; height:66px;
-    background:#fff; border:1.5px solid #e5e7eb; border-radius:12px;
+    background:#fff; border:1.5px solid #E4E0D6; border-radius:12px;
     filter:grayscale(1); opacity:.6;
     transition:filter .3s ease, opacity .3s ease, border-color .3s ease, box-shadow .3s ease;
     cursor:default; flex-shrink:0;
 }
 .partner-logo:hover {
     filter:grayscale(0); opacity:1;
-    border-color:var(--accent); box-shadow:0 4px 22px rgba(200,169,81,.2);
+    border-color:var(--accent); box-shadow:0 4px 22px rgba(198,161,91,.2);
 }
 .partner-logo--text {
     font-size:.85rem; font-weight:700; color:var(--navy);
@@ -612,9 +612,9 @@ document.addEventListener('alpine:init', () => {
 }
 </style>
 @endpush
-<section class="py-10" style="background:#f7f8fa;border-top:1px solid #eaecf0;border-bottom:1px solid #eaecf0;">
+<section class="py-10" style="background:#F9F8F5;border-top:1px solid #E4E0D6;border-bottom:1px solid #E4E0D6;">
     <div class="container-sm">
-        <p class="text-center" style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#9ca3af;margin-bottom:1.4rem;">
+        <p class="text-center" style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#A39C8C;margin-bottom:1.4rem;">
             @lang('home.partners_label')
         </p>
         <div class="partners-marquee">
