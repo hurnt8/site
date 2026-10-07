@@ -40,17 +40,39 @@
 .loan-field label { min-height:2.4em; display:flex; align-items:flex-end; }
 .loan-error { font-size:.74rem; color:#b91c1c; margin:.45rem 0 0; }
 
-/* ── Résumé du devis ── */
+/* ── Détails de la demande (toujours visibles) ── */
 .quote-result {
-    background:var(--forest); border-radius:var(--radius-xl); padding:1.25rem 1.4rem; color:#fff;
-    border-top:3px solid var(--brass);
+    margin-top:1.4rem; background:var(--forest); border-radius:var(--radius-xl);
+    border-top:4px solid var(--brass); color:#fff; overflow:hidden;
+    box-shadow:0 8px 24px rgba(14,59,46,.18);
 }
-.quote-result__row { display:flex; flex-wrap:wrap; gap:.8rem; justify-content:space-between; margin-bottom:.8rem; }
-.quote-result__item { text-align:center; flex:1; min-width:110px; }
-.quote-result__label { font-size:.62rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.55); display:block; margin-bottom:.25rem; }
-.quote-result__value { font-family:var(--font-display); font-size:1.05rem; font-weight:700; color:#fff; }
-.quote-result__value.accent { color:var(--brass-light); font-size:1.4rem; }
-.quote-result__sep { width:1px; height:36px; background:rgba(255,255,255,.18); align-self:center; }
+.quote-result__head {
+    display:flex; align-items:center; gap:.6rem; padding:.9rem 1.4rem;
+    background:rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.12);
+    font-family:var(--font-display); font-weight:700; font-size:1rem; color:#fff;
+}
+.quote-result__head i { color:var(--brass-light); }
+.quote-result__main {
+    padding:1.3rem 1.4rem 1.1rem; text-align:center; border-bottom:1px solid rgba(255,255,255,.12);
+}
+.quote-result__main .quote-result__label { font-size:.74rem; }
+.quote-result__main .quote-result__value { font-size:2.2rem; color:var(--brass-light); line-height:1.15; }
+.quote-result__grid { display:grid; grid-template-columns:repeat(6,1fr); }
+.quote-result__cell { grid-column:span 2; }
+.quote-result__cell:nth-child(n+4) { grid-column:span 3; border-top:1px solid rgba(255,255,255,.12); }
+.quote-result__cell:nth-child(4) { border-left:0 !important; }
+.quote-result__cell { padding:1rem 1.1rem; text-align:center; }
+.quote-result__cell + .quote-result__cell { border-left:1px solid rgba(255,255,255,.12); }
+@media (max-width:575px) {
+    .quote-result__grid { grid-template-columns:1fr 1fr; }
+    .quote-result__cell, .quote-result__cell:nth-child(n+4) { grid-column:auto; }
+    .quote-result__cell:nth-child(3), .quote-result__cell:nth-child(5) { border-left:0 !important; }
+    .quote-result__cell:nth-child(n+3) { border-top:1px solid rgba(255,255,255,.12); }
+    .quote-result__main .quote-result__value { font-size:1.8rem; }
+}
+.quote-result__label { font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.8); display:block; margin-bottom:.3rem; font-weight:600; }
+.quote-result__value { font-family:var(--font-display); font-size:1.15rem; font-weight:700; color:#fff; }
+.quote-result__foot { padding:.7rem 1.4rem; background:rgba(0,0,0,.14); font-size:.72rem; color:rgba(255,255,255,.75); margin:0; }
 
 .form-section { margin-bottom:1.25rem; }
 
@@ -353,29 +375,43 @@ document.addEventListener('alpine:init', () => {
                             {{ __('loan.amount_range_hint', ['min' => number_format((float) $loanSetting->min_amount, 0, ',', ' '), 'max' => number_format((float) $loanSetting->max_amount, 0, ',', ' ')]) }}
                         </p>
 
-                        {{-- Résumé du devis (dès que montant + durée sont renseignés) --}}
-                        <div x-show="canProceed" x-cloak x-transition style="margin-top:1.15rem;">
-                            <div class="quote-result">
-                                <div class="quote-result__row">
-                                    <div class="quote-result__item">
-                                        <span class="quote-result__label">@lang('loan.quote_monthly')</span>
-                                        <span class="quote-result__value accent" x-text="fmt(monthly)">—</span>
-                                    </div>
-                                    <div class="quote-result__sep d-none d-sm-block"></div>
-                                    <div class="quote-result__item">
-                                        <span class="quote-result__label">@lang('loan.quote_total')</span>
-                                        <span class="quote-result__value" x-text="fmt(total)">—</span>
-                                    </div>
-                                    <div class="quote-result__sep d-none d-sm-block"></div>
-                                    <div class="quote-result__item">
-                                        <span class="quote-result__label">@lang('loan.quote_interest')</span>
-                                        <span class="quote-result__value" style="color:rgba(255,255,255,.7);" x-text="fmt(interests)">—</span>
-                                    </div>
-                                </div>
-                                <p style="font-size:.68rem;color:rgba(255,255,255,.5);margin:0;">
-                                    <i class="fas fa-info-circle" style="margin-right:.25rem;"></i>{{ __('loan.quote_hint', ['rate' => number_format((float) $loanSetting->annual_rate, 2)]) }}
-                                </p>
+                        {{-- Détails de la demande : toujours visibles, se remplissent en direct --}}
+                        <div class="quote-result">
+                            <div class="quote-result__head">
+                                <i class="fas fa-file-invoice-dollar"></i> @lang('loan.quote_summary_title')
                             </div>
+
+                            <div class="quote-result__main">
+                                <span class="quote-result__label">@lang('loan.quote_monthly')</span>
+                                <span class="quote-result__value" x-text="fmt(monthly)">—</span>
+                            </div>
+
+                            <div class="quote-result__grid">
+                                <div class="quote-result__cell">
+                                    <span class="quote-result__label">@lang('loan.label_amount')</span>
+                                    <span class="quote-result__value" x-text="amount ? fmtAmt(amount) : '—'">—</span>
+                                </div>
+                                <div class="quote-result__cell">
+                                    <span class="quote-result__label">@lang('loan.label_darly')</span>
+                                    <span class="quote-result__value" x-text="duration ? duration + ' ' + monthsLabel : '—'">—</span>
+                                </div>
+                                <div class="quote-result__cell">
+                                    <span class="quote-result__label">@lang('loan.label_rate')</span>
+                                    <span class="quote-result__value">{{ number_format((float) $loanSetting->annual_rate, 2) }} %</span>
+                                </div>
+                                <div class="quote-result__cell">
+                                    <span class="quote-result__label">@lang('loan.quote_total')</span>
+                                    <span class="quote-result__value" x-text="fmt(total)">—</span>
+                                </div>
+                                <div class="quote-result__cell">
+                                    <span class="quote-result__label">@lang('loan.quote_interest')</span>
+                                    <span class="quote-result__value" x-text="fmt(interests)">—</span>
+                                </div>
+                            </div>
+
+                            <p class="quote-result__foot">
+                                <i class="fas fa-info-circle" style="margin-right:.3rem;"></i>{{ __('loan.quote_hint', ['rate' => number_format((float) $loanSetting->annual_rate, 2)]) }}
+                            </p>
                         </div>
                     </div>
 
