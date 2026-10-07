@@ -13,14 +13,13 @@ return [
     'placeholder_message' => 'Il-Messaġġ Tiegħek',
     'button' => 'Ibgħat',
     'subject' => 'Agħżel Self',
-
     'detail_title' => 'Żomm kuntatt magħna',
     'detail_desc' => 'Aħna hawn biex ngħinuk. Ikkuntattjana għal kwalunkwe mistoqsija jew għajnuna rigward is-servizzi tagħna tas-self.',
-
     'address_title' => 'Indirizz',
     'address_desc' => 'Calcea Victoriei 118 Settore 1 010093 Bukarest',
     'phone_title' => 'Telefon',
-    'phone_desc' => site_phone() . ' ',
+    'phone_desc' => '+49 15510 562715 ',
     'mail_title' => 'Email',
-    'mail_desc' => site_email(),
+    'mail_desc' => 'info@fedelispay.com',
+    'sending' => 'Qed jintbagħat…',
 ];

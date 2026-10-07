@@ -12,11 +12,9 @@ return [
     'placeholder_duree' => 'Tul tas-self',
     'placeholder_taux' => 'Rata ta’ imgħax',
     'button' => 'Issimula',
-
     'result_title' => 'Riżultati tas-simulazzjoni:',
     'paiement' => 'Ħlas ta’ kull xahar stmat',
     'table' => 'Tabella ta’ amortizzazzjoni:',
-
     'table_month' => 'Xahar',
     'pay_table' => 'Ħlas ta’ kull xahar (€)',
     'table_primal' => 'Kapitali (€)',

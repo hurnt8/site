@@ -37,7 +37,7 @@ return [
         ],
         [
             'title' => '9. Contact',
-            'content' => 'Als u vragen of opmerkingen heeft over deze algemene voorwaarden, neem dan contact met ons op via:<br><br>' . site_name() . '<br>Adres: Rua de Santo António 33, 7200-175, Portugal<br>E-mail: ' . site_email() . '<br>Telefoon: ' . site_phone() . ' '
+            'content' => 'Als u vragen of opmerkingen heeft over deze algemene voorwaarden, neem dan contact met ons op via:<br><br>' . site_name() . '<br>Adres: First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland<br>E-mail: ' . site_email() . '<br>Telefoon: ' . site_phone() . ' '
         ],
     ],
 ];

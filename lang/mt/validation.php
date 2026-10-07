@@ -1,18 +1,6 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
     'accepted' => 'Il-qasam :attribute għandu jiġi aċċettat.',
     'accepted_if' => 'Il-qasam :attribute għandu jiġi aċċettat meta :other hu :value.',
     'active_url' => 'Il-qasam :attribute għandu jkun URL validu.',
@@ -106,7 +94,6 @@ return [
         'string' => 'Il-qasam :attribute għandu jkun mill-inqas :min karattri.',
     ],
     'min_digits' => 'Il-qasam :attribute għandu jkollu mill-inqas :min ċifri.',
-
     'missing' => 'Il-qasam :attribute għandu jkun nieqes.',
     'missing_if' => 'Il-qasam :attribute għandu jkun nieqes meta :other hu :value.',
     'missing_unless' => 'Il-qasam :attribute għandu jkun nieqes sakemm :other ma jkunx :value.',
@@ -158,52 +145,25 @@ return [
     'url' => 'Il-qasam :attribute għandu jkun URL validu.',
     'ulid' => 'Il-qasam :attribute għandu jkun ULID validu.',
     'uuid' => 'Il-qasam :attribute għandu jkun UUID validu.',
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
-
     'attributes' => [
-        'subject'          => 'suġġett',
-        // Sans ces libelles, les messages affichaient le nom technique du champ.
-        'name'             => 'isem sħiħ',
-        'email'            => 'indirizz email',
-        'address'          => 'indirizz',
-        'phone'            => 'numru tat-telefown',
-        'tax_number'       => 'numru tat-taxxa',
-        'activity'         => 'attività',
-        'doc_type'         => 'tip ta\' dokument',
-        'id_photo_recto'   => 'dokument tal-identità (quddiem)',
-        'id_photo_verso'   => 'dokument tal-identità (wara)',
-        'message'          => 'messaġġ',
-        'password'         => 'password',
-        'amount'           => 'ammont',
-        'duration'         => 'tul',
+        'subject' => 'suġġett',
+        'name' => 'isem sħiħ',
+        'email' => 'indirizz email',
+        'address' => 'indirizz',
+        'phone' => 'numru tat-telefown',
+        'tax_number' => 'numru tat-taxxa',
+        'activity' => 'attività',
+        'doc_type' => 'tip ta\' dokument',
+        'id_photo_recto' => 'dokument tal-identità (quddiem)',
+        'id_photo_verso' => 'dokument tal-identità (wara)',
+        'message' => 'messaġġ',
+        'password' => 'password',
+        'amount' => 'ammont',
+        'duration' => 'tul',
     ],
-
 ];

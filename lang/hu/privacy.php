@@ -45,7 +45,7 @@ return [
     'contact_text' => 'Ha bármilyen kérdése, aggálya vagy kérése van ezzel az adatvédelmi szabályzattal vagy azzal kapcsolatban, hogy miként kezeljük személyes adatait, kérjük, lépjen kapcsolatba velünk a következő címen:',
     'contact_details' => [
         site_name(),
-        "Cím: Rua de Santo António 33, 7200-175, Portugal",
+        "Cím: First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland",
         "E-mail: " . site_email(),
         "Telefon: " . site_phone() . " ",
     ],

@@ -46,8 +46,7 @@ return [
     'contact_details' => [
         site_name(),
         'Indirizz: Calcea Victoriei 118 Settur 1 010093 Bukarest',
-        'Email: ' . site_email(),
-        'Telefon: ' . site_phone() . ' ',
+        'Email: info@fedelispay.com',
+        'Telefon: +49 15510 562715 ',
     ],
-
 ];

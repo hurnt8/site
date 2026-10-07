@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'home' => 'Domov',
+    'about' => 'O nás',
+    'services' => 'Naše služby',
+    'simulate' => 'Simulácia úveru',
+    'contact' => 'Kontaktujte nás',
+    'loan' => 'Požiadať o úver',
+    'personal' => 'Osobný úver',
+    'auto' => 'Autoúver',
+    'home_loan' => 'Hypotéka',
+    'study' => 'Študentský úver',
+    'business' => 'Podnikateľský úver',
+    'bike' => 'Úver na motocykel',
+    'faq' => 'Časté otázky',
+    'terms' => 'Podmienky používania',
+    'privacy' => 'Zásady ochrany osobných údajov',
+    'quick_links' => 'Rýchle odkazy',
+    'addresses' => 'Adresy',
+    'rights_reserved' => 'Všetky práva vyhradené.',
+    'email_placeholder' => 'Váš e-mail',
+    'newsletter_title' => 'Buďte informovaní o našich ponukách',
+    'read_more' => 'Zistiť viac',
+    'footer_desc' => site_name() . ' je váš dôveryhodný partner pre rýchle, flexibilné a osobné riešenia financovania v celej Európe.',
+    'menu' => 'Menu',
+    'subscribe' => 'Odoberať',
+];

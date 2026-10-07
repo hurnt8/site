@@ -14,8 +14,6 @@ return [
     'consumer_loan' => 'Self għall-konsumatur',
     'bridge_loan' => 'Self ta’ pont',
     'microcredit' => 'Mikrokreditu',
-
-    // Traduzzjonijiet ġodda għas-sezzjoni
     'discover_our_loan_services' => 'Skopri s-servizzi tagħna ta’ self',
     'find_the_right_loan' => 'Sib is-self li jaqbel għal bżonnijietek fost l-għażliet differenti tagħna',
     'personal_loan_description' => 'Għall-proġetti personali tiegħek',
@@ -35,12 +33,10 @@ return [
     'microcredit_description' => 'Self żgħir',
     'microcredit_details' => 'Self żgħir għal bżonnijiet finanzjarji immedjati.',
     'loan' => 'Self',
-
     'notice' => 'Avviż',
     'from' => 'Minn',
     'popular_loan_title' => 'Self Popolari',
     'personal_loan_subtitle' => 'L-aktar self popolari u mfittxija',
-
     'title4' => 'Ikseb is-self tiegħek malajr u b’mod sigur.',
     'text4' => 'Il-vantaġġi li tagħżel is-servizzi ta’ self tagħna.',
     'competitive_rates' => 'Rati kompetittivi',
@@ -51,7 +47,6 @@ return [
     'quick_turnaround_description' => 'Ikseb tweġiba mgħaġġla u fondi disponibbli malajr.',
     '24/7_support' => 'Appoġġ 24/7',
     '24/7_support_description' => 'It-tim tagħna huwa disponibbli biex iwieġeb l-iktar mistoqsijiet tiegħek.',
-
     'custom_loan_services' => 'Ibbenefika mis-servizzi ta’ self adattati għalik',
     'reliability_quality' => 'Trasparenza u Affidabbiltà',
     'reliability_quality_description' => 'F’' . site_name() . ' noffru soluzzjonijiet ta’ self ċari u affidabbli, appoġġjati minn reviżjonijiet pożittivi tal-klijenti u trasparenza sħiħa.',
@@ -60,33 +55,43 @@ return [
     'optimal_security' => 'Sigurtà u Privatezza',
     'optimal_security_description' => 'Id-dejta personali tiegħek hija sigura magħna. ' . site_name() . ' juża protokolli avvanzati tas-sigurtà biex jipproteġi l-privatezza tiegħek. L-appoġġ tagħna huwa disponibbli 24/7 għal kull għajnuna.',
     'apply_loan' => 'Applika għal self',
-
-
     'testimonials_title' => 'Testimonjanzi',
     'testimonials_description' => 'Sib x’jgħidu l-klijenti tagħna dwarna.',
     'testimonial_1' => [
         'quote' => '"Jiena sodisfatt ħafna bis-servizz. Il-proċess ta’ applikazzjoni għas-self kien malajr u faċli. Irċevejt l-approvazzjoni f’ftit jiem biss, u r-rati kienu kompetittivi. Grazzi ħafna!"',
         'name' => 'Julie B.',
+        'months_ago' => 1,
+        'location' => 'Bristol, United Kingdom',
     ],
     'testimonial_2' => [
         'quote' => '"Nirrakkomanda ħafna dan is-servizz tas-self. It-tim kien professjonali ħafna u ta’ għajnuna. Wieġbu l-mistoqsijiet kollha tiegħi u għamlu l-proċess mingħajr stress. Grazzi għas-servizz eċċellenti tiegħek!"',
         'name' => 'Pierre L.',
+        'months_ago' => 2,
+        'location' => 'Cardiff, Wales',
     ],
     'testimonial_3' => [
         'quote' => '"Il-proċess ta’ applikazzjoni kien trasparenti u effiċjenti. Irċevejt pariri professjonali u personalizzati tul il-proċess. Grazzi lit-tim kollu għax-xogħol eċċellenti tagħkom!"',
         'name' => 'Sophie D.',
+        'months_ago' => 2,
+        'location' => 'Glasgow, Scotland',
     ],
     'testimonial_4' => [
         'quote' => '"Li ksibt self ma’ din il-kumpanija kien esperjenza mingħajr problemi. L-istaff kien edukat u kompetenti, u l-proċess kien mgħaġġel u effiċjenti. Nirrakkomandah ħafna!"',
         'name' => 'Marc F.',
+        'months_ago' => 3,
+        'location' => 'Liverpool, United Kingdom',
     ],
     'testimonial_5' => [
         'quote' => '"Servizz eċċellenti tal-klijent! Ġejt iggwidat f’kull pass tal-proċess tas-self u l-mistoqsijiet tiegħi ġew imwieġba malajr. Jiena sodisfatt ħafna bir-riżultat finali."',
         'name' => 'Nathalie P.',
+        'months_ago' => 4,
+        'location' => 'Belfast, Northern Ireland',
     ],
     'testimonial_6' => [
         'quote' => '"Rata ta’ imgħax tajba ħafna u proċess mgħaġġel. Nirrakkomanda ħafna dan is-servizz għal kull min għandu bżonn self malajr u affidabbli."',
         'name' => 'Luc M.',
+        'months_ago' => 5,
+        'location' => 'Newcastle, United Kingdom',
     ],
     'testimonial_7' => [
         'quote' => '"Proċess ta’ self sempliċi u effiċjenti. Kont sorpriż b’mod pjaċevoli mill-veloċità tal-approvazzjoni. Grazzi lit-tim kollu!"',
@@ -96,7 +101,6 @@ return [
         'quote' => '"Kelli esperjenza eċċellenti ma’ dan is-servizz ta’ self. L-istaff kien attent u professjonali. Nirrakkomandah minn qalbi!"',
         'name' => 'Jean L.',
     ],
-
     'about_title' => 'Ingħaqad fl-aqwa pjattaforma għall-ħaddiema globali',
     'about_description' => site_name() . ' hija l-pjattaforma fdati tiegħek biex tikseb self b’esperjenza tal-klijent eċċezzjonali. Aħna impenjati li nipprovdulek soluzzjonijiet finanzjarji sempliċi, siguri u mgħaġġla.',
     'rating' => '4.9/5',
@@ -108,19 +112,28 @@ return [
         '2' => 'Ibbenefika mis-servizz personalizzat tagħna tal-konsumatur biex issib l-aħjar offerti',
         '3' => 'Aċċessa self flessibbli adattat għall-bżonnijiet tiegħek',
     ],
-
     'cta_title' => 'Ikseb is-self li għandek bżonn malajr.',
     'cta_text' => 'Applika għal self online illum. Il-pjattaforma tagħna tgħaqqdek ma’ finanzjaturi fdati għal soluzzjonijiet finanzjarji veloċi u siguri.',
     'cta_button' => 'Ibda issa',
-
     'terms' => 'Kundizzjonijiet Ġenerali',
     'privacy_policy' => 'Politika tal-Privatezza',
     'site_map' => 'Mappa tas-Sit',
     'about' => [
-        'title' => 'Dwarna',
-        'who_we_are' => 'Min aħna?',
-        'faq' => 'Mistoqsijiet Frekwenti (FAQ)',
-        'contact' => 'Ikkuntattjana',
+        'exptitle' => 'sena ta\' esperjenza',
+        'sectagline' => 'Merħba fil-finanzi tal-ekwità',
+        'sectitle' => 'Prestiti personali biex twettqu l-ħolm tiegħek',
+        'text1' => 'Ilna 15-il sena f\'dan il-business u nipprovdu l-aħjar servizzi.',
+        'text2' => site_name() . ' hija l-pjattaforma affidabbli tiegħek għall-prestiti bi esperjenza tal-klijent eċċezzjonali. Aħna impenjati li nipprovdu soluzzjonijiet finanzjarji sempliċi, siguri u rapidi.',
+        'check1' => 'prestitu għall-kumpaniji żgħar',
+        'check2' => 'prestitu għall-istudju barra',
+        'check3' => 'proċess tal-prestitu veloċi',
+        'check4' => 'rates ħafna baxxi',
+        'engage1_title' => 'Liċenzjati u regolati',
+        'engage1_desc' => 'Istituzzjoni tal-kreditu ċertifikata li topera taħt standards Ewropej. Id-data u l-fajl tiegħek huma protetti f’kull pass.',
+        'engage2_title' => 'Tweġiba garantita fi 48 siegħa',
+        'engage2_desc' => 'Proċess 100% online, mingħajr żjara fil-fergħa. Deċiżjoni fi żmien 48 siegħa.',
+        'engage3_title' => 'Multi-munita u multi-pajjiż',
+        'engage3_desc' => 'Finanzjament disponibbli fil-munita tal-pajjiż tiegħek, imfassal għall-proġett tiegħek.',
     ],
     'loan_types' => [
         'title' => 'Tipi ta’ Self',
@@ -141,7 +154,6 @@ return [
         'button' => 'Ibgħat',
     ],
     'rights_reserved' => '© ' . site_name() . '. 2024. Id-drittijiet kollha riservati.',
-
     'en' => 'Ingliż',
     'fr' => 'Franċiż',
     'es' => 'Spanjol',
@@ -152,11 +164,7 @@ return [
     'mt' => 'Malti',
     'pt' => 'Portugiż',
     'sl' => 'Is-Sloven',
-
-    // Hero subtitle
     'hero_subtitle' => 'L-ebda proċess kumpless, l-ebda tariffi moħbija. Ilna 15-il sena niffinanzjaw proġetti personali, tal-proprjetà, tal-karozza u tan-negozju b\'trasparenza u veloċità.',
-
-    // Slide
     'slide_1' => [
         'title' => ' 15-il sena esperjenza · Liċenzjat · Risposta fi 48h',
         'text1' => 'Iffinanzja l-proġetti kollha tiegħek,',
@@ -177,35 +185,21 @@ return [
         'text1' => 'Qegħdin fil-Kap tal-Aħjar',
         'text2' => 'Kumpanija tal-Prestiti',
     ],
-
     'infos' => [
         'item1' => 'approvazzjonijiet veloċi',
         'item2' => '500k+ klijenti',
         'item3' => 'l-ebda tħallas ta\' miżati',
         'item4' => 'ħlasijiet flessibbli',
     ],
-
-    'about' => [
-        'exptitle' => 'sena ta\' esperjenza',
-        'sectagline' => 'Merħba fil-finanzi tal-ekwità',
-        'sectitle' => 'Prestiti personali biex twettqu l-ħolm tiegħek',
-        'text1' => 'Ilna 15-il sena f\'dan il-business u nipprovdu l-aħjar servizzi.',
-        'text2' => site_name() . ' hija l-pjattaforma affidabbli tiegħek għall-prestiti bi esperjenza tal-klijent eċċezzjonali. Aħna impenjati li nipprovdu soluzzjonijiet finanzjarji sempliċi, siguri u rapidi.',
-        'check1' => 'prestitu għall-kumpaniji żgħar',
-        'check2' => 'prestitu għall-istudju barra',
-        'check3' => 'proċess tal-prestitu veloċi',
-        'check4' => 'rates ħafna baxxi',
-    ],
-
     'services' => [
         'sectagline' => 'x’qed noffru',
         'sectitle' => 'Aħna nipprovdu l-aħjar servizzi għall-prestiti tiegħek',
+        'cta_title' => 'Lest biex tibda l-proġett finanzjarju tiegħek?',
+        'cta_text' => 'It-tim tagħna huwa disponibbli biex jappoġġak fl-applikazzjoni tiegħek għal finanzjament.',
     ],
-
     'simulate' => [
         'sectitle' => 'Kemm għandek bżonn?',
     ],
-
     'chooses' => [
         'sectagline' => 'il-vantaġġi tagħna',
         'sectitle' => 'Għaliex Agħżelna?',
@@ -216,7 +210,6 @@ return [
         'progress2' => 'konsulenza tan-negozju',
         'progress3' => 'vantaġġi fil-ħlasijiet',
     ],
-
     'works' => [
         'sectagline' => 'Kif taħdem',
         'sectitle' => 'Il-proċess tagħna',
@@ -238,7 +231,6 @@ return [
             'desc' => 'Il-flus jittrasferixxu direttament lejn il-kont bankarju tiegħek fi żmien qasir wara l-approvazzjoni.',
         ],
     ],
-
     'loan_reasons' => [
         'sectagline' => 'raġunijiet għall-prestiti',
         'sectitle' => 'Raġunijiet Popolari Għal Prestiti',
@@ -249,24 +241,78 @@ return [
             'desc2' => 'Ħallat diversi dejn f\'pagament wieħed faċli ta\' kull xahar, li jgħinek tikkontrolla u timmaniġġja l-finanzi tiegħek aħjar.',
             'title3' => 'Ħtija ta\' dar',
             'desc3' => 'Ħareġ jew irranġa d-dar tiegħek, iżid il-valur u l-kumdità tal-post fejn tgħix mingħajr l-istress finanzjarju.',
+            'title4' => 'Iffinanzja l-edukazzjoni tiegħek',
+            'desc4' => 'Investi fil-futur tiegħek: tariffi, taħriġ professjonali jew bidla ta’ karriera — mingħajr ma tikkomprometti l-ħajja ta’ kuljum.',
+            'title5' => 'Safar u btajjel',
+            'desc5' => 'Esplora d-dinja b’moħħok mistrieħ. Iffinanzja l-vjaġġ tal-ħolm tiegħek mingħajr ma tmiss it-tfaddil tiegħek.',
+            'title6' => 'Tieġ u avvenimenti tal-familja',
+            'desc6' => 'Iċċelebra l-aktar mumenti importanti tal-ħajja mingħajr stress finanzjarju. Ippjana l-avveniment tal-ħolm tiegħek bil-pass tiegħek.',
+            'title7' => 'Spejjeż mediċi u tas-saħħa',
+            'desc7' => 'Ittratta spejjeż mhux mistennija tas-saħħa b’kunfidenza. Kopri kuri, operazzjonijiet jew tagħmir mediku malajr.',
+            'title8' => 'Tnedija ta’ negozju u investiment',
+            'desc8' => 'Agħti ħajja lill-proġett intraprenditorjali tiegħek jew kabbar in-negozju tiegħek b’finanzjament mgħaġġel u flessibbli.',
         ],
         'btn_text' => 'Titgħallem Aktar',
-        'btn_icon' => 'ikona-suċċess'
+        'btn_icon' => 'ikona-suċċess',
     ],
-
     'total_loans_granted' => 'Totali tal-Prestiti Mħallsa',
     'customer_satisfaction_rate' => 'Klijenti Sodisfatti',
     'total_loan_amount_granted' => 'Ammont disponibbli',
     'average_approval_time' => 'Risposta garantita',
     'member' => 'Klijenti ffinanzjati',
     'day' => 'Jiem',
-
     'cta_title2' => 'Ikkunsidra il-prestitu li għandek bżonn malajr.',
     'cta_text2' => 'Ikseb Prestitu għal Kumpanija malajr',
     'cta_button2' => 'Ibda Issa',
-
     'about_text' => 'Aħna noffru soluzzjonijiet ta\' prestiti magħmula apposta biex jgħinuk tissodisfa l-għanijiet finanzjarji tiegħek. Għażliet veloċi, siguri, u flessibbli magħmula għall-bżonnijiet uniku tiegħek.',
     'get' => 'Ingħaqad Magħna',
-
-
+    'testimonials_months_ago' => '{1} xahar ilu|[2,*] :count xhur ilu',
+    'needs' => [
+        'sectagline' => 'skont is-sitwazzjoni tiegħek',
+        'sectitle' => 'Kwalunkwe proġett ikollok, għandna s-soluzzjoni',
+        'sectitle_sub' => 'Agħżel il-profil li jixbhek biex tiskopri l-offerta mfassla għalik.',
+        'profiles' => [
+            'starter' => [
+                'title' => 'Qed tibda proġett ġdid',
+                'text' => 'Tieġ, tiswijiet, spiża mhux mistennija... iffinanzja l-proġett personali tiegħek b’self flessibbli, mingħajr prova ta’ xiri.',
+                'cta' => 'Ara s-self personali',
+            ],
+            'student' => [
+                'title' => 'Int student',
+                'text' => 'Tariffi, akkomodazzjoni, tagħmir: finanzjament imfassal biex jappoġġa l-vjaġġ akkademiku tiegħek.',
+                'cta' => 'Ara s-self għall-istudenti',
+            ],
+            'buyer' => [
+                'title' => 'Qed tixtri proprjetà',
+                'text' => 'Agħmel ix-xiri tad-dar tiegħek realtà b’self għad-dar b’termini trasparenti u rata fissa.',
+                'cta' => 'Ara s-self għad-dar',
+            ],
+            'entrepreneur' => [
+                'title' => 'Qed tmexxi negozju',
+                'text' => 'Tnedija, fluss ta’ flus, tagħmir: finanzjament mgħaġġel biex jgħin lin-negozju tiegħek jikber mingħajr dewmien.',
+                'cta' => 'Ara s-self kummerċjali',
+            ],
+            'driver' => [
+                'title' => 'Qed tbiddel il-vettura',
+                'text' => 'Iffinanzja l-karozza tiegħek, ġdida jew użata, b’ħlasijiet ta’ kull xahar li jaqblu mal-baġit tiegħek.',
+                'cta' => 'Ara s-self għall-karozza',
+            ],
+            'rider' => [
+                'title' => 'Issuq żewġ roti',
+                'text' => 'Skuter jew mutur: ittagħmed malajr b’self dedikat u tweġiba fi żmien 48 siegħa.',
+                'cta' => 'Ara s-self għall-mutur',
+            ],
+        ],
+    ],
+    'faq_cta' => [
+        'label' => 'Appoġġ',
+        'title' => 'Ma sibtx it-tweġiba tiegħek?',
+        'text' => 'It-tim tagħna huwa disponibbli mit-Tnejn sas-Sibt biex jgħinek.',
+    ],
+    'final_cta' => [
+        'tagline' => 'agixxi',
+        'title' => 'Lest biex iwettaq il-proġett tiegħek?',
+    ],
+    'years_experience' => 'Snin ta’ esperjenza',
+    'partners_label' => 'Is-sħab tagħna',
 ];

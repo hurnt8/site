@@ -19,7 +19,7 @@ return [
     'detail_desc' => 'We are here to help you. Contact us for any questions or assistance regarding our loan services.',
 
     'address_title' => 'Address',
-    'address_desc' => 'Rua de Santo António 33, 7200-175, Portugal',
+    'address_desc' => 'First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland',
     'phone_title' => 'Quick Contact',
     'phone_desc' => site_phone() . ' ',
     'mail_title' => 'Support email',

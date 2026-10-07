@@ -37,7 +37,7 @@ return [
         ],
         [
             'title' => '9. Kontakt',
-            'content' => 'Ako imate bilo kakvih pitanja ili nedoumica u vezi s ovim odredbama i uvjetima, kontaktirajte nas na:<br><br>' . site_name() . '<br>Adresa: Rua de Santo António 33, 7200-175, Portugal<br>E-pošta: ' . site_email() . '<br>Telefon: ' . site_phone() . ' '
+            'content' => 'Ako imate bilo kakvih pitanja ili nedoumica u vezi s ovim odredbama i uvjetima, kontaktirajte nas na:<br><br>' . site_name() . '<br>Adresa: First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland<br>E-pošta: ' . site_email() . '<br>Telefon: ' . site_phone() . ' '
         ],
 
     ],

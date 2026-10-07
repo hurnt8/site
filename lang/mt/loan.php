@@ -18,7 +18,6 @@ return [
     'label_file' => 'Dokument tal-identità (żewġ naħat)',
     'label_objet' => 'Għan tas-self',
     'details' => 'Dettalji tas-Self',
-
     'placeholder_name' => 'L-isem u l-kunjom tiegħek',
     'placeholder_email' => 'Daħħal l-email tiegħek',
     'placeholder_phone' => 'Daħħal in-numru tat-telefon tiegħek',
@@ -28,8 +27,6 @@ return [
     'placeholder_amount' => 'Ammont tas-self (€) mixtieq',
     'placeholder_objet' => 'Iddeskrivi fil-qosor l-iskop tas-self tiegħek',
     'button' => 'Ibgħat it-talba tiegħek',
-
-
     'personal_loan' => [
         'section_title' => 'Prestitu Personali',
         'description' => 'Il-prestitu personali huwa prestitu li ma jintużax għal xiri speċifiku. F’dan il-kuntest, l-ammont li jiġi mogħti b’dan it-tip ta’ finanzjament jista’ jintuża biex jiġi finanzjat aktar minn xiri wieħed (karozza, mutur, proprjetà, xogħol, vjaġġ, eċċ.). 
@@ -51,10 +48,9 @@ return [
                 'answer2' => 'Sempliċement kompletaw il-formola ta\' applikazzjoni online, u t-tim tagħna jgħinek tul il-proċess pass pass.',
                 'question3' => 'X’inhu l-rata ta\' interess fuq prestitu personali?',
                 'answer3' => 'Ir-rati ta\' interess jvarjaw skont fakturi bħal ammont tal-prestitu u l-punteġġ tal-kreditu. Ikkuntattjana għal rata personalizzata.',
-            ]
-        ]
+            ],
+        ],
     ],
-
     'home_loan' => [
         'section_title' => 'Prestitu għall-Dar',
         'description' => 'Il-prestitu għall-dar jipprovdi finanzjament speċifiku għall-acquisto jew rinnovazzjoni ta\' proprjetà. Dan it-tip ta\' prestitu jippermetti li l-borrowers ikollhom aċċess għal fondi sinifikanti għal proġetti bħal xiri ta\' dar ġdida, espansjoni ta\' spazji ta\' abitazzjoni eżistenti, jew it-titjib tal-karatteristiċi tal-proprjetà. Il-prestiti għall-dar huma ġeneralment ta\' perjodi twal u jiġu b\'rati ta\' interess kompetittivi, li jagħmluhom għodda finanzjarja essenzjali biex jintlaħqu l-miri ta\' proprjetà. Il-flessibbiltà fit-termini ta\' ħlas u l-approċċ maħsub għall-finanzjament tal-proprjetà jagħmlu il-prestiti għall-dar soluzzjoni attraenti għall-persuni li jixtiequ jixtru d-dar tagħhom.',
@@ -73,11 +69,10 @@ return [
                 'question2' => 'Kif applikaw għal prestitu għall-dar?',
                 'answer2' => 'Biex applikaw, sempliċement imla l-applikazzjoni online, u t-tim tagħna jgħinek fil-passi kollha.',
                 'question3' => 'X’inhu l-iskor ta’ interess fuq prestitu għall-dar?',
-                'answer3' => 'Ir-rati tal-interess jvarjaw skond ammont ta’ prestitu, tip ta’ proprjetà u istorja ta’ kreditu. Ikkuntattjana għal stima ta’ rata personalizzata.'
-            ]
-        ]
+                'answer3' => 'Ir-rati tal-interess jvarjaw skond ammont ta’ prestitu, tip ta’ proprjetà u istorja ta’ kreditu. Ikkuntattjana għal stima ta’ rata personalizzata.',
+            ],
+        ],
     ],
-
     'auto_loan' => [
         'section_title' => 'Prestitu tal-Karozza',
         'description' => 'Il-prestitu tal-karozza huwa finanzjament maħsub biex jgħinek tixtri karozza ġdida jew użata. Dan it-tip ta’ prestitu jipprovdi termini ta’ ħlas flessibbli u rati ta’ interess kompetittivi, li jippermettu li timxi bl-karozza li trid mingħajr ħlas inizjali kbir. Bi prestitu tal-karozza, tista’ tkopri l-ispiża sħiħa jew parzjali tal-karozza u tħallsa lura matul iż-żmien, li jagħmilha soluzzjoni aċċessibbli għal ħafna baġits. Il-prestiti tal-karozza joffru proċess ta’ applikazzjoni sempliċi u approvazzjoni veloċi biex tgħinuk tasal malajr fit-toroq.',
@@ -95,13 +90,11 @@ return [
                 'answer1' => 'Il-prestiti tal-karozza jistgħu jintużaw biex jiffinanzjaw vetturi varji, inklużi karozzi ġodda u użati, muturi, u anke xi vetturi rikreattivi.',
                 'question2' => 'Kif applikaw għal prestitu tal-karozza?',
                 'answer2' => 'Sempliċement imla l-formola tal-applikazzjoni online tagħna, u t-tim tagħna jgħinek permezz tal-proċess tal-approvazzjoni tas-self biex idaħħalek fil-vettura l-ġdida tiegħek malajr.',
-                'question3' => " X'fatturi jiddeterminaw ir-rata tal-imgħax fuq self tal-karozzi?",
-                'answer3' => "Ir-rati tal-imgħax huma influwenzati minn fatturi bħat-tip ta' vettura, l-ammont tas-self, u l-punteġġ tal-kreditu tiegħek. Ikkuntattjana għal rata personalizzata bbażata fuq il-bżonnijiet tiegħek."
-            ]
-        ]
+                'question3' => ' X\'fatturi jiddeterminaw ir-rata tal-imgħax fuq self tal-karozzi?',
+                'answer3' => 'Ir-rati tal-imgħax huma influwenzati minn fatturi bħat-tip ta\' vettura, l-ammont tas-self, u l-punteġġ tal-kreditu tiegħek. Ikkuntattjana għal rata personalizzata bbażata fuq il-bżonnijiet tiegħek.',
+            ],
+        ],
     ],
-
-
     'business_loan' => [
         'section_title' => 'Prestitu għall-Negozju',
         'description' => 'Il-prestitu għall-intrapriża huwa soluzzjoni finanzjarja maħsuba biex tappoġġja l-iżvilupp u l-ħtiġijiet operattivi tan-negozju tiegħek. Jekk għandek bżonn fondi għall-espansjoni, ix-xiri ta\' tagħmir, jew kapital operattiv, prestitu għall-intrapriża jista\' jipprovdi l-boost finanzjarju li l-kumpanija tiegħek għandha bżonn. Bil-termini ta\' ħlas flessibbli u rati ta\' interess kompetittivi, dan it-tip ta\' prestitu jippermetti lill-proprjetarji tan-negozji li jimmaniġġjaw il-flus b\'effiċjenza, jinvestu f\'opportunitajiet ġodda, u jagħtu spinta għall-kisba ta\' suċċess fit-tul.',
@@ -120,11 +113,10 @@ return [
                 'question2' => 'Kif applikaw għal prestitu għall-intrapriża?',
                 'answer2' => 'Tista\' tapplika billi timla l-formola tal-applikazzjoni online. It-tim tagħna se jgħinek tul il-proċess biex tiżgura esperjenza bla xkiel.',
                 'question3' => 'X\'fakturi jaffettwaw il-rata ta\' interess fuq prestitu għall-intrapriża?',
-                'answer3' => 'Ir-rati ta\' interess jiddependu minn fatturi bħal ammont tal-prestitu, il-ħajja finanzjarja tan-negozju tiegħek, u l-istorja tal-kreditu tiegħek. Ikkuntattjana biex tirċievi rata personalizzata.'
-            ]
-        ]
+                'answer3' => 'Ir-rati ta\' interess jiddependu minn fatturi bħal ammont tal-prestitu, il-ħajja finanzjarja tan-negozju tiegħek, u l-istorja tal-kreditu tiegħek. Ikkuntattjana biex tirċievi rata personalizzata.',
+            ],
+        ],
     ],
-
     'bike_loan' => [
         'section_title' => 'Prestitu tal-Mutur',
         'description' => 'Il-prestitu tal-mutur huwa għażla finanzjarja maħsuba għal individwi li jixtiequ jixtru mutur jew bike ġdid jew użat. Dan il-prestitu jippermetti li tmur bil-bike li trid bi termini ta\' ħlas affordabbli u rati ta\' interess kompetittivi. Bi prestitu tal-mutur, tista\' tevita ħlas ta\' inizjali kbir u tħallas għal bike tiegħek matul iż-żmien, li jagħmilha aktar faċli biex timmaniġġja fil-baġit tiegħek. Dan it-tip ta\' prestitu huwa ideali kemm għal dawk li jibdew kif ukoll għal dawk li għandhom esperjenza f\'sewqan.',
@@ -143,11 +135,10 @@ return [
                 'question2' => 'Kif applikaw għal prestitu tal-mutur?',
                 'answer2' => 'Sempliċement kompletaw il-formola tal-applikazzjoni online, u t-tim tagħna se jgħinek matul il-proċess ta\' approvazzjoni għal esperjenza bla xkiel.',
                 'question3' => 'X\'fakturi jaffettwaw ir-rata ta\' interess fuq prestitu tal-mutur?',
-                'answer3' => 'Ir-rata ta\' interess tiddependi minn fatturi bħal tip tal-mutur, ammont tal-prestitu, u l-profil tal-kreditu tiegħek. Ikkuntattjana għal rata personalizzata.'
-            ]
-        ]
+                'answer3' => 'Ir-rata ta\' interess tiddependi minn fatturi bħal tip tal-mutur, ammont tal-prestitu, u l-profil tal-kreditu tiegħek. Ikkuntattjana għal rata personalizzata.',
+            ],
+        ],
     ],
-
     'study_loan' => [
         'section_title' => 'Prestitu għall-Istudji',
         'description' => 'Il-prestitu għall-istudji huwa għażla finanzjarja dedikata maħsuba biex tgħin lill-istudenti jkopru spejjeż edukattivi, inklużi t-tutorja, kotba, akkomodazzjoni, u spejjeż oħra relatati mal-istudju. Dan it-tip ta\' prestitu jipprovdi appoġġ finanzjarju lill-istudenti u lill-familji tagħhom biex isegwu edukazzjoni ogħla mingħajr ebda pressjoni finanzjarja immedjata. Bil-termini ta\' ħlas flessibbli u rati ta\' interess kompetittivi, prestitu għall-istudji jista\' jagħmel il-kisba ta\' miri akkademiċi aktar faċli.',
@@ -166,8 +157,57 @@ return [
                 'question2' => 'Kif applikaw għal prestitu għall-istudji?',
                 'answer2' => 'Tista\' tapplika billi timla l-formola tal-applikazzjoni online, u t-tim tagħna se jgħinek f\'kull pass tal-proċess.',
                 'question3' => 'Meta nibda lura l-prestitu għall-istudji?',
-                'answer3' => 'It-termini ta\' ħlas lura jvarjaw, iżda ħafna self ta\' studju joffri għażliet ta\' ħlas lura differit, li jippermettilek tibda l-ħlas lura wara li tlesti l-istudji tiegħek.'
-            ]
-        ]
-    ]
+                'answer3' => 'It-termini ta\' ħlas lura jvarjaw, iżda ħafna self ta\' studju joffri għażliet ta\' ħlas lura differit, li jippermettilek tibda l-ħlas lura wara li tlesti l-istudji tiegħek.',
+            ],
+        ],
+    ],
+    'label_country' => 'Pajjiż ta’ residenza',
+    'placeholder_country' => 'Agħżel il-pajjiż tiegħek',
+    'country_auto_hint' => 'Il-pajjiż instab awtomatikament — biddlu jekk ikun meħtieġ.',
+    'button_sending' => 'Qed jintbagħat…',
+    'service_benefits_title' => 'Għaliex tagħżel din l-offerta',
+    'service_related_title' => 'Esplora s-soluzzjonijiet l-oħra tagħna',
+    'service_related_sub' => 'Għandek proġett ieħor f’moħħok? Probabbilment għandna dak li jgħoddlok.',
+    'quote_monthly' => 'Ħlas ta’ kull xahar stmat',
+    'quote_total' => 'Total li jrid jitħallas lura',
+    'quote_interest' => 'Spiża totali tal-kreditu',
+    'quote_hint' => 'Kwotazzjoni indikattiva bbażata fuq rata annwali fissa ta’ :rate%. Ir-rata finali se tiġi kkonfermata wara r-reviżjoni tal-applikazzjoni tiegħek.',
+    'label_rate' => 'Rata annwali fissa',
+    'amount_range_hint' => 'Ammont bejn :min u :max',
+    'label_currency' => 'F’liema munita tixtieq tissellef?',
+    'quote_summary_title' => 'Il-kwotazzjoni tiegħek:',
+    'form_hint' => 'L-oqsma kollha mmarkati b’* huma obbligatorji. Id-data tiegħek hija protetta.',
+    'form_security' => 'L-informazzjoni tiegħek tintbagħat b’mod sigur.',
+    'quote_step_title' => 'Agħżel il-kwotazzjoni tiegħek',
+    'sidebar_hours' => 'It-Tnejn – Is-Sibt: 8:00 – 18:00',
+    'general_faqs' => [
+        'question1' => 'Liema rata tal-imgħax tapplika għas-self tiegħi?',
+        'answer1' => 'Ir-rata tiddependi fuq l-ammont misluf, it-tul li tagħżel u l-profil tiegħek (dħul, sitwazzjoni tax-xogħol, storja tal-kreditu). Wara simulazzjoni, tirċievi offerta personalizzata qabel ma tintrabat, mingħajr spejjeż u mingħajr impatt fuq il-fajl tal-kreditu tiegħek.',
+        'question2' => 'X’inhu l-ammont massimu li nista’ nissellef?',
+        'answer2' => 'Skont it-tip ta’ self u l-kapaċità tiegħek li tħallas lura, ' . site_name() . ' tiffinanzja proġetti sa €5,000,000 (jew l-ekwivalenti fil-munita tiegħek). L-ammont eżatt offrut jiddependi mir-reviżjoni tal-applikazzjoni tiegħek.',
+        'question3' => 'Għal xiex nista’ nuża s-self tiegħi?',
+        'answer3' => 'Inti ħieles tuża s-self personali tiegħek kif trid: xiri, tiswijiet fid-dar, safar, spiża mhux mistennija... Għal proġett speċifiku (proprjetà, karozza, studji, negozju), l-offerti dedikati tagħna jipprovdu kundizzjonijiet aktar adattati, għalhekk ħossok liberu tqabbel il-prodotti tagħna.',
+        'question4' => 'Min jista’ japplika għal self ma’ ' . site_name() . '?',
+        'answer4' => 'Kwalunkwe adult b’dħul regolari u dokument tal-identità validu jista’ jressaq applikazzjoni online. L-approvazzjoni finali tiddependi mill-valutazzjoni tas-sitwazzjoni finanzjarja tiegħek u tal-kapaċità tiegħek li tħallas lura.',
+        'question5' => 'Kemm iddum biex nirċievi l-fondi?',
+        'answer5' => 'Ladarba l-applikazzjoni tiegħek tiġi approvata u l-kuntratt jiġi ffirmat elettronikament, il-fondi normalment jiġu ttrasferiti fil-kont tiegħek fi żmien 48 siegħa tax-xogħol.',
+        'question6' => 'Nista’ nagħmel ħlasijiet parzjali bil-quddiem?',
+        'answer6' => 'Iva, tista’ tħallas lura s-self kollu jew parti minnu bil-quddiem fi kwalunkwe ħin, mingħajr spejjeż moħbija. Ħlas bil-quddiem inaqqas it-tul li fadal jew l-ammont tar-rati li jmiss.',
+        'question7' => 'Nista’ nħallas is-self tiegħi qabel it-tmiem tal-kuntratt?',
+        'answer7' => 'Iva, il-ħlas lura sħiħ bil-quddiem huwa possibbli fi kwalunkwe ħin b’talba sempliċi. Ikkuntattja s-servizz tal-klijenti tagħna biex tikseb l-ammont eżatt għad-data li tagħżel.',
+        'question8' => 'Liema dokumenti jeħtieġ li nagħti għall-applikazzjoni online?',
+        'answer8' => 'Dokument tal-identità validu, prova tad-dħul u, skont it-tip ta’ self, ftit dokumenti addizzjonali (prova tal-indirizz, estratt bankarju...). Il-lista eżatta tingħatalek wara s-simulazzjoni.',
+        'question9' => 'Kif nibgħat id-dokumenti tiegħi għal applikazzjoni online?',
+        'answer9' => 'Tuploadja d-dokumenti tiegħek direttament (PDF, JPEG jew PNG) mill-ispazju tal-applikazzjoni online, b’sigurtà sħiħa. M’hemm bżonn l-ebda posta jew żjara fil-fergħa.',
+        'question10' => 'Ir-rata riklamata tinkludi l-ispejjeż kollha?',
+        'answer10' => 'Ir-rati tiegħek ikopru l-kapital misluf u l-imgħax. L-ebda spiża addizzjonali ma tapplika matul il-ħajja tas-self, apparti l-assigurazzjoni fakultattiva li seta’ għażilt.',
+        'question11' => 'Nista’ nissellef jekk diġà għandi self ieħor x’imkien ieħor?',
+        'answer11' => 'Self eżistenti ma jwaqqafx awtomatikament self ġdid: dak li jgħodd huwa l-kapaċità tiegħek li żżomm il-ħlasijiet kollha flimkien. Jista’ jiġi kkunsidrat ukoll il-konsolidament tad-dejn biex tissimplifika l-baġit tiegħek.',
+        'question12' => 'Nista’ jkolli diversi self ma’ ' . site_name() . ' fl-istess ħin?',
+        'answer12' => 'Iva, sakemm ikollok dħul nett disponibbli biżżejjed u l-kontijiet tiegħek ikunu mmaniġġjati tajjeb. Kull applikazzjoni ġdida tiġi eżaminata b’mod indipendenti skont is-sitwazzjoni ġenerali tiegħek.',
+        'question13' => 'X’jiġri jekk ma nibqax nista’ nħallas rata?',
+        'answer13' => 'Ikkuntattja s-servizz tal-klijenti tagħna kemm jista’ jkun malajr: jista’ jiġi kkunsidrat differiment tal-ħlas jew ristrutturar tas-self. Iktar ma tikkuntattja kmieni, aktar soluzzjonijiet ikun hemm.',
+        'question14' => 'Nista’ nassigura s-self tiegħi?',
+        'answer14' => 'L-assigurazzjoni fakultattiva tal-mutwatarju tista’ tkopri r-rati tiegħek f’każ ta’ telf ta’ xogħol, inkapaċità jew mewt, biex tipproteġi lill-familja tiegħek. Mhix meħtieġa biex tikseb is-self u tista’ tiżdied fi kwalunkwe ħin.',
+    ],
 ];

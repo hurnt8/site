@@ -1,0 +1,51 @@
+<?php
+
+return [
+    'introduction_title' => '1. Úvod',
+    'introduction_text' => 'V ' . site_name() . ' sa zaväzujeme chrániť a rešpektovať vaše súkromie. Tieto zásady vysvetľujú, ako zhromažďujeme, používame, sprístupňujeme a chránime vaše osobné údaje pri používaní nášho webu a online úverových služieb. Používaním webu súhlasíte s postupmi opísanými v týchto zásadách.',
+    'information_collection_title' => '2. Údaje, ktoré zhromažďujeme',
+    'information_collection_text' => 'O vás môžeme zhromažďovať a spracúvať tieto informácie:',
+    'information_collection_list' => [
+        'Údaje, ktoré nám poskytnete priamo, napríklad meno, adresa, e-mail, telefónne číslo, finančné údaje a pod.',
+        'Údaje zhromažďované automaticky pri používaní webu vrátane IP adresy, typu prehliadača, navštívených stránok a dĺžky návštevy.',
+        'Údaje od tretích strán, napríklad úverových registrov, obchodných partnerov alebo verejných zdrojov.',
+    ],
+    'information_use_title' => '3. Použitie vašich údajov',
+    'information_use_text' => 'Zhromaždené údaje používame na:',
+    'information_use_list' => [
+        'Poskytovanie a správu našich úverových služieb vrátane posúdenia vašej spôsobilosti na úver a správy účtu.',
+        'Zlepšovanie webu a služieb, vrátane analýzy používania webu a prispôsobenia vášho zážitku.',
+        'Komunikáciu s vami, najmä o stave vašej žiadosti, aktualizáciách služieb a propagačných ponukách.',
+        'Plnenie našich právnych a regulačných povinností.',
+    ],
+    'information_sharing_title' => '4. Zdieľanie vašich údajov',
+    'information_sharing_text' => 'Vaše osobné údaje môžeme zdieľať s:',
+    'information_sharing_list' => [
+        'Našimi partnermi a poskytovateľmi služieb, ktorí nám pomáhajú poskytovať a zlepšovať úverové služby.',
+        'Úverovými registrami a inými finančnými inštitúciami na posúdenie vašej bonity a riadenie finančných rizík.',
+        'Regulačnými a vládnymi orgánmi, ak to vyžaduje zákon.',
+        'Tretími stranami v rámci obchodnej transakcie, napríklad fúzie, akvizície alebo predaja majetku.',
+    ],
+    'information_security_title' => '5. Bezpečnosť vašich údajov',
+    'information_security_text' => 'Zavádzame primerané technické a organizačné bezpečnostné opatrenia na ochranu vašich osobných údajov pred stratou, zneužitím, neoprávneným prístupom, zverejnením, zmenou a zničením. Absolútnu bezpečnosť údajov prenášaných cez internet však nemožno zaručiť.',
+    'your_rights_title' => '6. Vaše práva',
+    'your_rights_text' => 'Máte právo:',
+    'your_rights_list' => [
+        'Na prístup k vašim osobným údajom, ktoré uchovávame.',
+        'Požiadať o opravu osobných údajov, ak sú nepresné alebo neúplné.',
+        'Požiadať o vymazanie osobných údajov za určitých podmienok.',
+        'Namietať proti spracúvaniu osobných údajov za určitých okolností.',
+        'Kedykoľvek odvolať súhlas so spracúvaním osobných údajov, ak je spracúvanie založené na súhlase.',
+    ],
+    'your_rights_contact' => 'Ak chcete uplatniť svoje práva, kontaktujte nás na e-mailovej adrese uvedenej v nižšie uvedenej časti „Kontakt“.',
+    'policy_updates_title' => '7. Zmeny týchto zásad',
+    'policy_updates_text' => 'Tieto zásady môžeme z času na čas aktualizovať, aby odrážali zmeny v našich postupoch a službách. Odporúčame vám túto stránku pravidelne kontrolovať. Dátum poslednej aktualizácie je uvedený v hornej časti zásad.',
+    'contact_title' => '8. Kontakt',
+    'contact_text' => 'Ak máte otázky, pripomienky alebo požiadavky týkajúce sa týchto zásad alebo spracúvania vašich osobných údajov, kontaktujte nás na:',
+    'contact_details' => [
+        site_name(),
+        'Adresa: First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland',
+        'E-mail: info@fedelispay.com',
+        'Telefón: +49 15510 562715 ',
+    ],
+];

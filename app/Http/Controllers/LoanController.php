@@ -59,7 +59,7 @@ class LoanController extends Controller
         $data['currency'] = $data['currency'] ?? Currency::default();
 
         $locale = $request->input('locale', 'fr');
-        if (!in_array($locale, ['fr', 'en', 'pl', 'es', 'bg', 'hu', 'it', 'de', 'lt', 'ro', 'lv', 'nl', 'pt', 'hr'])) {
+        if (!in_array($locale, \App\Models\Language::enabledCodes(), true)) {
             $locale = 'fr';
         }
         App::setLocale($locale);

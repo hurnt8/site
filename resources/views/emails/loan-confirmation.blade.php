@@ -168,6 +168,30 @@ $texts = [
         'closing'    => 'S poštovanjem,',
         'team'       => 'Tim ' . site_name(),
     ],
+    'sk' => [
+        'title'      => 'Žiadosť o úver bola prijatá',
+        'sub'        => site_name(),
+        'greeting'   => 'Dobrý deň '.$data['name'].',',
+        'body'       => 'Úspešne sme prijali vašu žiadosť o úver vo výške <strong>'.number_format($data['amount'], 0, ',', ' ').' '.($data['currency'] ?? 'EUR').'</strong> na <strong>'.$data['darly'].' mesiacov</strong>. Momentálne ju spracúva náš tím.',
+        'cond_title' => 'Podmienky oprávnenosti',
+        'cond_body'  => 'Na získanie úveru musíte mať aspoň 18 rokov, stabilný mesačný príjem a byť schopní splácať podľa stanovených podmienok.',
+        'footer'     => 'Budeme vás kontaktovať čo najskôr. Ďakujeme za dôveru.',
+        'noreply'    => 'Tento e-mail bol odoslaný z adresy no-reply. Neodpovedajte naň priamo.',
+        'closing'    => 'S pozdravom,',
+        'team'       => 'Tím ' . site_name(),
+    ],
+    'mt' => [
+        'title'      => 'It-talba għal self ġiet riċevuta',
+        'sub'        => site_name(),
+        'greeting'   => 'Bongu '.$data['name'].',',
+        'body'       => 'Irċevejna t-talba tiegħek għal self ta’ <strong>'.number_format($data['amount'], 0, ',', ' ').' '.($data['currency'] ?? 'EUR').'</strong> fuq <strong>'.$data['darly'].' xhur</strong>. Bħalissa qed tiġi pproċessata mit-tim tagħna.',
+        'cond_title' => 'Kundizzjonijiet ta’ eliġibbiltà',
+        'cond_body'  => 'Biex tikseb self, għandek ikollok mill-inqas 18-il sena, dħul stabbli kull xahar u tkun kapaċi tħallas lura skont il-kundizzjonijiet stabbiliti.',
+        'footer'     => 'Se nikkuntattjawk kemm jista’ jkun malajr. Grazzi talli afdajtna.',
+        'noreply'    => 'Din l-email intbagħtet minn indirizz no-reply. Jekk jogħġbok tweġibx direttament.',
+        'closing'    => 'Dejjem tiegħek,',
+        'team'       => 'It-tim ta’ ' . site_name(),
+    ],
 ];
 $t = $texts[$lang] ?? $texts['fr'];
 $L = [
@@ -185,6 +209,8 @@ $L = [
     'nl' => ['recap' => 'Samenvatting van uw aanvraag', 'amount' => 'Gevraagd bedrag', 'duration' => 'Looptijd', 'months' => 'maanden', 'type' => 'Type lening', 'monthly' => 'Geschatte maandlast', 'rate' => 'Jaarlijkse rente', 'ref' => 'Indicatieve schatting, onder voorbehoud van goedkeuring van uw aanvraag.', 'next' => 'Volgende stappen', 's1' => 'Beoordeling van uw aanvraag', 's1d' => 'Ons team bekijkt uw dossier.', 's2' => 'Wij nemen contact op', 's2d' => 'Een adviseur neemt contact op per e-mail of telefoon.', 's3' => 'Beslissing en uitbetaling', 's3d' => 'Antwoord binnen 48 uur, daarna uitbetaling.'],
     'pt' => ['recap' => 'Resumo do seu pedido', 'amount' => 'Montante solicitado', 'duration' => 'Prazo', 'months' => 'meses', 'type' => 'Tipo de empréstimo', 'monthly' => 'Prestação mensal estimada', 'rate' => 'Taxa anual', 'ref' => 'Estimativa indicativa, sujeita à aprovação do seu pedido.', 'next' => 'Próximos passos', 's1' => 'Análise do pedido', 's1d' => 'A nossa equipa está a analisar o seu processo.', 's2' => 'Contacto', 's2d' => 'Um consultor contactá-lo-á por e-mail ou telefone.', 's3' => 'Decisão e desembolso', 's3d' => 'Resposta em 48 h e, depois, entrega dos fundos.'],
     'hr' => ['recap' => 'Sažetak vašeg zahtjeva', 'amount' => 'Traženi iznos', 'duration' => 'Rok', 'months' => 'mjeseci', 'type' => 'Vrsta zajma', 'monthly' => 'Procijenjena mjesečna rata', 'rate' => 'Godišnja stopa', 'ref' => 'Okvirna procjena, podložna odobrenju zahtjeva.', 'next' => 'Sljedeći koraci', 's1' => 'Razmatranje zahtjeva', 's1d' => 'Naš tim razmatra vaš zahtjev.', 's2' => 'Javljamo vam se', 's2d' => 'Savjetnik će vas kontaktirati e-poštom ili telefonom.', 's3' => 'Odluka i isplata', 's3d' => 'Odgovor u roku od 48 sati, zatim isplata sredstava.'],
+    'sk' => ['recap' => 'Zhrnutie vašej žiadosti', 'amount' => 'Požadovaná suma', 'duration' => 'Doba', 'months' => 'mesiacov', 'type' => 'Typ úveru', 'monthly' => 'Odhadovaná mesačná splátka', 'rate' => 'Ročná sadzba', 'ref' => 'Orientačný odhad, podlieha schváleniu vašej žiadosti.', 'next' => 'Ďalšie kroky', 's1' => 'Posúdenie žiadosti', 's1d' => 'Náš tím preveruje vašu žiadosť.', 's2' => 'Kontaktujeme vás', 's2d' => 'Poradca vás bude kontaktovať e-mailom alebo telefonicky.', 's3' => 'Rozhodnutie a vyplatenie', 's3d' => 'Odpoveď do 48 hodín, potom vyplatenie prostriedkov.'],
+    'mt' => ['recap' => 'Sommarju tat-talba tiegħek', 'amount' => 'Ammont mitlub', 'duration' => 'Tul', 'months' => 'xhur', 'type' => 'Tip ta’ self', 'monthly' => 'Ħlas ta’ kull xahar stmat', 'rate' => 'Rata annwali', 'ref' => 'Stima indikattiva, soġġetta għall-approvazzjoni tat-talba tiegħek.', 'next' => 'Il-passi li jmiss', 's1' => 'Eżami tat-talba', 's1d' => 'It-tim tagħna qed jeżamina l-applikazzjoni tiegħek.', 's2' => 'Nikkuntattjawk', 's2d' => 'Konsulent se jikkuntattjak bl-email jew bit-telefon.', 's3' => 'Deċiżjoni u ħlas', 's3d' => 'Tweġiba fi żmien 48 siegħa, imbagħad jinħarġu l-fondi.'],
 ];
 $l = $L[$lang] ?? $L['fr'];
 
