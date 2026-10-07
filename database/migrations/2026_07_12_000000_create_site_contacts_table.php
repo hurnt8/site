@@ -23,10 +23,10 @@ return new class extends Migration
         });
 
         DB::table('site_contacts')->insert([
-            'address_1'  => '24 Rue de la Bourse, 75002 Paris, France',
-            'address_2'  => '34 Rue du Rhône, 1204 Genève, Suisse',
-            'address_3'  => '56 Bockenheimer Landstraße, 60323 Frankfurt am Main, Deutschland',
-            'phone_1'    => '+31 6 57341120',
+            'address_1'  => 'First Citiz GmbH, Französische Straße 56, 10117 Berlin, Deutschland',
+            'address_2'  => null,
+            'address_3'  => null,
+            'phone_1'    => '+49 15510 562715',
             'phone_2'    => null,
             'created_at' => now(),
             'updated_at' => now(),
