@@ -11,52 +11,53 @@
 <style>
 /* ── Blocs du formulaire ── */
 .loan-block {
-    border:1px solid var(--gray-200); border-radius:var(--radius-xl);
+    border:1px solid var(--gray-200); border-radius:var(--radius-xl,.375rem);
     background:#fff; padding:1.4rem 1.4rem 1.5rem; margin-bottom:1.25rem;
 }
 .loan-block__head { display:flex; align-items:center; gap:.8rem; margin-bottom:1.15rem; }
 .loan-block__num {
     width:30px; height:30px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
-    background:var(--forest); color:var(--brass-light); border-radius:var(--radius);
-    font-family:var(--font-display); font-weight:700; font-size:.95rem;
+    background:var(--forest,#0E3B2E); color:var(--brass-light,#DCBE87); border-radius:var(--radius,.25rem);
+    font-family:var(--font-display,'Fraunces',Georgia,serif); font-weight:700; font-size:.95rem;
 }
-.loan-block__title { font-family:var(--font-display); font-weight:700; color:var(--forest); font-size:1.05rem; margin:0; line-height:1.2; }
+.loan-block__title { font-family:var(--font-display,'Fraunces',Georgia,serif); font-weight:700; color:var(--forest,#0E3B2E); font-size:1.05rem; margin:0; line-height:1.2; }
 .loan-block__hint  { font-size:.76rem; color:var(--gray-500); margin:.1rem 0 0; }
 
+.loan-block input, .loan-block select, .loan-block textarea, .loan-block button { font-family:var(--font-body,'Outfit',sans-serif); }
 .loan-grid { align-items:end; display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 @media (max-width:767px) { .loan-grid { grid-template-columns:1fr; } }
 .loan-field label {
     display:block; font-size:.7rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--forest); margin-bottom:.4rem;
+    color:var(--forest,#0E3B2E); margin-bottom:.4rem;
 }
 .loan-field .form-control { width:100%; height:50px; }
 .loan-input { position:relative; }
 .loan-input input { padding-right:3.4rem; font-weight:600; }
 .loan-input__unit {
     position:absolute; right:.9rem; top:50%; transform:translateY(-50%);
-    font-size:.82rem; font-weight:700; color:var(--brass-dark); pointer-events:none;
+    font-size:.82rem; font-weight:700; color:var(--brass-dark,#9A7736); pointer-events:none;
 }
-.loan-rate { margin-left:auto; display:inline-flex; align-items:center; gap:.4rem; background:var(--brass-pale); color:var(--brass-dark); padding:.35rem .85rem; border-radius:999px; font-weight:800; font-size:.78rem; white-space:nowrap; }
+.loan-rate { margin-left:auto; display:inline-flex; align-items:center; gap:.4rem; background:var(--brass-pale,#F5EDDD); color:var(--brass-dark,#9A7736); padding:.35rem .85rem; border-radius:999px; font-weight:800; font-size:.78rem; white-space:nowrap; }
 .loan-field label { min-height:2.4em; display:flex; align-items:flex-end; }
 .loan-error { font-size:.74rem; color:#b91c1c; margin:.45rem 0 0; }
 
 /* ── Détails de la demande (toujours visibles) ── */
 .quote-result {
-    margin-top:1.4rem; background:var(--forest); border-radius:var(--radius-xl);
-    border-top:4px solid var(--brass); color:#fff; overflow:hidden;
+    margin-top:1.4rem; background:var(--forest,#0E3B2E); border-radius:var(--radius-xl,.375rem);
+    border-top:4px solid var(--brass,#C6A15B); color:#fff; overflow:hidden;
     box-shadow:0 8px 24px rgba(14,59,46,.18);
 }
 .quote-result__head {
     display:flex; align-items:center; gap:.6rem; padding:.9rem 1.4rem;
     background:rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.12);
-    font-family:var(--font-display); font-weight:700; font-size:1rem; color:#fff;
+    font-family:var(--font-display,'Fraunces',Georgia,serif); font-weight:700; font-size:1rem; color:#fff;
 }
-.quote-result__head i { color:var(--brass-light); }
+.quote-result__head i { color:var(--brass-light,#DCBE87); }
 .quote-result__main {
     padding:1.3rem 1.4rem 1.1rem; text-align:center; border-bottom:1px solid rgba(255,255,255,.12);
 }
 .quote-result__main .quote-result__label { font-size:.74rem; }
-.quote-result__main .quote-result__value { font-size:2.2rem; color:var(--brass-light); line-height:1.15; }
+.quote-result__main .quote-result__value { font-size:2.2rem; color:var(--brass-light,#DCBE87); line-height:1.15; }
 .quote-result__grid { display:grid; grid-template-columns:repeat(6,1fr); }
 .quote-result__cell { grid-column:span 2; }
 .quote-result__cell:nth-child(n+4) { grid-column:span 3; border-top:1px solid rgba(255,255,255,.12); }
@@ -71,7 +72,7 @@
     .quote-result__main .quote-result__value { font-size:1.8rem; }
 }
 .quote-result__label { font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.8); display:block; margin-bottom:.3rem; font-weight:600; }
-.quote-result__value { font-family:var(--font-display); font-size:1.15rem; font-weight:700; color:#fff; }
+.quote-result__value { font-family:var(--font-display,'Fraunces',Georgia,serif); font-size:1.15rem; font-weight:700; color:#fff; }
 .quote-result__foot { padding:.7rem 1.4rem; background:rgba(0,0,0,.14); font-size:.72rem; color:rgba(255,255,255,.75); margin:0; }
 
 .form-section { margin-bottom:1.25rem; }
@@ -79,8 +80,8 @@
 /* ── Sidebar raisons ── */
 .reason-item { display:flex; gap:.75rem; padding:.8rem 0; }
 .reason-item + .reason-item { border-top:1px solid #f0f0f0; }
-.reason-icon { width:38px; height:38px; border-radius:9px; background:rgba(198,161,91,.1); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
-.reason-title { font-size:.84rem; font-weight:700; color:var(--navy); margin-bottom:.15rem; }
+.reason-icon { width:38px; height:38px; border-radius:9px; background:rgba(198,161,91,.1); color:var(--accent,#9A7736); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
+.reason-title { font-size:.84rem; font-weight:700; color:var(--navy,#0E3B2E); margin-bottom:.15rem; }
 .reason-desc  { font-size:.75rem; color:#6F695D; line-height:1.45; margin:0; }
 
 .country-auto-note {
@@ -313,7 +314,7 @@ document.addEventListener('alpine:init', () => {
                         <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#d1fae5,#a7f3d0);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(5,150,105,.2);">
                             <i class="fas fa-check" style="font-size:1.8rem;color:#059669;"></i>
                         </div>
-                        <h3 style="color:var(--navy);font-size:1.2rem;font-weight:800;margin-bottom:.6rem;">
+                        <h3 style="color:var(--navy,#0E3B2E);font-size:1.2rem;font-weight:800;margin-bottom:.6rem;">
                             {{ session('success') }}
                         </h3>
                         <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -435,7 +436,7 @@ document.addEventListener('alpine:init', () => {
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label>@lang('loan.label_name') <span style="color:var(--accent);">*</span></label>
+                                    <label>@lang('loan.label_name') <span style="color:var(--accent,#9A7736);">*</span></label>
                                     <input type="text" name="name" class="form-control"
                                            value="{{ old('name') }}"
                                            placeholder="@lang('loan.placeholder_name')" required>
@@ -444,7 +445,7 @@ document.addEventListener('alpine:init', () => {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>@lang('loan.label_email') <span style="color:var(--accent);">*</span></label>
+                                    <label>@lang('loan.label_email') <span style="color:var(--accent,#9A7736);">*</span></label>
                                     <input type="email" name="email" class="form-control"
                                            value="{{ old('email') }}"
                                            placeholder="@lang('loan.placeholder_email')" required>
@@ -453,7 +454,7 @@ document.addEventListener('alpine:init', () => {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>@lang('loan.label_phone') <span style="color:var(--accent);">*</span></label>
+                                    <label>@lang('loan.label_phone') <span style="color:var(--accent,#9A7736);">*</span></label>
                                     <input type="text" name="phone" class="form-control"
                                            value="{{ old('phone') }}"
                                            placeholder="@lang('loan.placeholder_phone')" required>
@@ -462,7 +463,7 @@ document.addEventListener('alpine:init', () => {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>@lang('loan.label_country') <span style="color:var(--accent);">*</span></label>
+                                    <label>@lang('loan.label_country') <span style="color:var(--accent,#9A7736);">*</span></label>
                                     <select name="country" x-model="country"
                                             class="form-control" required>
                                         <option value="">— @lang('loan.placeholder_country') —</option>
@@ -479,7 +480,7 @@ document.addEventListener('alpine:init', () => {
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>@lang('contact.subject') <span style="color:var(--accent);">*</span></label>
+                                    <label>@lang('contact.subject') <span style="color:var(--accent,#9A7736);">*</span></label>
                                     <select name="subject" class="form-control" required>
                                         <option value="">— @lang('contact.subject') —</option>
                                         <option value="Prêt personnel"  {{ old('subject')=='Prêt personnel'  ?'selected':'' }}>@lang('menu.personal')</option>
@@ -597,10 +598,10 @@ document.addEventListener('alpine:init', () => {
 }
 .partner-logo:hover {
     filter:grayscale(0); opacity:1;
-    border-color:var(--accent); box-shadow:0 4px 22px rgba(198,161,91,.2);
+    border-color:var(--accent,#9A7736); box-shadow:0 4px 22px rgba(198,161,91,.2);
 }
 .partner-logo--text {
-    font-size:.85rem; font-weight:700; color:var(--navy);
+    font-size:.85rem; font-weight:700; color:var(--navy,#0E3B2E);
     text-align:center; line-height:1.3; white-space:nowrap;
 }
 @media (max-width:576px) {

@@ -74,7 +74,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/nouislider/nouislider.min.css') }}">
 
     <!-- Design system -->
-    <link rel="stylesheet" href="{{ asset('assets/css/royal.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/royal.css') }}?v={{ @filemtime(public_path('assets/css/royal.css')) }}">
 
     @stack('styles')
 </head>
