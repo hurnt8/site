@@ -46,18 +46,5 @@ class Handler extends ExceptionHandler
             //
         });
 
-        // Quand le total televerse depasse post_max_size, PHP vide la requete : plus de
-        // fichiers, plus de jeton CSRF. L utilisateur tombait sur une page d erreur brute
-        // 413 sans comprendre que ses photos etaient simplement trop lourdes.
-        $this->renderable(function (PostTooLargeException $e, $request) {
-            $message = __('message.upload_too_large');
-
-            if ($request->expectsJson()) {
-                return response()->json(['message' => $message], 413);
-            }
-
-            return redirect()->back()->withInput($request->except(['id_photo_recto', 'id_photo_verso']))
-                ->withErrors(['upload' => $message]);
-        });
     }
 }
