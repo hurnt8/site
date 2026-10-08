@@ -113,6 +113,19 @@
     [$title, $message] = $L[$code] ?? $L[500];
 
     try { $siteName = site_name(); } catch (\Throwable $e) { $siteName = 'Aurenza Capital'; }
+    // Logo officiel téléversé en admin (clair sur fond blanc), sinon logo par défaut de la marque
+    $logoUrl = '/assets/images/logo-aurenza-dark.svg';
+    $iconUrl = '/assets/images/favicon-aurenza.svg';
+    try {
+        $contact = site_identity();
+        $logoPath = $contact?->logo_light_path ?: $contact?->logo_dark_path;
+        if ($logoPath && \Illuminate\Support\Facades\Storage::disk('public')->exists($logoPath)) {
+            $logoUrl = \Illuminate\Support\Facades\Storage::url($logoPath);
+            $iconUrl = '/site-icon-32.png';
+        }
+    } catch (\Throwable $e) {
+        // base ou disque indisponible : on garde le logo par défaut
+    }
     $homeUrl    = url('/' . $locale);
     $showReload = in_array($code, [419, 423, 429, 500, 503], true);
 @endphp
@@ -123,7 +136,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>{{ $code }} — {{ $title }} | {{ $siteName }}</title>
-<link rel="icon" href="/assets/images/favicon-aurenza.svg" type="image/svg+xml">
+<link rel="icon" href="{{ $iconUrl }}">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--forest:#0E3B2E;--forest-deep:#082A20;--brass:#C6A15B;--ivory:#FBF9F4;--gray:#6F695D}
@@ -148,7 +161,7 @@ footer{padding:1.25rem;text-align:center;font-size:.78rem;color:#8A8474;border-t
 </style>
 </head>
 <body>
-<div class="bar"><a href="{{ $homeUrl }}"><img src="/assets/images/logo-aurenza-dark.svg" alt="{{ $siteName }}"></a></div>
+<div class="bar"><a href="{{ $homeUrl }}"><img src="{{ $logoUrl }}" alt="{{ $siteName }}"></a></div>
 <main>
   <div class="card">
     <div class="code">{!! preg_replace('/^(\d)(\d)(\d)$/', '$1<span>$2</span>$3', (string) $code) !!}</div>
